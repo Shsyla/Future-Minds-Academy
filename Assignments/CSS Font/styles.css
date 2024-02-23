@@ -1,0 +1,38 @@
+main {
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.first {
+    font-size: 200px;
+    float: left;
+    text-decoration: underline rgb(250, 110, 10);
+    margin-top: -27px;
+
+}
+
+.second {
+    font-size: 50px;
+
+}
+
+.third {
+    font-size: 30px;
+}
+
+.fourth {
+    font-size: 200px;
+    float: inherit;
+    text-decoration: underline rgb(250, 110, 10);
+    margin-top: -27px;
+
+}
+
+.fifth {
+    font-size: 50px;
+
+}
+
+.sixth {
+    font-size: 30px;
+}
