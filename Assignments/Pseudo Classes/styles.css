@@ -1,0 +1,15 @@
+.p1:hover {
+    background-color: red;
+}
+
+.p2:hover {
+    background-color: grey;
+}
+
+.p1::first-letter {
+    font-size: 50px;
+}
+
+.p2::first-letter {
+    font-size: 50px;
+}
