@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+article {
+    height: 25vh;
+}
+
+hr {
+    width: 33%;
+    border-color: red;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+h1, p {
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div:nth-child(odd) {
+    padding: 20px;
+    background-color: grey;
+}
+
+div:nth-child(even) {
+    padding: 20px;
+    background-color: beige;
+}
