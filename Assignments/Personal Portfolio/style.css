@@ -1,0 +1,130 @@
+body {
+    background-image: url(Images/background.webp);
+    background-size: cover;
+    text-align: center;
+    font-family: sans-serif;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.c1 li:nth-child(1n +1) {
+    background-color: rgb(4, 110, 239);
+    color: white;
+    text-transform: none;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 8px;
+    display: inline;
+    position: relative;
+    right: 20px;
+}
+
+.first {
+    border: 3px;
+    background-color: rgb(244, 197, 240);
+    border-radius: 20px;
+    margin: 100px;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.p1 {
+    text-align: justify;
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+img {
+    width: 300px;
+    border-radius: 50%;
+}
+
+.second {
+    border: 3px;
+    background-color: rgb(152, 231, 178);
+    border-radius: 20px;
+    margin: 100px;
+    padding: 10px;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.list_1,
+.list_2,
+.list_3 {
+    text-align: left;
+    background-color: rgb(152, 231, 178);
+    box-shadow: 0px 0px 20px 20px rgb(77, 204, 141);
+    border-radius: 10px;
+    margin: 50px;
+    padding: 20px;
+    list-style-type: none;
+}
+
+.third {
+    border: 3px;
+    background-color: rgb(174, 230, 235);
+    border-radius: 20px;
+    margin: 100px;
+    margin-top: 25px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+table,
+th,
+td {
+    padding: 10px;
+    margin: auto;
+    border: 2px solid rgb(142, 138, 138);
+    border-collapse: collapse;
+
+}
+
+th {
+    background-color: rgb(100, 144, 239);
+}
+
+td {
+    background-color: rgb(167, 208, 247);
+}
+
+.header {
+    text-align: center;
+}
+
+.fourth {
+    border: 3px;
+    background-color: rgb(249, 187, 187);
+    border-radius: 20px;
+    margin: 100px;
+    margin-top: 25px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.fourth button {
+    background-color: rgb(225, 143, 37);
+    color: white;
+    margin: auto;
+    padding: auto;
+    position: relative;
+    bottom: 10px;
+}
+
+.fifth {
+    border: 10px;
+    background-color: rgb(89, 87, 87);
+    margin-right: 100px;
+    margin-left: 100px;
+    padding: 20px;
+    font-size: 18px;
+    color: white;
+}
