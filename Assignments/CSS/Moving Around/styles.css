@@ -47,12 +47,10 @@ video {
 }
 
 h3 {
-    width: auto;
     position: relative;
-    bottom: 85px;
-    left: 70px;
-    display: block;
     float: right;
+    bottom: 50px;
+    left: 80px;
 }
 
 div:hover {
