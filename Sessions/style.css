@@ -1,6 +1,17 @@
 body {
-    cursor: url(icon.png), auto;
+    background-color: pink;
+    display: flex;
 }
 div {
-    height: 25vh;
+    background-color: antiquewhite;
+    border: 3px solid black;
+    width: 300px;
+    padding: 2rem;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
