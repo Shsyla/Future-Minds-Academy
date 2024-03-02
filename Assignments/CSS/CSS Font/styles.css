@@ -3,36 +3,34 @@ main {
 
 }
 
-.first {
+.span-1 {
     font-size: 200px;
-    float: left;
     text-decoration: underline rgb(250, 110, 10);
-    margin-top: -27px;
 
 }
 
-.second {
+.span-2 {
     font-size: 50px;
 
 }
 
-.third {
+.span-3 {
     font-size: 30px;
 }
 
-.fourth {
+.span-4 {
     font-size: 200px;
-    float: inherit;
+    float: left;
     text-decoration: underline rgb(250, 110, 10);
-    margin-top: -27px;
+    margin-top: -30px;
 
 }
 
-.fifth {
+.span-5 {
     font-size: 50px;
 
 }
 
-.sixth {
+.span-6 {
     font-size: 30px;
 }
