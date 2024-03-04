@@ -24,6 +24,10 @@ p {
     font-size: 18px;
 }
 
+ul {
+    padding: initial;
+}
+
 .line {
     display: inline;
 
