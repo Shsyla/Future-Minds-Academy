@@ -1,0 +1,18 @@
+body {
+    margin: 0px 100px;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    font-size: 3rem;
+}
+nav a {
+    text-decoration: none;
+}
+nav li {
+    list-style-type: none;
+}
+.line {
+    color: solid black;
+    display: inline;
+}
