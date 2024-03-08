@@ -1,0 +1,46 @@
+
+.card-price {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.card-price>div {
+    border: 2px solid black;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-date {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-date>div {
+    border: 2px solid black;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+}
+
+.card-copyright {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    border: 2px solid black;
+    width: 300px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card>div {
+    display: flex;
+
+}
