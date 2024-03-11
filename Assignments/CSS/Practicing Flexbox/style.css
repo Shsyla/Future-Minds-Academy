@@ -1,0 +1,90 @@
+body {
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+.aside-container {
+    height: 150%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(88, 91, 132);
+    color: white;
+    text-align: end;
+}
+
+img {
+    width: 10%;
+    position: relative;
+    float: right;
+    bottom: 75px;
+    right: 100px;
+}
+
+.aside-paragraph {
+    color: rgb(117, 135, 187);
+    font-size: 25px;
+}
+
+.login {
+    margin: 30px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+
+}
+
+.aside-header {
+    font-size: 25px;
+}
+
+.article-container {
+    height: 150%;
+    padding: 50px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+hr {
+    border: 1px solid rgb(245, 235, 235);
+}
+
+h4 {
+    color: rgb(191, 191, 191);
+}
+
+.article-header {
+    font-size: 30px;
+}
+
+.article-paragraph {
+    color: rgb(64, 63, 63);
+    text-align: justify;
+}
+
+.bgGreen {
+    background-color: rgb(14, 189, 14);
+    color: white;
+    padding: 5px;
+}
+
+.bgBlue {
+    background-color: rgb(54, 54, 251);
+    color: white;
+    padding: 5px;
+}
+
+.bgPink {
+    background-color: rgb(203, 36, 78);
+    color: white;
+    padding: 5px;
+}
+
+.name {
+    color: rgb(77, 77, 255);
+}
