@@ -1,3 +1,7 @@
+* {
+    cursor: url(image/arrow.png), auto;
+}
+
 body {
     margin: 0%;
     display: flex;
