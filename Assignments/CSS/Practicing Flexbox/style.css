@@ -5,7 +5,6 @@ body {
 }
 
 .aside-container {
-    height: 150%;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -17,10 +16,19 @@ body {
 
 img {
     width: 10%;
-    position: relative;
     float: right;
+}
+
+.user-image {
+    position: relative;
     bottom: 75px;
-    right: 100px;
+    left: 10px;
+}
+
+button {
+    background-color: transparent;
+    padding: 5px 15px 5px 15px;
+    color: white;
 }
 
 .aside-paragraph {
@@ -28,21 +36,11 @@ img {
     font-size: 25px;
 }
 
-.login {
-    margin: 30px;
-    padding: 10px;
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-
-}
-
 .aside-header {
     font-size: 25px;
 }
 
-.article-container {
-    height: 150%;
+.main-container {
     padding: 50px;
     background-color: aliceblue;
     display: flex;
@@ -59,7 +57,7 @@ h4 {
 }
 
 .article-header {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .article-paragraph {
