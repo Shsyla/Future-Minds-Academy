@@ -1,6 +1,7 @@
 main {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -9,6 +10,7 @@ main {
     border: 5px solid black;
     position: relative;
     width: 300px;
+    height: 522px;
 }
 
 .article {
@@ -47,11 +49,9 @@ p {
 }
 
 .image {
-    display: flex;
     justify-content: center;
-    border: 2px solid black;
 }
 
 img {
-    width: 300px;
+    width: 100%;
 }
