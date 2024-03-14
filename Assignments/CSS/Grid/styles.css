@@ -3,7 +3,6 @@ body {
     height: 100vh;
     display: grid;
     grid-template-rows: auto;
-    grid-auto-columns: auto;
 }
 
 .bgpink {
