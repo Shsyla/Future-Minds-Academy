@@ -1,70 +1,48 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    height: 100vh;
+    margin: 0;
+    min-height: 100vh;
+    /* The grid properties */
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    font-family: 'Gill Sans', 'Gill Sans MT'
 }
-
-img {
-    width: 50px;
-}
-
-li,
-a {
-    text-decoration: none;
-    list-style: none;
-    display: inline;
-}
-
 header {
-    background-color: red;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    background-color: bisque;
+    padding: 20px;
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
 }
-
+nav {
+    background-color: greenyellow;
+    padding: 20px;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+}
 main {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: auto 1fr;
-}
-main:hover .article1 {
-    background-color: rgb(44, 49, 46);
+    gap: 15px;
+    padding: 15px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 200px);
+    
 }
 aside {
-    background-color: blueviolet;
-    padding: 20px;
+    background-color: red;
 }
-
-footer {
-    background-color: blue;
-}
-
-.section1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-.article1 {
-    background-color: yellow;
-}
-
-.article2 {
+.product {
     background-color: grey;
-}
-
-.article3 {
-    background-color: green;
-}
-
-.section2 {
+    color: white;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    place-content: center;
+    font-size: 1.2em;
 }

@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    cursor: url(image/arrow.png), auto;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+aside {
+    padding: 20px;
+    text-align: end;
+    background-color: rgb(88, 91, 132);
+    color: white;
+    display: grid;
+    align-items: center;
+}
+
+.aside-container {
+    font-size: 25px;
+}
+
+aside p {
+    color: rgb(117, 135, 187);
+    font-size: 25px;
+}
+
+button {
+    background-color: transparent;
+    padding: 5px 15px 5px 15px;
+    color: white;
+}
+
+main {
+    padding: 50px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+img {
+    width: 50px;
+    float: right;
+}
+
+.user-image {
+    position: relative;
+    bottom: 75px;
+    left: 10px;
+}
+
+hr {
+    border: 1px solid rgb(245, 235, 235);
+}
+
+h4 {
+    color: rgb(191, 191, 191);
+}
+
+.article-header {
+    font-size: 25px;
+}
+
+.article-paragraph {
+    color: rgb(64, 63, 63);
+    text-align: justify;
+}
+
+.bgGreen {
+    background-color: rgb(14, 189, 14);
+    color: white;
+    padding: 5px;
+}
+
+.bgBlue {
+    background-color: rgb(54, 54, 251);
+    color: white;
+    padding: 5px;
+}
+
+.bgPink {
+    background-color: rgb(203, 36, 78);
+    color: white;
+    padding: 5px;
+}
+
+.name {
+    color: rgb(77, 77, 255);
+}
