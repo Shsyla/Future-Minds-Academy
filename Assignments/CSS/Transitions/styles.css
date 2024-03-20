@@ -1,0 +1,12 @@
+img {
+    margin: 50px;
+    width: 500px;
+    filter: blur(10px);
+    transition-duration: 1000ms;
+}
+
+img:hover {
+    filter: none;
+    transform: rotate(720deg);
+    transition: ease-in-out 1000ms;
+}
