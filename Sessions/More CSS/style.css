@@ -1,90 +1,23 @@
-body,
-ul {
-    padding: 0px;
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+@media screen and (min-width: 900px) {
+  article {
+    padding: 1rem 3rem;
+  }
 }
 
-nav {
-    background-color: rgb(68, 68, 68);
-    padding: 20px;
-    box-shadow: 0px 10px 15px 5px #4b4b4b;
+/* Nested within another conditional at-rule */
+@supports (display: flex) {
+  @media screen and (min-width: 900px) {
+    article {
+      display: flex;
+    }
+  }
 }
-
-li {
-    float: left;
-    list-style-type: none;
-    margin-right: 10px;
+.Hello {
+  background-color: red;
 }
-
-li a {
-    padding: 10px;
-    font-size: 20px;
-    text-decoration: none;
-    background-color: #726f6f;
-    color: white;
-    border-radius: 5px;
+.World {
+  background-color: yellow;
 }
-
-li a:hover {
-    background-color: black;
-    transition: 1s;
-}
-
-.activePage {
-    background-color: black;
-}
-
-nav ul {
-    width: 480px;
-    margin: 0px auto;
-}
-
-.red {
-    background-color: red;
-}
-
-.green {
-    background-color: green;
-}
-
-.p30 {
-    padding: 30px;
-}
-
-.pt50 {
-    padding-top: 50px;
-}
-
-main {
-    width: 1200px;
-    margin: 20px auto;
-
-}
-
-figure {
-    float: left;
-}
-
-h4 {
-    color: red;
-}
-
-h2 {
-    font-size: 30px;
-}
-
-p {
-    color: rgb(120, 111, 111);
-}
-
-.shkurte {
-    float: right;
-}
-img {
-    transition: 1s;
-}
-img:hover {
-    border-radius: 50%;
-    transition: 1s ;
+.Goodbye {
+  background-color: green;
 }

@@ -6,31 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>An Animation Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/favicon.ico">
 </head>
 
 <body>
     <aside>
-        <form>
-            <div class="animation">
+        <form class="animation">
+            <div>
                 <input type="text" id="fname" name="fname" placeholder="First Name">
                 <br>
-                <label for="fname">* Enter a valid first name</label>
+                <label class="animated-label" for="fname">* Enter a valid first name</label>
             </div>
-            <div class="animation">
+            <div>
                 <input type="text" id="lname" name="lname" placeholder="Last Name">
                 <br>
-                <label for="lname">* Enter a valid last name</label>
+                <label class="animated-label" for="lname">* Enter a valid last name</label>
             </div>
-            <div class="animation">
+            <div>
                 <input type="email" id="Email" name="Email" placeholder="Email">
                 <br>
-                <label for="Email">* Your email should be a Gmail Domain</label>
+                <label class="animated-label" for="Email">* Your email should be a Gmail Domain</label>
             </div>
             <div>
                 <input class="submit" type="submit">
             </div>
+            <figure>
+                <img src="image/circle.svg" alt="half-cicrle">
+            </figure>
         </form>
     </aside>
+
 </body>
 
 </html>
