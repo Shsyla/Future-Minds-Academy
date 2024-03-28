@@ -1,9 +1,6 @@
 body {
     margin: 0;
-}
-
-article {
-    height: 25vh;
+    height: 100vh;
 }
 
 hr {
@@ -21,12 +18,12 @@ p {
     font-family: 'Times New Roman', Times, serif;
 }
 
-div:nth-child(odd) {
+article:nth-child(odd) {
     padding: 20px;
     background-color: grey;
 }
 
-div:nth-child(even) {
+article:nth-child(even) {
     padding: 20px;
     background-color: beige;
 }
