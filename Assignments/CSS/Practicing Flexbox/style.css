@@ -3,7 +3,7 @@
 }
 
 body {
-    margin: 0%;
+    margin: 0px;
     display: flex;
     justify-content: center;
 }
@@ -18,23 +18,6 @@ body {
     text-align: end;
 }
 
-img {
-    width: 10%;
-    float: right;
-}
-
-.user-image {
-    position: relative;
-    bottom: 75px;
-    left: 10px;
-}
-
-button {
-    background-color: transparent;
-    padding: 5px 15px 5px 15px;
-    color: white;
-}
-
 .aside-paragraph {
     color: rgb(117, 135, 187);
     font-size: 25px;
@@ -42,6 +25,12 @@ button {
 
 .aside-header {
     font-size: 25px;
+}
+
+button {
+    background-color: transparent;
+    padding: 5px 15px 5px 15px;
+    color: white;
 }
 
 .main-container {
@@ -57,11 +46,23 @@ hr {
 }
 
 h4 {
+    font-size: 18px;
     color: rgb(191, 191, 191);
 }
 
 .article-header {
     font-size: 25px;
+    position: relative;
+}
+
+img {
+    width: 10%;
+}
+
+.user-image {
+    position: absolute;
+    right: -450px;
+    top: 20px;
 }
 
 .article-paragraph {

@@ -9,61 +9,174 @@
     <link rel="icon" href="images/favicon.ico">
 </head>
 
-<body>
+<body class="grid">
     <aside>
-        <div class="asideParagraph">
-            <p>CP</p>
-            <p>COOL PAGE</p>
+        <div class="aside-paragraph grid">
+            <h2>CP</h2>
+            <h2>COOL PAGE</h2>
         </div>
         <hr>
-        <div class="asideLinks">
+        <div class="asideLinks aside-avatar grid">
             <img class="avatar-image" src="images/avatar.jpg" alt="avatar">
             <p>John Doe</p>
             <img src="asides/expandMore.svg" alt="expand">
         </div>
         <hr>
-        <div class="asideLinks">
+        <div class="asideLinks aside-dashboard bgRed grid">
             <img src="asides/asideDashboard.svg" alt="dashboard">
             <p>Dashboard</p>
             <img src="asides/expandMore.svg" alt="expand">
         </div>
-        <div class="asideLinks">
+        <div class="asideLinks grid">
             <img src="asides/pages.svg" alt="pages">
             <p>Pages</p>
             <img src="asides/expandMore.svg" alt="expand">
         </div>
-        <div class="asideLinks">
+        <div class="asideLinks grid">
             <img src="asides/components.svg" alt="components">
             <p>Components</p>
             <img src="asides/expandMore.svg" alt="expand">
         </div>
-        <div class="asideLinks">
+        <div class="asideLinks grid">
             <img src="asides/form.svg" alt="form">
             <p>Forms</p>
             <img src="asides/expandMore.svg" alt="expand">
         </div>
-        <div class="asideLinks">
+        <div class="asideLinks grid">
             <img src="asides/table.svg" alt="table">
             <p>Tables</p>
             <img src="asides/expandMore.svg" alt="expand">
         </div>
-        <div class="asideLinks">
+        <div class="asideLinks grid">
             <img src="asides/map.svg" alt="map">
             <p>Maps</p>
             <img src="asides/expandMore.svg" alt="expand">
         </div>
-        <div class="asideLinks">
+        <div class="asideLinks grid">
             <img src="asides/widget.svg" alt="widget">
             <p>Widgets</p>
             <img src="asides/expandMore.svg" alt="expand">
         </div>
+        <div class="asideLinks grid">
+            <img src="asides/chart.svg" alt="chart">
+            <p>Maps</p>
+            <img src="asides/expandMore.svg" alt="expand">
+        </div>
+        <div class="asideLinks grid">
+            <img src="asides/calendar.svg" alt="calendar">
+            <p>Widgets</p>
+            <img src="asides/expandMore.svg" alt="expand">
+        </div>
     </aside>
-    <div>
-        <header>
-            <h1>header</h1>
+    <div class="Container grid">
+        <header class="header-container flex">
+            <div class="flex">
+                <figure class="circle boxShadow" title="See More">
+                    <img src="icons/header/more.svg" alt="more">
+                </figure>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="flex">
+                <form class="search-form flex">
+                    <input type="search" id="search" placeholder="Search">
+                    <label for="search">
+                        <figure class="circle boxShadow" title="Search">
+                            <img src="icons/header/search.svg" alt="search">
+                        </figure>
+                    </label>
+                </form>
+                <img src="icons/header/headerDashboard.svg" alt="dashboard" title="Dashboard">
+                <div class="notifications">
+                    <img src="icons/header/notifications.svg" alt="notifications" title="Notification">
+                    <p class="notificationP bgRed flex">5</p>
+                    <div class="notificationMsg bgWhite">
+                        <p>John Doe sent a message</p>
+                        <p>Someone viewed your profile</p>
+                        <p>John Doe sent a message</p>
+                        <p>Someone viewed your profile</p>
+                        <p>Another notification</p>
+                    </div>
+                </div>
+                <img src="icons/header/headerAvatar.svg" alt="avatar" title="Profile">
+            </div>
         </header>
-        <main>
-            <h1>main</h1>
+        <main class="main-container grid">
+            <article class="sales-article bgWhite border-radius grid">
+                <div class="global-sales grid">
+                    <figure>
+                        <img class="language-img bgGreen border-radius box-model position"
+                            src="icons/cards/language.svg" alt="language">
+                    </figure>
+                    <p>Global Sales by Top Locations</p>
+                </div>
+                <div class="flag-and-map grid">
+                    <table>
+                        <tr>
+                            <td><img class="flags-image" src="flags/us.svg" alt="Usa"> USA</td>
+                            <td>2920</td>
+                            <td>53.23%</td>
+                        </tr>
+                        <tr>
+                            <td><img class="flags-image" src="flags/germany.svg" alt="Germany"> Germany</td>
+                            <td>1300</td>
+                            <td>4.34%</td>
+                        </tr>
+                        <tr>
+                            <td><img class="flags-image" src="flags/albania.svg" alt="Albania"> Albania</td>
+                            <td>760</td>
+                            <td>20.43%</td>
+                        </tr>
+                        <tr>
+                            <td><img class="flags-image" src="flags/italy.svg" alt="Italy"> Italy</td>
+                            <td>690</td>
+                            <td>10.35%</td>
+                        </tr>
+                        <tr>
+                            <td><img class="flags-image" src="flags/kosovo.svg" alt="Kosovo"> Kosovo</td>
+                            <td>550</td>
+                            <td>5.94%</td>
+                        </tr>
+                    </table>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1711978926276!5m2!1sen!2s"
+                        width="700" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </article>
+            <article class="article-box border-radius grid">
+                <div class="booking-box bgWhite border-radius">
+                    <img class="couch-img bgOrange border-radius box-model position" src="icons/cards/couch.svg"
+                        alt="couch">
+                    <p class="paragraph-box">Bookings<br>184</p>
+                    <hr>
+                    <img src="icons/cards/warning.svg" alt="warning">
+                    <p>Get more space</p>
+                </div>
+                <div class="website-box bgWhite border-radius">
+                    <img class="couch-img bgPink border-radius box-model position" src="icons/cards/couch.svg"
+                        alt="couch">
+                    <p class="paragraph-box">Bookings<br>184</p>
+                    <hr>
+                    <img src="icons/cards/warning.svg" alt="warning">
+                    <p>Get more space</p>
+                </div>
+                <div class="revenue-box bgWhite border-radius">
+                    <img class="couch-img bgGreen border-radius box-model position" src="icons/cards/couch.svg"
+                        alt="couch">
+                    <p class="paragraph-box">Bookings<br>184</p>
+                    <hr>
+                    <img src="icons/cards/warning.svg" alt="warning">
+                    <p>Get more space</p>
+                </div>
+                <div class="followers-box bgWhite border-radius">
+                    <img class="couch-img bgBlue border-radius box-model position" src="icons/cards/couch.svg"
+                        alt="couch">
+                    <p class="paragraph-box">Bookings<br>184</p>
+                    <hr>
+                    <img src="icons/cards/warning.svg" alt="warning">
+                    <p>Get more space</p>
+                </div>
+            </article>
         </main>
         <footer>
             <h1>footer</h1>
