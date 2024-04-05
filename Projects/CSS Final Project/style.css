@@ -7,6 +7,7 @@
 body {
     height: 100vh;
     grid-template-columns: auto 1fr;
+    overflow: hidden;
 }
 
 /* Global */
@@ -18,19 +19,28 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 2px solid rgb(207, 205, 205);
+    border: 2px solid rgb(222, 216, 216);
 }
 
 .border-radius {
     border-radius: 5px;
 }
 
-.box-model {
-    width: 50px;
+.card-model {
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.flags-image {
+    width: 20px;
 }
 
 .boxShadow:hover {
     box-shadow: 0px 0px 18px 0px rgb(179, 178, 178);
+}
+
+.card-transform {
+    transform: translateY(-35px);
 }
 
 .bgWhite {
@@ -57,40 +67,66 @@ body {
     background-color: rgb(101, 101, 245);
 }
 
-.flex {
+.font-size-card {
+    font-size: 1.5rem;
+}
+
+.font-color-card {
+    color: rgba(34, 33, 33, 0.554);
+}
+
+.text-align-cards {
+    text-align: center;
+}
+
+.card-figure {
+    width: 100%;
+    transform: translateY(-40px);
+}
+
+.info-flex {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+}
+
+.icon-flex {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .grid {
     display: grid;
 }
 
-.position {
-    position: absolute;
-    top: -15px
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Aside-Container */
 aside {
     background: url(images/sidebar-1.jpg);
-    background-color: solid black;
-    background-blend-mode: rgba(0, 0, 0, 0.466);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: color;
     background-position: center;
+    overflow-y: scroll;
 }
 
 .asideLinks,
 .aside-paragraph {
     margin: 10px 25px;
     padding: 10px 0px;
-    gap: 1rem;
     grid-template-columns: auto 1fr auto;
     align-items: center;
+    gap: 1rem;
     color: white;
     border-radius: 5px;
-    font-size: 1rem;
+}
 
+.asideLinks {
+    font-size: 1.3rem;
 }
 
 .asideLinks:hover:not(.aside-paragraph, .aside-avatar, .aside-dashboard) {
@@ -102,16 +138,22 @@ aside {
     border-radius: 50%;
 }
 
-/* Container */
-.Container {
-    padding: 5px 30px;
+/* Dashboard-Container */
+.Dashboard-container {
+    padding: 0px 30px;
     grid-template-rows: auto 1fr auto;
-    row-gap: 2rem;
+    row-gap: 3rem;
     background-color: rgb(226, 225, 225);
+    overflow-y: scroll;
 }
 
 /* Header-Container */
+.header-container {
+    margin: 10px 0px;
+}
+
 .header-container div {
+    padding: 0px;
     gap: 2rem;
 }
 
@@ -134,7 +176,7 @@ aside {
 .notificationP {
     position: absolute;
     right: -3px;
-    top: -4px;
+    top: -5px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -145,7 +187,7 @@ aside {
 .notificationMsg {
     padding: 5px 10px;
     width: 300px;
-    border: 2px solid rgb(207, 205, 205);
+    border: 2px solid rgb(222, 216, 216);
     position: absolute;
     display: none;
     top: 20px;
@@ -167,23 +209,24 @@ aside {
 
 /* Main-Container */
 .main-container {
-    row-gap: 3rem;
-}
-
-/* Sales-Article */
-.sales-article {
-    padding: 10px;
-    grid-template-columns: 1fr;
-    position: relative;
+    row-gap: 4rem;
 }
 
 .global-sales {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Sales-Section */
+.sales-section,
+div {
+    padding: 10px;
 }
 
 .flag-and-map {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    align-content: end;
+    gap: 2rem;
 }
 
 table {
@@ -191,25 +234,28 @@ table {
 }
 
 tr {
-    border-bottom: 2px solid rgb(207, 205, 205);
+    border-bottom: 2px solid rgb(222, 216, 216);
 }
 
-.flags-image {
-    width: 20px;
+.text-align-table {
+    text-align: end;
 }
 
-/* Article-Boxes */
-.article-box {
+/* Cards-Section */
+.card-section {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
-.article-box div {
-    padding: 10px;
-    position: relative;
+.card-header {
+    padding: 0px;
 }
 
-.paragraph-box {
-    position: absolute;
-    right: 10px;
+.cards-section {
+    padding: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.footer-info {
+    gap: 1rem;
 }
