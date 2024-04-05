@@ -38,7 +38,9 @@ body {
 .boxShadow:hover {
     box-shadow: 0px 0px 18px 0px rgb(179, 178, 178);
 }
-
+.card-shadow {
+    box-shadow: 0px 0px 18px 0px rgb(179, 178, 178);
+}
 .card-transform {
     transform: translateY(-35px);
 }
@@ -75,24 +77,9 @@ body {
     color: rgba(34, 33, 33, 0.554);
 }
 
-.text-align-cards {
-    text-align: center;
-}
-
-.card-figure {
-    width: 100%;
-    transform: translateY(-40px);
-}
-
 .info-flex {
     display: flex;
     align-items: center;
-}
-
-.icon-flex {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
 }
 
 .grid {
@@ -209,7 +196,7 @@ aside {
 
 /* Main-Container */
 .main-container {
-    row-gap: 4rem;
+    row-gap: 3rem;
 }
 
 .global-sales {
@@ -248,13 +235,44 @@ tr {
 }
 
 .card-header {
-    padding: 0px;
+    padding: 20px 0px;
 }
 
 .cards-section {
     padding: 0px;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
+    text-align: center;
+}
+
+.card-figure {
+    width: 100%;
+    transform: translateY(-40px);
+    transition: transform 0.5s ease;
+}
+
+.card-listing:hover .card-figure {
+    transform: translateY(-70px);
+}
+
+.card-listing {
+    position: relative;
+}
+
+.card-listing-icon {
+    position: absolute;
+    display: none;
+    top: 140px;
+    right: 105px;
+    gap: 1rem;
+}
+
+.card-listing:hover .card-listing-icon {
+    display: flex;
+}
+.card-listing-info {
+    margin-top: -30px;
+    margin-bottom: 30px;
 }
 .footer-info {
     gap: 1rem;
