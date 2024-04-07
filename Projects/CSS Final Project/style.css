@@ -59,18 +59,6 @@ body {
     background-color: green;
 }
 
-.bgOrange {
-    background-color: orange;
-}
-
-.bgPink {
-    background-color: rgb(245, 102, 126);
-}
-
-.bgBlue {
-    background-color: rgb(101, 101, 245);
-}
-
 .font-size-card {
     font-size: 1.5rem;
 }
@@ -148,6 +136,10 @@ aside {
     margin-top: -10px;
 }
 
+.dashboard-menu {
+    display: none;
+}
+
 .search-form input {
     background-color: transparent;
     border: none;
@@ -212,7 +204,6 @@ aside {
 
 .flag-and-map {
     grid-template-columns: 1fr 1fr;
-    align-content: end;
     gap: 2rem;
 }
 
@@ -232,6 +223,18 @@ tr {
 .card-section {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+}
+
+.booking-card {
+    background-color: orange;
+}
+
+.visits-card {
+    background-color: rgb(245, 102, 126);
+}
+
+.followers-card {
+    background-color: rgb(101, 101, 245);
 }
 
 /* Card-listing-Container */
@@ -270,20 +273,44 @@ tr {
 }
 
 /* Responsive Dashboard */
-@media (max-width:800px) {
+@media all and (max-width:1280px) {
+    .header-dashboard {
+        display: none;
+    }
+
+    .responsive-dashboard {
+        display: flex;
+    }
+
+    .flag-and-map {
+        grid-template-columns: 1fr;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .global-sales-paragraph {
+        font-size: 3rex;
+    }
+
+    .card-listing-container {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    footer {
+        font-size: 2rex;
+    }
+}
+
+@media all and (max-width: 600px) {
     .card-section {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 600px) {
-    .card-listing-container {
-        grid-template-columns: 1fr;
-        gap: 5rem;
-    }
-}
-
-@media (max-width:800px) {
+@media all and (max-width:800px) {
     aside {
         display: none;
     }
