@@ -38,11 +38,13 @@ body {
 .boxShadow:hover {
     box-shadow: 0px 0px 18px 0px rgb(179, 178, 178);
 }
+
 .card-shadow {
     box-shadow: 0px 0px 18px 0px rgb(179, 178, 178);
 }
+
 .card-transform {
-    transform: translateY(-35px);
+    transform: translateY(-40px);
 }
 
 .bgWhite {
@@ -77,9 +79,12 @@ body {
     color: rgba(34, 33, 33, 0.554);
 }
 
-.info-flex {
-    display: flex;
-    align-items: center;
+.padding {
+    padding: 20px;
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
 }
 
 .grid {
@@ -90,6 +95,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
+}
+
+.info-flex {
+    display: flex;
+    align-items: center;
 }
 
 /* Aside-Container */
@@ -103,7 +114,7 @@ aside {
 
 .asideLinks,
 .aside-paragraph {
-    margin: 10px 25px;
+    margin-bottom: 10px;
     padding: 10px 0px;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -126,22 +137,15 @@ aside {
 }
 
 /* Dashboard-Container */
-.Dashboard-container {
-    padding: 0px 30px;
-    grid-template-rows: auto 1fr auto;
-    row-gap: 3rem;
+.dashboard-container {
+    padding: 0px 20px;
     background-color: rgb(226, 225, 225);
     overflow-y: scroll;
 }
 
 /* Header-Container */
-.header-container {
-    margin: 10px 0px;
-}
-
-.header-container div {
-    padding: 0px;
-    gap: 2rem;
+.header-dashboard {
+    margin-top: -10px;
 }
 
 .search-form input {
@@ -195,19 +199,15 @@ aside {
 }
 
 /* Main-Container */
-.main-container {
-    row-gap: 3rem;
+
+/* Sales-Section */
+.sales-section {
+    margin-bottom: 50px;
 }
 
 .global-sales {
     display: flex;
     gap: 1rem;
-}
-
-/* Sales-Section */
-.sales-section,
-div {
-    padding: 10px;
 }
 
 .flag-and-map {
@@ -234,12 +234,12 @@ tr {
     gap: 2rem;
 }
 
-.card-header {
+/* Card-listing-Container */
+.card-listing-header {
     padding: 20px 0px;
 }
 
-.cards-section {
-    padding: 0px;
+.card-listing-container {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     text-align: center;
@@ -247,7 +247,6 @@ tr {
 
 .card-figure {
     width: 100%;
-    transform: translateY(-40px);
     transition: transform 0.5s ease;
 }
 
@@ -263,17 +262,29 @@ tr {
     position: absolute;
     display: none;
     top: 140px;
-    right: 105px;
-    gap: 1rem;
+    right: 100px;
 }
 
 .card-listing:hover .card-listing-icon {
     display: flex;
 }
-.card-listing-info {
-    margin-top: -30px;
-    margin-bottom: 30px;
+
+/* Responsive Dashboard */
+@media (max-width:800px) {
+    .card-section {
+        grid-template-columns: 1fr;
+    }
 }
-.footer-info {
-    gap: 1rem;
+
+@media (max-width: 600px) {
+    .card-listing-container {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+}
+
+@media (max-width:800px) {
+    aside {
+        display: none;
+    }
 }

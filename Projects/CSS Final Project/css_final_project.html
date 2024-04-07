@@ -10,12 +10,12 @@
 </head>
 
 <body class="grid">
-    <aside>
+    <aside class="padding">
         <div class="aside-paragraph grid">
             <h2>CP</h2>
             <h2>COOL PAGE</h2>
         </div>
-        <hr>
+        <hr class="line">
         <div class="asideLinks aside-avatar grid">
             <img class="avatar-image" src="images/avatar.jpg" alt="avatar">
             <p>John Doe</p>
@@ -69,8 +69,8 @@
             <img src="asides/expandMore.svg" alt="expand">
         </div>
     </aside>
-    <div class="Dashboard-container grid">
-        <header class="header-container flex">
+    <div class="dashboard-container">
+        <header class="header-dashboard padding margin-bottom flex">
             <div class="flex">
                 <figure class="circle boxShadow" title="See More">
                     <img src="icons/header/more.svg" alt="more">
@@ -101,8 +101,8 @@
                 <img src="icons/header/headerAvatar.svg" alt="avatar" title="Profile">
             </div>
         </header>
-        <main class="main-container grid">
-            <section class="sales-section card-shadow bgWhite border-radius">
+        <main class="main-container padding margin-bottom">
+            <section class="sales-section card-shadow bgWhite border-radius padding">
                 <div class="global-sales">
                     <figure>
                         <img class=" bgGreen card-model card-transform" src="icons/cards/language.svg" alt="language">
@@ -143,8 +143,8 @@
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </section>
-            <section class="card-section  border-radius grid">
-                <div class="bgWhite card-shadow border-radius">
+            <section class="card-section  border-radius grid margin-bottom">
+                <div class="bgWhite card-shadow border-radius padding">
                     <div class="flex">
                         <img class="bgOrange card-model card-transform" src="icons/cards/couch.svg" alt="couch">
                         <p><span class="font-color-card">Bookings</span><br><span class="font-size-card">184</span>
@@ -156,7 +156,7 @@
                         <p>Get more space</p>
                     </div>
                 </div>
-                <div class="bgWhite card-shadow border-radius">
+                <div class="bgWhite card-shadow border-radius padding">
                     <div class="flex">
                         <img class="bgPink card-model card-transform" src="icons/cards/equalizer.svg" alt="equalizer">
                         <p><span class="font-color-card">Website Visits</span><br><span
@@ -168,7 +168,7 @@
                         <p>Tracked from Google Analytics</p>
                     </div>
                 </div>
-                <div class="bgWhite card-shadow border-radius">
+                <div class="bgWhite card-shadow border-radius padding">
                     <div class="flex">
                         <img class="bgGreen card-model card-transform" src="icons/cards/storefront.svg"
                             alt="storefront">
@@ -181,7 +181,7 @@
                         <p>Last 24 Hours</p>
                     </div>
                 </div>
-                <div class="bgWhite card-shadow border-radius">
+                <div class="bgWhite card-shadow border-radius padding">
                     <div class="flex">
                         <img class="bgBlue card-model card-transform" src="icons/cards/language.svg" alt="language">
                         <p><span class="font-color-card">Followers</span><br><span class="font-size-card">+245</span>
@@ -195,15 +195,16 @@
                 </div>
             </section>
             <section>
-                <div class="card-header font-size-card">
+                <div class="card-listing-header font-size-card">
                     <h3>Manage Listing</h3>
                 </div>
                 <br><br>
-                <div class="cards-section grid">
-                    <div class="bgWhite card-shadow border-radius">
+                <div class="card-listing-container grid margin-bottom">
+                    <div class="bgWhite card-shadow border-radius padding">
                         <div class="card-listing">
                             <figure>
-                                <img class="card-figure border-radius" src="images/card-1.jpeg" alt="beautiful castle">
+                                <img class="card-figure card-transform  border-radius" src="images/card-1.jpeg"
+                                    alt="beautiful castle">
                             </figure>
                             <div class="card-listing-icon flex">
                                 <img src="icons/cards/view.svg" alt="view" title="View">
@@ -211,7 +212,7 @@
                                 <img src="icons/cards/delete.svg" alt="delete" title="Delete">
                             </div>
                         </div>
-                        <div class="card-listing-info">
+                        <div class="card-listing-info margin-bottom">
                             <p class="font-size-card">Beautiful Castle</p>
                             <br>
                             <p class="font-color-card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
@@ -222,16 +223,17 @@
                             <div>
                                 <p>$1,119/night</p>
                             </div>
-                            <div class="flex font-color-card">
+                            <div class="info-flex font-color-card">
                                 <img src="icons/cards/location.svg" alt="location" title="Location">
                                 <p>London, UK</p>
                             </div>
                         </div>
                     </div>
-                    <div class="boxShadow card-shadow bgWhite border-radius">
+                    <div class="bgWhite card-shadow border-radius padding">
                         <div class="card-listing">
                             <figure>
-                                <img class="card-figure border-radius" src="images/card-2.jpeg" alt="beautiful city">
+                                <img class="card-figure card-transform  border-radius" src="images/card-2.jpeg"
+                                    alt="beautiful city">
                             </figure>
                             <div class="card-listing-icon flex">
                                 <img src="icons/cards/view.svg" alt="view" title="View">
@@ -239,7 +241,7 @@
                                 <img src="icons/cards/delete.svg" alt="delete" title="Delete">
                             </div>
                         </div>
-                        <div class="card-listing-info">
+                        <div class="card-listing-info margin-bottom">
                             <p class="font-size-card">Cozy 5 Star Apartment</p>
                             <br>
                             <p class="font-color-card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
@@ -250,16 +252,17 @@
                             <div>
                                 <p>$459/night</p>
                             </div>
-                            <div class="flex font-color-card">
+                            <div class="info-flex font-color-card">
                                 <img src="icons/cards/location.svg" alt="location" title="Location">
                                 <p>Milan, Italy</p>
                             </div>
                         </div>
                     </div>
-                    <div class="bgWhite card-shadow border-radius">
+                    <div class="bgWhite card-shadow border-radius padding">
                         <div class="card-listing">
                             <figure>
-                                <img class="card-figure border-radius" src="images/card-3.jpeg" alt="office studio">
+                                <img class="card-figure card-transform  border-radius" src="images/card-3.jpeg"
+                                    alt="office studio">
                             </figure>
                             <div class="card-listing-icon flex">
                                 <img src="icons/cards/view.svg" alt="view" title="View">
@@ -267,7 +270,7 @@
                                 <img src="icons/cards/delete.svg" alt="delete" title="Delete">
                             </div>
                         </div>
-                        <div class="card-listing-info">
+                        <div class="card-listing-info margin-bottom">
                             <p class="font-size-card">Office Studio</p>
                             <br>
                             <p class="font-color-card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
@@ -278,7 +281,7 @@
                             <div>
                                 <p>$899/night</p>
                             </div>
-                            <div class="flex font-color-card">
+                            <div class="info-flex font-color-card">
                                 <img src="icons/cards/location.svg" alt="location" title="Location">
                                 <p>Barcelona, Spain</p>
                             </div>
@@ -288,7 +291,7 @@
             </section>
         </main>
         <hr>
-        <footer class="flex">
+        <footer class="flex padding">
             <div class="footer-info flex">
                 <p>HOME</p>
                 <p>COMPANY</p>
