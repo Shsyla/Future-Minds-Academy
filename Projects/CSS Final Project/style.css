@@ -248,6 +248,12 @@ tr {
     text-align: center;
 }
 
+.card-listing {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
 .card-figure {
     width: 100%;
     transition: transform 0.5s ease;
@@ -257,15 +263,11 @@ tr {
     transform: translateY(-70px);
 }
 
-.card-listing {
-    position: relative;
-}
-
 .card-listing-icon {
     position: absolute;
+    bottom: 30px;
     display: none;
-    top: 140px;
-    right: 100px;
+    gap: 1rem;
 }
 
 .card-listing:hover .card-listing-icon {
