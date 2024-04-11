@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
     margin: 0px;
     padding: 0px;
@@ -6,6 +13,7 @@
 
 body {
     height: 100vh;
+    -ms-grid-columns: auto 1fr;
     grid-template-columns: auto 1fr;
     overflow: hidden;
 }
@@ -52,8 +60,14 @@ body {
     background-color: white;
     width: 30px;
     height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-radius: 50%;
     border: 2px solid rgb(222, 216, 216);
@@ -73,14 +87,18 @@ body {
 }
 
 .boxShadow:hover {
+    -webkit-box-shadow: 0px 0px 18px 0px rgb(179, 178, 178);
     box-shadow: 0px 0px 18px 0px rgb(179, 178, 178);
 }
 
 .card-shadow {
+    -webkit-box-shadow: 0px 0px 18px 0px rgb(179, 178, 178);
     box-shadow: 0px 0px 18px 0px rgb(179, 178, 178);
 }
 
 .card-transform {
+    -webkit-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
     transform: translateY(-40px);
 }
 
@@ -113,18 +131,29 @@ body {
 }
 
 .d-grid {
+    display: -ms-grid;
     display: grid;
 }
 
 .d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 1rem;
 }
 
 .info-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -141,7 +170,10 @@ aside {
 .aside-paragraph {
     margin-bottom: 10px;
     padding: 10px;
+    -ms-grid-columns: auto 1rem 1fr 1rem auto;
     grid-template-columns: auto 1fr auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 1rem;
     color: var(--text-color);
@@ -177,6 +209,8 @@ aside {
     border: none;
     outline: none;
     border-bottom: 2px solid rgb(207, 205, 205);
+    -webkit-transition: border-bottom 2s linear;
+    -o-transition: border-bottom 2s linear;
     transition: border-bottom 2s linear;
 }
 
@@ -196,6 +230,8 @@ aside {
     height: 15px;
     border-radius: 50%;
     color: var(--text-color);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -230,11 +266,14 @@ aside {
 }
 
 .global-sales {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 1rem;
 }
 
 .flag-and-map {
+    -ms-grid-columns: 1fr 2rem 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
@@ -253,6 +292,7 @@ tr {
 
 /* Cards-Section */
 .card-section {
+    -ms-grid-columns: 1fr 2rem 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
@@ -275,6 +315,7 @@ tr {
 }
 
 .card-listing-container {
+    -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     text-align: center;
@@ -282,16 +323,26 @@ tr {
 
 .card-listing {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .card-figure {
     width: 100%;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
     transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .card-listing:hover .card-figure {
+    -webkit-transform: translateY(-70px);
+    -ms-transform: translateY(-70px);
     transform: translateY(-70px);
 }
 
@@ -303,12 +354,15 @@ tr {
 }
 
 .card-listing:hover .card-listing-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 /* Responsive Dashboard */
 @media all and (max-width:1300px) {
     .flag-and-map {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 
@@ -323,6 +377,7 @@ tr {
     }
 
     .card-listing-container {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         gap: 5rem;
     }
@@ -338,10 +393,13 @@ tr {
     }
 
     .responsive-dashboard {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
     .card-section {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 }
