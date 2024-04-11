@@ -7,111 +7,166 @@
     <title>CSS Final Project</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+        rel="stylesheet">
 </head>
 
-<body class="grid">
-    <aside class="padding">
-        <div class="aside-paragraph grid">
+<body class="d-grid">
+    <aside class="padding-20px">
+        <div class="aside-paragraph d-grid">
             <h2>CP</h2>
-            <h2>COOL PAGE</h2>
+            <h2 class="roboto-medium">COOL PAGE</h2>
         </div>
         <hr class="line">
-        <div class="asideLinks aside-avatar grid">
-            <img class="avatar-image" src="images/avatar.jpg" alt="avatar">
-            <p>John Doe</p>
-            <img src="asides/expandMore.svg" alt="expand">
+        <div class="asideLinks aside-avatar d-grid">
+            <figure>
+                <img class="avatar-image" src="images/avatar.jpg" alt="avatar">
+            </figure>
+            <h3 class="roboto-light">John Doe</h3>
+            <figure>
+                <img src="asides/expandMore.svg" alt="expand">
+            </figure>
         </div>
         <hr>
         <br>
-        <div class="asideLinks aside-dashboard bgRed grid">
-            <img src="asides/asideDashboard.svg" alt="dashboard">
-            <p>Dashboard</p>
-            <img src="asides/expandMore.svg" alt="expand">
+        <div class="asideLinks aside-dashboard bgRed d-grid border-radius">
+            <figure>
+                <img src="asides/asideDashboard.svg" alt="dashboard">
+            </figure>
+            <h3 class="roboto-light">Dashboard</h3>
+            <figure>
+                <img src="asides/expandMore.svg" alt="expand">
+            </figure>
         </div>
-        <div class="asideLinks grid">
-            <img src="asides/pages.svg" alt="pages">
-            <p>Pages</p>
-            <img src="asides/expandMore.svg" alt="expand">
+        <div class="asideLinks d-grid border-radius">
+            <figure>
+                <img src="asides/pages.svg" alt="pages">
+            </figure>
+            <h3 class="roboto-light">Pages</h3>
+            <figure>
+                <img src="asides/expandMore.svg" alt="expand">
+            </figure>
         </div>
-        <div class="asideLinks grid">
-            <img src="asides/components.svg" alt="components">
-            <p>Components</p>
-            <img src="asides/expandMore.svg" alt="expand">
+        <div class="asideLinks d-grid border-radius">
+            <figure>
+                <img src="asides/components.svg" alt="components">
+            </figure>
+            <h3 class="roboto-light">Components</h3>
+            <figure>
+                <img src="asides/expandMore.svg" alt="expand">
+            </figure>
         </div>
-        <div class="asideLinks grid">
-            <img src="asides/form.svg" alt="form">
-            <p>Forms</p>
-            <img src="asides/expandMore.svg" alt="expand">
+        <div class="asideLinks d-grid border-radius">
+            <figure>
+                <img src="asides/form.svg" alt="form">
+            </figure>
+            <h3 class="roboto-light">Forms</h3>
+            <figure>
+                <img src="asides/expandMore.svg" alt="expand">
+            </figure>
         </div>
-        <div class="asideLinks grid">
-            <img src="asides/table.svg" alt="table">
-            <p>Tables</p>
-            <img src="asides/expandMore.svg" alt="expand">
+        <div class="asideLinks d-grid border-radius">
+            <figure>
+                <img src="asides/table.svg" alt="table">
+            </figure>
+            <h3 class="roboto-light">Tables</h3>
+            <figure>
+                <img src="asides/expandMore.svg" alt="expand">
+            </figure>
         </div>
-        <div class="asideLinks grid">
-            <img src="asides/map.svg" alt="map">
-            <p>Maps</p>
-            <img src="asides/expandMore.svg" alt="expand">
+        <div class="asideLinks d-grid border-radius">
+            <figure>
+                <img src="asides/map.svg" alt="map">
+            </figure>
+            <h3 class="roboto-light">Maps</h3>
+            <figure>
+                <img src="asides/expandMore.svg" alt="expand">
+            </figure>
         </div>
-        <div class="asideLinks grid">
-            <img src="asides/widget.svg" alt="widget">
-            <p>Widgets</p>
-            <img src="asides/expandMore.svg" alt="expand">
+        <div class="asideLinks d-grid border-radius">
+            <figure>
+                <img src="asides/widget.svg" alt="widget">
+            </figure>
+            <h3 class="roboto-light">Widgets</h3>
+            <figure>
+                <img src="asides/expandMore.svg" alt="expand">
+            </figure>
         </div>
-        <div class="asideLinks grid">
-            <img src="asides/chart.svg" alt="chart">
-            <p>Maps</p>
-            <img src="asides/expandMore.svg" alt="expand">
+        <div class="asideLinks d-grid border-radius">
+            <figure>
+                <img src="asides/chart.svg" alt="chart">
+            </figure>
+            <h3 class="roboto-light">Charts</h3>
+            <figure>
+                <img src="asides/expandMore.svg" alt="expand">
+            </figure>
         </div>
-        <div class="asideLinks grid">
-            <img src="asides/calendar.svg" alt="calendar">
-            <p>Widgets</p>
-            <img src="asides/expandMore.svg" alt="expand">
+        <div class="asideLinks d-grid border-radius">
+            <figure>
+                <img src="asides/calendar.svg" alt="calendar">
+            </figure>
+            <h3 class="roboto-light">Calendar</h3>
+            <figure>
+                <img src="asides/expandMore.svg" alt="expand">
+            </figure>
         </div>
     </aside>
     <div class="dashboard-container">
-        <header class="header-dashboard padding margin-bottom flex">
-            <div class="flex">
-                <figure class="circle boxShadow" title="See More">
-                    <img src="icons/header/more.svg" alt="more">
-                </figure>
-                <h2 class="responsive-dashboard flex">Dashboard <img class="dashboard-menu" src="icons/header/menu.svg"
-                        alt="menu"></h2>
-            </div>
-            <div class="flex">
-                <form class="search-form flex">
-                    <input type="search" id="search" placeholder="Search">
-                    <label for="search">
-                        <figure class="circle boxShadow" title="Search">
-                            <img src="icons/header/search.svg" alt="search">
-                        </figure>
-                    </label>
-                </form>
-                <img src="icons/header/headerDashboard.svg" alt="dashboard" title="Dashboard">
-                <div class="notifications">
-                    <img src="icons/header/notifications.svg" alt="notifications" title="Notification">
-                    <p class="notificationP bgRed flex">5</p>
-                    <div class="notificationMsg bgWhite">
-                        <p>John Doe sent a message</p>
-                        <p>Someone viewed your profile</p>
-                        <p>John Doe sent a message</p>
-                        <p>Someone viewed your profile</p>
-                        <p>Another notification</p>
-                    </div>
+        <header>
+            <div class="header-dashboard padding-20px margin-bottom d-flex">
+                <div class="d-flex">
+                    <figure class="circle boxShadow" title="See More">
+                        <img src="icons/header/more.svg" alt="more">
+                    </figure>
+                    <h2 class="roboto-light ">Dashboard</h2>
                 </div>
-                <img src="icons/header/headerAvatar.svg" alt="avatar" title="Profile">
+                <div class="d-flex">
+                    <form class="search-form d-flex">
+                        <input type="search" id="search" placeholder="Search">
+                        <label for="search">
+                            <figure class="circle boxShadow" title="Search">
+                                <img src="icons/header/search.svg" alt="search">
+                            </figure>
+                        </label>
+                    </form>
+                    <figure>
+                        <img src="icons/header/headerDashboard.svg" alt="dashboard" title="Dashboard">
+                    </figure>
+                    <div class="notifications">
+                        <figure>
+                            <img src="icons/header/notifications.svg" alt="notifications" title="Notification">
+                        </figure>
+                        <p class="notificationP bgRed d-flex">5</p>
+                        <div class="notificationMsg bgWhite">
+                            <p>John Doe sent a message</p>
+                            <p>Someone viewed your profile</p>
+                            <p>John Doe sent a message</p>
+                            <p>Someone viewed your profile</p>
+                            <p>Another notification</p>
+                        </div>
+                    </div>
+                    <figure>
+                        <img src="icons/header/headerAvatar.svg" alt="avatar" title="Profile">
+                    </figure>
+                </div>
+            </div>
+            <div class="responsive-dashboard d-flex padding-20px">
+                <h2 class="roboto-light ">Dashboard</h2>
+                <figure>
+                    <img src="icons/header/menu.svg" alt="menu" title="Menu">
+                </figure>
             </div>
         </header>
-        <main class="main-container padding margin-bottom">
-            <section class="sales-section card-shadow bgWhite border-radius padding">
+        <main class="main-container padding-20px margin-bottom">
+            <section class="sales-section card-shadow bgWhite border-radius padding-20px">
                 <div class="global-sales">
                     <figure>
                         <img class=" bgGreen card-model card-transform card-shadow" src="icons/cards/language.svg"
                             alt="language">
                     </figure>
-                    <p class="global-sales-paragraph font-size-card">Global Sales by Top Locations</p>
+                    <h1 class="global-sales-paragraph roboto-light">Global Sales by Top Locations</h1>
                 </div>
-                <div class="flag-and-map grid">
+                <div class="flag-and-map d-grid">
                     <table>
                         <tr>
                             <td><img class="flags-image" src="flags/us.svg" alt="Usa"> USA</td>
@@ -145,70 +200,90 @@
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </section>
-            <section class="card-section  border-radius grid margin-bottom">
-                <div class="bgWhite card-shadow border-radius padding">
-                    <div class="flex">
-                        <img class="booking-card card-model card-transform card-shadow" src="icons/cards/couch.svg"
-                            alt="couch">
-                        <p><span class="font-color-card">Bookings</span><br><span class="font-size-card">184</span>
+            <section class="card-section  border-radius d-grid margin-bottom">
+                <div class="bgWhite card-shadow border-radius padding-20px">
+                    <div class="d-flex">
+                        <figure>
+                            <img class="booking-card card-model card-transform card-shadow" src="icons/cards/couch.svg"
+                                alt="couch">
+                        </figure>
+                        <p><span class="font-color-card">Bookings</span><br>
+                            <span class="roboto-regular font-size-card">184</span>
                         </p>
                     </div>
                     <hr>
                     <div class="info-flex font-color-card">
-                        <img src="icons/cards/warning.svg" alt="warning" title="Warning">
+                        <figure>
+                            <img src="icons/cards/warning.svg" alt="warning" title="Warning">
+                        </figure>
                         <p>Get more space</p>
                     </div>
                 </div>
-                <div class="bgWhite card-shadow border-radius padding">
-                    <div class="flex">
-                        <img class="visits-card card-model card-transform card-shadow" src="icons/cards/equalizer.svg"
-                            alt="equalizer">
-                        <p><span class="font-color-card">Website Visits</span><br><span
-                                class="font-size-card">75.521</span></p>
+                <div class="bgWhite card-shadow border-radius padding-20px">
+                    <div class="d-flex">
+                        <figure>
+                            <img class="visits-card card-model card-transform card-shadow"
+                                src="icons/cards/equalizer.svg" alt="equalizer">
+                        </figure>
+                        <p><span class="font-color-card">Website Visits</span><br>
+                            <span class="roboto-regular font-size-card">75.521</span>
+                        </p>
                     </div>
                     <hr>
                     <div class="info-flex font-color-card">
-                        <img src="icons/cards/tracked.svg" alt="tracked" title="Tracked">
+                        <figure>
+                            <img src="icons/cards/tracked.svg" alt="tracked" title="Tracked">
+                        </figure>
                         <p>Tracked from Google Analytics</p>
                     </div>
                 </div>
-                <div class="bgWhite card-shadow border-radius padding">
-                    <div class="flex">
-                        <img class="bgGreen card-model card-transform card-shadow" src="icons/cards/storefront.svg"
-                            alt="storefront">
-                        <p><span class="font-color-card">Revenue</span><br><span class="font-size-card">$34.245</span>
+                <div class="bgWhite card-shadow border-radius padding-20px">
+                    <div class="d-flex">
+                        <figure>
+                            <img class="bgGreen card-model card-transform card-shadow" src="icons/cards/storefront.svg"
+                                alt="storefront">
+                        </figure>
+                        <p><span class="font-color-card">Revenue</span><br>
+                            <span class="roboto-regular font-size-card">$34.245</span>
                         </p>
                     </div>
                     <hr>
                     <div class="info-flex font-color-card">
-                        <img src="icons/cards/calendar.svg" alt="calendar" title="Calendar">
+                        <figure>
+                            <img src="icons/cards/calendar.svg" alt="calendar" title="Calendar">
+                        </figure>
                         <p>Last 24 Hours</p>
                     </div>
                 </div>
-                <div class="bgWhite card-shadow border-radius padding">
-                    <div class="flex">
-                        <img class="followers-card card-model card-transform card-shadow" src="icons/cards/language.svg"
-                            alt="language">
-                        <p><span class="font-color-card">Followers</span><br><span class="font-size-card">+245</span>
+                <div class="bgWhite card-shadow border-radius padding-20px">
+                    <div class="d-flex">
+                        <figure>
+                            <img class="followers-card card-model card-transform card-shadow"
+                                src="icons/cards/language.svg" alt="language">
+                        </figure>
+                        <p><span class="font-color-card">Followers</span><br>
+                            <span class="roboto-regular font-size-card">+245</span>
                         </p>
                     </div>
                     <hr>
                     <div class="info-flex font-color-card">
-                        <img src="icons/cards/update.svg" alt="update" title="Update">
+                        <figure>
+                            <img src="icons/cards/update.svg" alt="update" title="Update">
+                        </figure>
                         <p>Just Updated</p>
                     </div>
                 </div>
             </section>
             <section>
-                <div class="card-listing-header font-size-card">
-                    <h3>Manage Listing</h3>
+                <div class="card-listing-header roboto-bold">
+                    <h1>Manage Listing</h1>
                 </div>
                 <br><br>
-                <div class="card-listing-container grid margin-bottom">
-                    <div class="bgWhite card-shadow border-radius padding">
+                <div class="card-listing-container d-grid margin-bottom">
+                    <div class="bgWhite card-shadow border-radius padding-20px">
                         <div class="card-listing">
                             <figure>
-                                <img class="card-figure card-transform  border-radius" src="images/card-1.jpeg"
+                                <img class="card-figure card-transform border-radius" src="images/card-1.jpeg"
                                     alt="beautiful castle">
                             </figure>
                             <div class="card-listing-icon">
@@ -224,23 +299,25 @@
                             </div>
                         </div>
                         <div class="card-listing-info margin-bottom">
-                            <p class="font-size-card">Beautiful Castle</p>
+                            <h2 class="roboto-light">Beautiful Castle</h2>
                             <br>
                             <p class="font-color-card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
                                 magni, officia enim
                                 molestiae neque incidunt quisquam suscipit.</p>
                         </div>
-                        <div class="flex">
+                        <div class="d-flex">
                             <div>
                                 <p>$1,119/night</p>
                             </div>
                             <div class="info-flex font-color-card">
-                                <img src="icons/cards/location.svg" alt="location" title="Location">
+                                <figure>
+                                    <img src="icons/cards/location.svg" alt="location" title="Location">
+                                </figure>
                                 <p>London, UK</p>
                             </div>
                         </div>
                     </div>
-                    <div class="bgWhite card-shadow border-radius padding">
+                    <div class="bgWhite card-shadow border-radius padding-20px">
                         <div class="card-listing">
                             <figure>
                                 <img class="card-figure card-transform  border-radius" src="images/card-2.jpeg"
@@ -259,23 +336,25 @@
                             </div>
                         </div>
                         <div class="card-listing-info margin-bottom">
-                            <p class="font-size-card">Cozy 5 Star Apartment</p>
+                            <h2 class="roboto-light">Cozy 5 Star Apartment</h2>
                             <br>
                             <p class="font-color-card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
                                 magni, officia enim
                                 molestiae neque incidunt quisquam suscipit.</p>
                         </div>
-                        <div class="flex">
+                        <div class="d-flex">
                             <div>
                                 <p>$459/night</p>
                             </div>
                             <div class="info-flex font-color-card">
-                                <img src="icons/cards/location.svg" alt="location" title="Location">
+                                <figure>
+                                    <img src="icons/cards/location.svg" alt="location" title="Location">
+                                </figure>
                                 <p>Milan, Italy</p>
                             </div>
                         </div>
                     </div>
-                    <div class="bgWhite card-shadow border-radius padding">
+                    <div class="bgWhite card-shadow border-radius padding-20px">
                         <div class="card-listing">
                             <figure>
                                 <img class="card-figure card-transform  border-radius" src="images/card-3.jpeg"
@@ -294,18 +373,20 @@
                             </div>
                         </div>
                         <div class="card-listing-info margin-bottom">
-                            <p class="font-size-card">Office Studio</p>
+                            <h2 class="roboto-light">Office Studio</h2>
                             <br>
                             <p class="font-color-card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
                                 magni, officia enim
                                 molestiae neque incidunt quisquam suscipit.</p>
                         </div>
-                        <div class="flex">
+                        <div class="d-flex">
                             <div>
                                 <p>$899/night</p>
                             </div>
                             <div class="info-flex font-color-card">
-                                <img src="icons/cards/location.svg" alt="location" title="Location">
+                                <figure>
+                                    <img src="icons/cards/location.svg" alt="location" title="Location">
+                                </figure>
                                 <p>Barcelona, Spain</p>
                             </div>
                         </div>
@@ -314,15 +395,15 @@
             </section>
         </main>
         <hr>
-        <footer class="flex padding">
-            <div class="footer-info flex">
+        <footer class="d-flex padding-20px">
+            <div class="footer-info d-flex">
                 <p>HOME</p>
                 <p>COMPANY</p>
                 <p>PORTFOLIO</p>
                 <p>BLOG</p>
             </div>
             <div>
-                <p>&#169; <i>John Doe,</i> 2023</p>
+                <p>&#169; <span class="roboto-light-italic ">John Doe,</span> 2023</p>
             </div>
         </footer>
     </div>

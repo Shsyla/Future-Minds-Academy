@@ -10,6 +10,43 @@ body {
     overflow: hidden;
 }
 
+/* Roboto-CSS Font */
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* CSS Variables */
+:root {
+    --text-color: white;
+    --cards-color: orange;
+}
+
 /* Global */
 .circle {
     background-color: white;
@@ -67,7 +104,7 @@ body {
     color: rgba(34, 33, 33, 0.554);
 }
 
-.padding {
+.padding-20px {
     padding: 20px;
 }
 
@@ -75,11 +112,11 @@ body {
     margin-bottom: 30px;
 }
 
-.grid {
+.d-grid {
     display: grid;
 }
 
-.flex {
+.d-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -103,16 +140,11 @@ aside {
 .asideLinks,
 .aside-paragraph {
     margin-bottom: 10px;
-    padding: 10px 0px;
+    padding: 10px;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 1rem;
-    color: white;
-    border-radius: 5px;
-}
-
-.asideLinks {
-    font-size: 1.3rem;
+    color: var(--text-color);
 }
 
 .asideLinks:hover:not(.aside-paragraph, .aside-avatar, .aside-dashboard) {
@@ -136,7 +168,7 @@ aside {
     margin-top: -10px;
 }
 
-.dashboard-menu {
+.responsive-dashboard {
     display: none;
 }
 
@@ -163,7 +195,7 @@ aside {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    color: white;
+    color: var(--text-color);
     justify-content: center;
 }
 
@@ -226,7 +258,7 @@ tr {
 }
 
 .booking-card {
-    background-color: orange;
+    background-color: var(--cards-color);
 }
 
 .visits-card {
@@ -275,15 +307,7 @@ tr {
 }
 
 /* Responsive Dashboard */
-@media all and (max-width:1280px) {
-    .header-dashboard {
-        display: none;
-    }
-
-    .responsive-dashboard {
-        display: flex;
-    }
-
+@media all and (max-width:1300px) {
     .flag-and-map {
         grid-template-columns: 1fr;
     }
@@ -291,9 +315,11 @@ tr {
     iframe {
         width: 100%;
     }
+}
 
-    .global-sales-paragraph {
-        font-size: 3rex;
+@media all and (max-width: 900px) {
+    aside {
+        display: none;
     }
 
     .card-listing-container {
@@ -306,14 +332,16 @@ tr {
     }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 700px) {
+    .header-dashboard {
+        display: none;
+    }
+
+    .responsive-dashboard {
+        display: flex;
+    }
+
     .card-section {
         grid-template-columns: 1fr;
-    }
-}
-
-@media all and (max-width:800px) {
-    aside {
-        display: none;
     }
 }
