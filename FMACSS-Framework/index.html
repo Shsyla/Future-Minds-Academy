@@ -4,42 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title> Golf Club</title>
     <link rel="stylesheet" href="assets/css/fma-general.css">
     <link rel="stylesheet" href="assets/css/fma-responsive.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
-    <div class="container-fixed">
-        <header class="row m-2">
-            <div class="col">My FMA Logo</div>
-            <div class="col">
-                <a href="#">Home</a>
-                <a href="#">Home</a>
-                <a href="#">Home</a>
-                <a href="#">Home</a>
-                <a href="#">Home</a>
+<body class="container-fluid p-4 gap-4">
+    <header class="p-relative border-radius">
+        </div>
+        <nav class="row just-between align-center">
+            <div>
+                <div class="menu-container p-relative row align-center gap-1">
+                    <figure>
+                        <img src="assets/icons/menu.svg" alt="menu">
+                    </figure>
+                    <div class="roboto-regular font-1-2rem font-white">
+                        <p>MENU</p>
+                    </div>
+                    <div class="dropdown-menu box-shadow p-absolute bg-white top-shadow roboto-light">
+                        <div class="bottom-shadow "><a href="#">HOME</a></div>
+                        <div class="bottom-shadow "><a href="#">NEWS</a></div>
+                        <div class="bottom-shadow "><a href="#">EVENTS</a></div>
+                        <div class="bottom-shadow "><a href="#">FEATURES</a></div>
+                        <div class="bottom-shadow "><a href="#">ABOUT</a></div>
+                        <div class="bottom-shadow "><a href="#">CONTACTS</a></div>
+                    </div>
+                </div>
             </div>
-            <div class="col text-right">
-                <button>Login</button>
-                <button>Sign up</button>
+            <div>
+                <div class="shopping-cart-container p-relative">
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="assets/icons/shopping-cart.svg" alt="shopping-cart">
+                        </figure>
+                    </div>
+                    <div class="dropdown-shopping-cart box-shadow p-absolute bg-white top-shadow p-1 roboto-light">
+                        <div class="shopping-prices flex gap-1">
+                            <figure>
+                                <img class="img-xxl" src="assets/img/golf-wedges.png" alt="golf-wedges">
+                            </figure>
+                            <div>
+                                <p>Best Golf <br> Wedges 2024</p>
+                                <br>
+                                <p class="font-1-2rem font-red">1 x $350.00</p>
+                            </div>
+                            <div>
+                                <button class="dropdown-button font-1-2rem bg-white"><a class="font-black"
+                                        href="#"><b>x</b></a></button>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="dashed-line">
+                        <br>
+                        <div class="shopping-prices flex gap-1">
+                            <figure>
+                                <img class="img-xxl" src="assets/img/golf-gloves.jpeg" alt="golf-shopping1">
+                            </figure>
+                            <div>
+                                <p>Best Golf <br> Gloves 2024</p>
+                                <br>
+                                <p class="font-1-2rem font-red">1 x $230.00</p>
+                            </div>
+                            <div>
+                                <button class="dropdown-button font-1-2rem bg-white"><a class="font-black"
+                                        href="#"><b>x</b></a></button>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="dashed-line">
+                        <div class="flex just-end">
+                            <h3 class="total-prize font-1-4rem p-1">Total: $580.00</h3>
+                        </div>
+                        <div class="text-center">
+                            <div class="p-1">
+                                <button class="button-cart">
+                                    <a class="font-white" href="#">VIEW CART</a>
+                                </button>
+                            </div>
+                            <div>
+                                <button class="button-cart">
+                                    <a class="font-white" href="#">CHECKOUT</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </header>
-        <div class="hero row m-2">
-            <div class="iphone col-1">
-                <img src="assets/img/55821_4g_apple_headphones_iphone_mobile_icon.png" alt="">
+        </nav>
+        <div class="theme-header p-absolute text-center font-green p-0 roboto-regular">
+            <div class="theme-paragraph flex align-center just-center gap-2 p-4">
+                <div>
+                    <p>TIMELESS <br> STYLE</p>
+                </div>
+                <div>
+                    <p>TIMELESS <br> GAME</p>
+                </div>
             </div>
-            <div class="features col-2">
-                <h2>All Features</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Porro molestiae assumenda quod architecto voluptatem placeat enim possimus in
-                    consequatur, doloremque nam, dignissimos explicabo pariatur voluptates ex. Repellendus harum
-                    recusandae aliquam!</p>
+            <p class="font-2-5rem">YOUR GOLF JOURNEY <br> STARTS HERE</p>
+            <div class="p-5">
+                <button class="button-theme border-radius"><a class="font-black roboto-regular font-1rem" href="#">JOIN
+                        OUR
+                        CLUB</a></button>
+                <button class="button-theme border-radius"><a class="font-black roboto-regular font-1rem" href="#">MAKE
+                        RESERVATION</a></button>
             </div>
         </div>
-    </div>
+    </header>
+    <main>
+        <section class="p-4">
+            <div class="text-center">
+                <p class="font-2-5rem">
+                    COME & JOIN OUR CLUB
+                </p>
+                <p class="font-1-2rem">What we offer</p>
+            </div>
+            <div>
 
+            </div>
+        </section>
+        <section class="section-1 roboto-light font-white">
+            <div class="welcome-section text-center p-2 border-radius">
+                <h1 class="font-2-5rem p-0">WELCOME</h1>
+                <p class="font-1-2rem">TO OUR GOLF CLUB</p>
+                <p class="welcome-paragraph p-2 font-1-2rem">We are passionate about all the things golf and dedicated
+                    to helping
+                    players of every level improve for tips or a seasoned pro seeking new
+                    insights, you&apos;ll find valuable resources, expert advice, and a supportive community here.
+                    Let&apos;s tee off together and elevate our golfing experience!
+                </p>
+            </div>
+            <div class="section-wall text-center">
+                <figure>
+                    <img src="assets/img/golf-wallpaper3.jpeg" alt="golf">
+                </figure>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h1>footer</h1>
+    </footer>
 </body>
 
 </html>

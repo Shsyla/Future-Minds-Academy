@@ -172,10 +172,6 @@
 
 /* Flex and Flex Properties */
 
-.row-direction{
-    display: flex;
-    flex-direction: column;
-}
 
 .col-1 {
     flex: 1;
