@@ -11,7 +11,7 @@
     font-style: normal;
 }
 
-.roboto-light-italic {
+.roboto-italic {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: italic;
@@ -22,6 +22,10 @@
     color: white;
 }
 
+.font-gray {
+    color: rgb(177, 177, 177);
+}
+
 .font-lightBlack {
     color: black;
     opacity: 0.5;
@@ -29,6 +33,10 @@
 
 .font-green {
     color: rgb(0, 33, 0);
+}
+
+.font-mGreen {
+    color: green;
 }
 
 .font-lightGreen {
@@ -47,8 +55,8 @@
     background-color: rgb(238, 250, 219);
 }
 
-.bg-lightGreen {
-    background-color: rgb(238, 250, 219);
+.bg-white {
+    background-color: rgb(255, 255, 255);
 }
 
 .font-1rem {
@@ -71,12 +79,24 @@
     font-size: 2.5rem;
 }
 
+.font-4rem {
+    font-size: 4rem;
+}
+
 .box-shadow {
     box-shadow: inset -1px 0px 69px -36px rgba(0, 0, 0, 1);
 }
 
-.border-radius {
-    border-radius: 0px 100px 0px 100px;
+.golf-logo {
+    width: 30%;
+    margin-left: -300px;
+    margin-right: -300px;
+}
+
+.logo-line {
+    width: 30%;
+    border-style: dashed;
+    opacity: 0.5;
 }
 
 .flex {
@@ -91,6 +111,14 @@
     position: absolute;
 }
 
+.owerflow-h {
+    overflow: hidden;
+}
+
+.d-none {
+    display: none;
+}
+
 .before::before,
 .after::after {
     content: "";
@@ -100,58 +128,22 @@
 
 /* Header Container */
 header {
-    height: 100vh;
     margin-top: -35px;
-    padding: 30px 60px;
-    background: url(../img/golf-wallpaper7.jpeg);
-    background-size: cover;
+    border-top: 20px solid black;
+    padding: 5px 50px 0px 50px;
 }
 
-.theme-header {
-    width: 100%;
-    left: 10px;
-    animation: move 5s linear;
-}
-
-@keyframes move {
-    0% {
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.2;
-    }
-
-    75% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.button-theme {
-    padding: 10px 25px;
-    background-color: rgba(0, 33, 0, 0.618);
-}
-
-.button-theme:hover {
-    background-color: rgb(1, 35, 0);
+.golf-club img {
+    width: 20%;
 }
 
 /* Dropdown Menu */
 .dropdown-menu {
     width: 300px;
-    padding: 15px 50px;
-    top: 37px;
-    right: -136px;
-    transition: transform 2s ease;
-    display: none;
+    padding: 25px 20px;
+    top: 34px;
+    left: 0px;
+    z-index: 1;
 }
 
 .dropdown-menu div,
@@ -172,30 +164,18 @@ a {
     font-weight: bolder;
 }
 
-.dropdown-menu:hover,
-.dropdown-shopping-cart:hover {
-    transform: translateY(-65px);
-}
-
-.menu-container:hover .dropdown-menu {
-    display: block;
-}
-
 /* Dropdown Shopping Cart */
 .dropdown-shopping-cart {
-    width: 370px;
-    top: 37px;
-    right: -60px;
-    z-index: 2;
-    transition: transform 2s ease;
-    display: none;
+    padding: 30px 10px;
+    width: 300px;
+    top: 34px;
+    right: 0px;
+    z-index: 1;
 }
 
-.shopping-cart-container:hover .dropdown-shopping-cart {
-    display: block;
-}
-
-.dropdown-shopping-cart img {
+.cart-img {
+    width: 130px;
+    height: 100px;
     border: 1px solid rgba(138, 138, 138, 0.309);
 }
 
@@ -214,7 +194,7 @@ a {
 }
 
 .button-cart {
-    padding: 10px 60px;
+    padding: 10px 40px;
     background-color: rgb(67, 67, 67);
 }
 
@@ -223,44 +203,82 @@ a {
 }
 
 /* Main Container */
+main {
+    background-image: url('../img/bgGreen.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
-/* First Section */
+/* Wallpaper Section */
+.wallpaper-section {
+    height: 90vh;
+    margin-bottom: 100px;
+    padding: 50px;
+    background: url(../img/golf-wallpaper8.jpeg);
+    background-size: cover;
+}
 
-.section1-icons img {
+.golf-wallpaper {
+    width: 100%;
+    left: -120px;
+    /* animation: move 3s linear; */
+}
+
+/* @keyframes move {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+} */
+
+.button-wallpaper {
+    padding: 10px 25px;
+    background-color: rgba(0, 33, 0, 0.618);
+}
+
+.button-wallpaper:hover {
+    background-color: rgb(1, 35, 0);
+}
+
+/* Join Section */
+.join-icons img {
     width: 30%;
 }
 
-.section1-icons h4:hover {
+.join-icons h4:hover {
     color: rgb(152, 222, 152);
 }
 
-/* Second Section */
-.section-2 {
-    padding: 100px 0px;
+/* Welcome Section */
+.welcome-section {
+    padding: 80px 0px;
     margin: 0px 0px 0px 300px;
-    border-right: 2px solid black;
-    border-left: 5px solid black;
 }
 
-.welcome-section {
+.welcome-container {
     width: 50%;
     height: 80%;
+    border-radius: 0px 100px 0px 100px;
     background-color: rgb(11, 0, 37);
     bottom: 50px;
     left: -170px;
     transition: transform 0.5s ease;
 }
 
-.section-2 .welcome-section:hover {
-    transform: scale(1.3);
+.welcome-section .welcome-container:hover {
+    transform: scale(1.2);
 }
 
 .welcome-paragraph {
     text-align: justify;
 }
 
-/* Third Section */
-.section-3 {
+/* Match Section */
+.match-section {
     padding: 100px 0px;
     display: grid;
     grid-template-columns: auto auto;
@@ -270,7 +288,7 @@ a {
     color: rgb(0, 81, 0);
 }
 
-.match-section {
+.match-container {
     border-right: 3px solid black;
 }
 
@@ -289,4 +307,281 @@ a {
 
 .list-matches-link:hover {
     box-shadow: 0px 20px 10px -15px rgba(69, 125, 76, 0.75);
+}
+
+/* Gallery-Section */
+.gallery-section {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.gallery-img {
+    width: 640px;
+    height: 400px;
+}
+
+.gallery-imgs {
+    width: 320px;
+    height: 450px;
+}
+
+.gallery-item {
+    top: 0;
+    animation: moveT 0.5s ease;
+}
+
+.gallery-paragraph {
+    bottom: 0;
+}
+
+.gallery {
+    transition: transform 0.5s ease;
+}
+
+.gallery:hover .gallery-item {
+    display: block;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #1b3500 100%);
+}
+
+.gallery:hover {
+    transform: translateY(-10px);
+}
+
+@keyframes moveT {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*Videos Section */
+.videos-section {
+    margin: 100px -35px;
+    padding: 70px 50px;
+    height: 140vh;
+    background-image: url('../img/golf-gallery7.jpeg');
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.809);
+    background-blend-mode: color;
+    background-size: cover;
+}
+
+.video-width {
+    width: 240px;
+    height: 150px;
+}
+
+.video-link {
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.709);
+    background-blend-mode: color;
+    border-bottom: 3px solid greenyellow;
+}
+
+.video-link img {
+    width: 20%;
+    height: 20%;
+    top: 50px;
+    left: 100px;
+}
+
+.videos:hover .video-link {
+    animation: up 0.5s ease;
+    display: block;
+}
+
+.video-header {
+    margin-bottom: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #7aa93c;
+}
+
+.video-paragraph {
+    padding-top: 15px;
+    padding-bottom: 60px;
+}
+
+/* Statistics Section */
+.statistics-section {
+    height: 50vh;
+}
+
+canvas {
+    border-radius: 50%;
+}
+
+/* Membership Section */
+.membership-section {
+    margin: 0px -35px;
+    margin-top: 100px;
+    padding: 100px 0px;
+    height: 130vh;
+    background: url(../img/grass.jpeg);
+}
+
+.membership-cards div {
+    width: 25%;
+    height: 450px;
+    border: 5px solid white;
+}
+
+.membership-section:hover .membership-card-1 {
+    position: relative;
+    animation: moveLeft 2s ease;
+}
+
+.membership-section:hover .membership-card-2 {
+    position: relative;
+    animation: moveTop 2s ease;
+}
+
+.membership-section:hover .membership-card-3 {
+    position: relative;
+    animation: moveRight 2s ease;
+}
+
+@keyframes moveLeft {
+    from {
+        left: -100px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes moveTop {
+    from {
+        top: 100px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes moveRight {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 0px;
+    }
+}
+
+.membership-paragraph {
+    padding-bottom: 4rem;
+}
+
+.membership-button {
+    padding: 15px 50px;
+    background-color: transparent;
+    border: 1px solid rgb(152, 222, 152);
+    border-radius: 0%;
+}
+
+.membership-button:hover {
+    transition: 1.5s ease;
+    color: white;
+    background-color: rgb(152, 222, 152);
+}
+
+/* Golf Brands */
+.golf-brands img {
+    width: 150px;
+    height: 60px;
+    transition: transform 0.7s linear;
+}
+
+.golf-brands img:hover {
+    filter: opacity(0.8);
+    transform: scale(1.1);
+}
+
+/* Top Products Secion */
+.top-products-section {
+    margin: 0px -35px;
+    padding: 70px 50px;
+    height: 100vh;
+    background-image: url('../img/golf-wallpaper8.jpeg');
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.809);
+    background-blend-mode: color;
+    background-size: cover;
+}
+
+.product-width {
+    width: 250px;
+    height: 250px;
+}
+
+.products-hvLink {
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.809);
+    background-blend-mode: color;
+}
+
+@keyframes up {
+    from {
+        top: 100%;
+    }
+
+    to {
+        bottom: 0%;
+    }
+}
+
+.products-img:hover .products-hvLink {
+    animation: up 0.5s ease;
+    display: block;
+}
+
+.products-hvLink img {
+    width: 15%;
+    height: 15%;
+    top: 90px;
+    left: 110px;
+}
+
+.products-line {
+    opacity: 0.3;
+    margin-bottom: 30px;
+}
+
+.products-button {
+    padding: 10px 108px;
+    background-color: rgb(69, 196, 69);
+    border-radius: 0%;
+}
+
+.products-link {
+    padding: 0%;
+    margin: 0%;
+    border-radius: 0%;
+}
+
+.products-link:hover {
+    border-bottom: 1px solid white;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    margin: 0px -35px;
+    padding: 70px 50px;
+    background-color: rgb(242, 241, 241);
+}
+
+.testimonials-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.testimonials {
+    padding: 0px 60px 30px 60px;
 }

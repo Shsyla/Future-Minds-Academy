@@ -10,35 +10,18 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="container-fluid p-4 gap-12">
-    <header class="p-relative border-radius">
-        <div class="theme-header p-absolute text-center font-green p-0 roboto-regular">
-            <div class="theme-paragraph before after flex align-center just-center gap-2 p-4">
-                <div>
-                    <p>TIMELESS <br> STYLE</p>
-                </div>
-                <div>
-                    <p>TIMELESS <br> GAME</p>
-                </div>
-            </div>
-            <p class="font-2-5rem">YOUR GOLF JOURNEY <br> STARTS HERE</p>
-            <div class="p-5">
-                <button class="button-theme m-1"><a class="font-white roboto-regular font-1rem" href="#">JOIN
-                        OUR CLUB</a></button>
-                <button class="button-theme m-1"><a class="font-white roboto-regular font-1rem" href="#">MAKE
-                        RESERVATION</a></button>
-            </div>
-        </div>
-        <nav class="row just-between align-center">
+<body class="container-fluid p-4 gap-2">
+    <header>
+        <nav class="flex just-between align-center">
             <div>
                 <div class="menu-container p-relative row align-center gap-1">
                     <figure>
                         <img src="assets/icons/menu.svg" alt="menu">
                     </figure>
-                    <div class="roboto-regular font-1-2rem font-white">
+                    <div class="roboto-light">
                         <p>MENU</p>
                     </div>
-                    <div class="dropdown-menu box-shadow p-absolute bg-lightGreen top-shadow roboto-light">
+                    <div class="dropdown-menu d-none box-shadow p-absolute bg-white top-shadow roboto-light">
                         <div class="bottom-shadow box-shadow font-black"><a href="#"><b>HOME</b></a></div>
                         <div class="bottom-shadow "><a href="#">NEWS</a></div>
                         <div class="bottom-shadow "><a href="#">EVENTS</a></div>
@@ -48,6 +31,10 @@
                     </div>
                 </div>
             </div>
+            <div class="golf-club flex just-center align-center gap-2 roboto-regular">
+                <p class="font-1-2rem">GOLF</p> <img src="assets/img/golf-club.png" alt="golf-club">
+                <p class="font-1-2rem">CLUB</p>
+            </div>
             <div>
                 <div class="shopping-cart-container p-relative">
                     <div class="shopping-cart">
@@ -55,18 +42,18 @@
                             <img src="assets/icons/shopping-cart.svg" alt="shopping-cart">
                         </figure>
                     </div>
-                    <div class="dropdown-shopping-cart box-shadow p-absolute bg-lightGreen top-shadow p-1 roboto-light">
+                    <div
+                        class="dropdown-shopping-cart d-none box-shadow p-absolute bg-white top-shadow p-1 roboto-light">
                         <div class="shopping-prices flex gap-1">
                             <figure>
-                                <img class="img-xxl" src="assets/img/golf-wedges.png" alt="golf-wedges">
+                                <img class="cart-img" src="assets/img/golf-wedges.png" alt="golf-wedges">
                             </figure>
                             <div>
-                                <p>Best Golf <br> Wedges 2024</p>
-                                <br>
-                                <p class="font-1-2rem font-red">1 x $350.00</p>
+                                <p>Best Golf Wedges 2024</p>
+                                <p class="font-red">1 x $350.00</p>
                             </div>
                             <div>
-                                <button class="dropdown-button font-1-2rem bg-white"><a class="font-black"
+                                <button class="dropdown-button bg-white font-1-2rem"><a class="font-black"
                                         href="#"><b>x</b></a></button>
                             </div>
                         </div>
@@ -75,22 +62,21 @@
                         <br>
                         <div class="shopping-prices flex gap-1">
                             <figure>
-                                <img class="img-xxl" src="assets/img/golf-gloves.jpeg" alt="golf-shopping1">
+                                <img class="cart-img" src="assets/img/golf-gloves.jpeg" alt="golf-shopping1">
                             </figure>
                             <div>
-                                <p>Best Golf <br> Gloves 2024</p>
-                                <br>
-                                <p class="font-1-2rem font-red">1 x $230.00</p>
+                                <p>Best Golf Gloves 2024</p>
+                                <p class="font-red">1 x $230.00</p>
                             </div>
                             <div>
-                                <button class="dropdown-button font-1-2rem bg-white"><a class="font-black"
+                                <button class="dropdown-button bg-white font-1-2rem"><a class="font-black"
                                         href="#"><b>x</b></a></button>
                             </div>
                         </div>
                         <br>
                         <hr class="dashed-line">
                         <div class="flex just-end">
-                            <h3 class="total-prize font-1-4rem p-1">Total: $580.00</h3>
+                            <h3 class="total-prize font-1-2rem p-1">Total: $580.00</h3>
                         </div>
                         <div class="text-center">
                             <div class="p-1">
@@ -110,7 +96,26 @@
         </nav>
     </header>
     <main>
-        <section class="section-1 m-5 roboto-light text-center">
+        <section class="wallpaper-section p-relative">
+            <div class="golf-wallpaper p-absolute text-center font-green p-0 roboto-regular">
+                <div class="before after flex align-center just-center gap-2 p-4">
+                    <div>
+                        <p>TIMELESS <br> STYLE</p>
+                    </div>
+                    <div>
+                        <p>TIMELESS <br> GAME</p>
+                    </div>
+                </div>
+                <p class="font-2-5rem">YOUR GOLF JOURNEY <br> STARTS HERE</p>
+                <div class="p-5">
+                    <button class="button-wallpaper m-1"><a class="font-white roboto-regular font-1rem" href="#">JOIN
+                            OUR CLUB</a></button>
+                    <button class="button-wallpaper m-1"><a class="font-white roboto-regular font-1rem" href="#">MAKE
+                            RESERVATION</a></button>
+                </div>
+            </div>
+        </section>
+        <section class="join-section m-5 roboto-light text-center">
             <div>
                 <div>
                     <div>
@@ -119,13 +124,13 @@
                         </p>
                         <p class="font-1-2rem">What we offer</p>
                     </div>
-                    <div class="golf-club-logo before after flex align-center just-center p-0">
+                    <div class="before after flex align-center just-center p-0">
                         <figure>
-                            <img class="img-xs" src="assets/img/golf-club.avif" alt="golf-club">
+                            <img class="golf-logo" src="assets/icons/golf-logo-2.svg" alt="golf-club">
                         </figure>
                     </div>
                 </div>
-                <div class="section1-icons bg-green p-5 m-5 flex just-center align-center">
+                <div class="join-icons bg-green p-5 m-5 flex just-center align-center">
                     <div>
                         <figure>
                             <a href="#">
@@ -175,14 +180,14 @@
             </div>
         </section>
         <section>
-            <div class="section-2 roboto-light font-white">
+            <div class="welcome-section roboto-light font-white">
                 <div class="section-wall p-relative text-center">
                     <div>
                         <figure>
                             <img class="img-md" src="assets/img/golf-wallpaper4.jpeg" alt="golf">
                         </figure>
                     </div>
-                    <div class="welcome-section p-absolute text-center p-5 border-radius">
+                    <div class="welcome-container p-absolute text-center p-5">
                         <h1 class="font-2-5rem p-0">WELCOME</h1>
                         <p class="font-1-2rem">TO OUR GOLF CLUB</p>
                         <p class="welcome-paragraph p-2 font-1-2rem">We are passionate about all the things golf and
@@ -195,8 +200,8 @@
             </div>
         </section>
         <section>
-            <div class="section-3 roboto-light">
-                <div class="match-section p-5">
+            <div class="match-section roboto-light">
+                <div class="match-container p-5">
                     <div>
                         <p class="font-2rem">LAST MATCH</p>
                         <br><br>
@@ -215,7 +220,8 @@
                             <p class="font-lightBlack">05 March 14:00</p>
                             <p class="font-2-5rem font-black">3 - 1</p>
                             <a href="#">
-                                <p class="match-results font-1-2rem font-lightBlack">2023 Ryder Cup Royal Marco Golf Club in Naples, Florida</p>
+                                <p class="match-results font-1-2rem font-lightBlack">2023 Ryder Cup Royal Marco Golf
+                                    Club in Naples, Florida</p>
                             </a>
                         </div>
                         <div>
@@ -268,10 +274,408 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="text-center roboto-light">
+                <p class="font-2-5rem p-2">The Latest Photos</p>
+                <p class="font-lightBlack font-1-4rem">Vibrant snapshots of golf&apos;s beauty and passion</p>
+            </div>
+            <div class="text-center before after flex align-center just-center p-4">
+                <figure>
+                    <img class="golf-logo" src="assets/icons/golf-logo-2.svg" alt="golf-club">
+                </figure>
+            </div>
+            <div class="gallery-section just-center align-center gap-2">
+                <div class="gallery p-relative">
+                    <figure><img class="gallery-imgs" src="assets/img/golf-gallery3.jpeg" alt="golf-gallery">
+                    </figure>
+                    <div class="gallery-item d-none gallery-imgs p-absolute">
+                        <div class="gallery-paragraph p-absolute p-2 flex just-center align-center gap-2">
+                            <img src="assets/icons/crown.svg" alt="">
+                            <p class="font-white font-2rem">Iconic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery p-relative">
+                    <figure><img class="gallery-imgs" src="assets/img/golfff.jpeg" alt="golf-gallery">
+                    </figure>
+                    <div class="gallery-item d-none gallery-imgs p-absolute">
+                        <div class="gallery-paragraph p-absolute p-2 flex just-center align-center gap-2">
+                            <img src="assets/icons/crown.svg" alt="">
+                            <p class="font-white font-2rem">Dramatic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery p-relative">
+                    <figure><img class="gallery-imgs" src="assets/img/golfff.avif" alt="golf-gallery">
+                    </figure>
+                    <div class="gallery-item d-none gallery-imgs p-absolute">
+                        <div class="gallery-paragraph p-absolute p-2 flex just-center align-center gap-2">
+                            <img src="assets/icons/crown.svg" alt="">
+                            <p class="font-white font-2rem">Majestic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery p-relative">
+                    <figure><img class="gallery-imgs" src="assets/img/tiger-woods-.webp" alt="golf-gallery">
+                    </figure>
+                    <div class="gallery-item d-none gallery-imgs p-absolute">
+                        <div class="gallery-paragraph p-absolute p-2 flex just-center align-center gap-2">
+                            <img src="assets/icons/crown.svg" alt="">
+                            <p class="font-white font-2rem">Inspiring</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex align-center just-center bg-whites p-1 gap-6">
+                <div class="gallery p-relative">
+                    <figure>
+                        <img class="gallery-img" src="assets/img/golf-gallery4.jpeg" alt="golf-gallery">
+                    </figure>
+                    <div class="gallery-item d-none gallery-img p-absolute">
+                        <div class="gallery-paragraph p-absolute p-2 flex just-center align-center gap-2">
+                            <img src="assets/icons/crown.svg" alt="">
+                            <p class="font-white font-2rem">Captivating</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery p-relative">
+                    <figure>
+                        <img class="gallery-img" src="assets/img/golf-gallery2.jpeg" alt="golf-gallery">
+                    </figure>
+                    <div class="gallery-item d-none gallery-img p-absolute">
+                        <div class="gallery-paragraph p-absolute p-2 flex just-center align-center gap-2">
+                            <img src="assets/icons/crown.svg" alt="">
+                            <p class="font-white font-2rem">Action-packed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="videos-section font-white roboto-light">
+            <div class="text-center">
+                <p class="p-1 font-4rem">GOLF. IS THE NEW <span class="font-mGreen">GREEN</span>.</p>
+                <p class="font-1-4rem font-lightGreen">THE BEST GOLF TOUR AROUND THE WORLD.</p>
+            </div>
+            <div class="flex just-center gap-0 p-5">
+                <div class="p-5">
+                    <div class="video-header">
+                        <h3 class="text-left">AMAZING VIDEO</h3>
+                    </div>
+                    <div class="video-img owerflow-h flex gap-3">
+                        <div class="videos p-relative">
+                            <div class="video-img owerflow-h p-relative">
+                                <figure>
+                                    <img class="video-width" src="assets/img/golf-gallery.jpeg" alt="golf-gallery">
+                                </figure>
+                                <figure class="video-link video-width d-none p-absolute">
+                                    <a href="https://www.youtube.com/"><img class="p-absolute"
+                                            src="assets/icons/play-circle.svg" alt="link"></a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="video-paragraph text-left">
+                            <p class="font-1-2rem roboto-regular font-lightGreen">Swing Excellence</p> <br>
+                            <p>Experience the precision and elegance of golf in this captivation video, as each
+                                swing and put showcases the player&apos;s mastery of the game.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="videos p-relative">
+                            <div class="video-img owerflow-h p-relative">
+                                <figure>
+                                    <img class="video-width" src="assets/img/golf-gallery1.jpeg" alt="golf-gallery">
+                                </figure>
+                                <figure class="video-link video-width d-none p-absolute">
+                                    <a href="https://www.youtube.com/"><img class="p-absolute"
+                                            src="assets/icons/play-circle.svg" alt="link"></a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="video-paragraph text-left">
+                            <p class="font-1-2rem roboto-regular font-lightGreen">Swing Excellence</p> <br>
+                            <p>Experience the precision and elegance of golf in this captivation video, as each
+                                swing and put showcases the player&apos;s mastery of the game.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="videos p-relative">
+                            <div class="video-img owerflow-h p-relative">
+                                <figure>
+                                    <img class="video-width" src="assets/img/golf-gallery5.jpeg" alt="golf-gallery">
+                                </figure>
+                                <figure class="video-link video-width d-none p-absolute">
+                                    <a href="https://www.youtube.com/"><img class="p-absolute"
+                                            src="assets/icons/play-circle.svg" alt="link"></a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="video-paragraph text-left">
+                            <p class="font-1-2rem roboto-regular font-lightGreen">Swing Excellence</p> <br>
+                            <p>Experience the precision and elegance of golf in this captivation video, as each
+                                swing and put showcases the player&apos;s mastery of the game.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="video-header">
+                        <h3 class="text-left">AMAZING VIDEO</h3>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="videos p-relative">
+                            <div class="video-img owerflow-h p-relative">
+                                <figure>
+                                    <img class="video-width" src="assets/img/golf-gallery.jpeg" alt="golf-gallery">
+                                </figure>
+                                <figure class="video-link video-width d-none p-absolute">
+                                    <a href="https://www.youtube.com/"><img class="p-absolute"
+                                            src="assets/icons/play-circle.svg" alt="link"></a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="video-paragraph text-left">
+                            <p class="font-1-2rem roboto-regular font-lightGreen">Swing Excellence</p> <br>
+                            <p>Experience the precision and elegance of golf in this captivation video, as each
+                                swing put showcases the player&apos;s mastery of the game.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="videos p-relative">
+                            <div class="video-img owerflow-h p-relative">
+                                <figure>
+                                    <img class="video-width" src="assets/img/golf-gallery1.jpeg" alt="golf-gallery">
+                                </figure>
+                                <figure class="video-link video-width d-none p-absolute">
+                                    <a href="https://www.youtube.com/"><img class="p-absolute"
+                                            src="assets/icons/play-circle.svg" alt="link"></a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="video-paragraph text-left">
+                            <p class="font-1-2rem roboto-regular font-lightGreen">Swing Excellence</p> <br>
+                            <p>Experience the precision and elegance of golf in this captivation video, as each
+                                swing and put showcases the player&apos;s mastery of the game.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="videos p-relative">
+                            <div class="video-img owerflow-h p-relative">
+                                <figure>
+                                    <img class="video-width" src="assets/img/golf-gallery5.jpeg" alt="golf-gallery">
+                                </figure>
+                                <figure class="video-link video-width d-none p-absolute">
+                                    <a href="https://www.youtube.com/"><img class="p-absolute"
+                                            src="assets/icons/play-circle.svg" alt="link"></a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="video-paragraph text-left">
+                            <p class="font-1-2rem roboto-regular font-lightGreen">Swing Excellence</p> <br>
+                            <p>Experience the precision and elegance of golf in this captivation video, as each
+                                swing and put showcases the player&apos;s mastery of the game.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="text-center">
+                <p class="font-2-5rem roboto-regular">STATISTICS</p>
+                <p class="font-1-2rem roboto-light p-5">A small creative team, trying to enrich the lives of others and
+                    <br> build brands that a normal
+                    humans can understand.
+                </p>
+            </div>
+            <div class="statistics-section flex just-center align-center gap-8" id="statistics">
+                <canvas id="canvas1" width="200" height="200"></canvas>
+                <canvas id="canvas2" width="200" height="200"></canvas>
+                <canvas id="canvas3" width="200" height="200"></canvas>
+                <canvas id="canvas4" width="200" height="200"></canvas>
+            </div>
+        </section>
+        <section class="membership-section font-white">
+            <div class="text-center">
+                <p class="font-2-5rem roboto-light">CLUB MEMBERSHIP</p>
+                <p class="font-white roboto-italic font-1-2rem p-1">What can you do at the Golf Club?</p>
+            </div>
+            <div class="text-center flex align-center just-center font-white just-center p-4">
+                <hr class="logo-line">
+                <figure>
+                    <img class="golf-logo" src="assets/icons/golf-logo.svg" alt="golf-logo">
+                </figure>
+                <hr class="logo-line">
+            </div>
+            <div class="membership-cards roboto-light text-center flex align-center just-center gap-2">
+                <div class="membership-card-1 p-4">
+                    <p class="font-2rem p-5">Junior</p>
+                    <p class="font-4rem p-0">$250<span class="font-2rem">/mo</span></p>
+                    <p class="membership-paragraph">Juniors must be less than 19 years old as at 1st January</p>
+                    <a class="membership-button font-lightGreen" href="#">ORDER NOW</a>
+                </div>
+                <div class="membership-card-2 p-4">
+                    <p class="font-2rem p-5">Individual</p>
+                    <p class="font-4rem p-0">$350<span class="font-2rem">/mo</span></p>
+                    <p class="membership-paragraph">Save $98 every year compared to the monthly plan by paying yearly.
+                    </p>
+                    <a class="membership-button font-lightGreen" href="#">ORDER NOW</a>
+                </div>
+                <div class="membership-card-3 p-4">
+                    <p class="font-2rem p-5">Group</p>
+                    <p class="font-4rem p-0">$500<span class="font-2rem">/mo</span></p>
+                    <p class="membership-paragraph">Save $150 every year compared to the monthly plan by paying yearly.
+                    </p>
+                    <a class="membership-button font-lightGreen" href="#">ORDER NOW</a>
+                </div>
+            </div>
+        </section>
+        <section class="golf-brands flex align-center just-center gap-8 p-2 bg-white">
+            <div>
+                <img src="assets/img/titleist.png" alt="titleist">
+            </div>
+            <div>
+                <img src="assets/img/callaway.png" alt="callaway">
+            </div>
+            <div>
+                <img src="assets/img/tylorMade.png" alt="taylorMade">
+            </div>
+            <div>
+                <img src="assets/img/ping.jpeg" alt="ping">
+            </div>
+            <div>
+                <img src="assets/img/cobra.png" alt="cobra">
+            </div>
+            <div>
+                <img src="assets/img/nike.png" alt="nike">
+            </div>
+        </section>
+        <section class="top-products-section">
+            <div class="text-center">
+                <p class="font-2-5rem roboto-light font-white">TOP PRODUCT<span class="font-lightGreen">.</span></p>
+                <p class="font-1-2rem font-gray roboto-italic p-4">A small creative team, trying to enrich the lives of
+                    others and <br>
+                    build brands that a normal humans can understand.</p>
+            </div>
+            <div class="golf-products flex align-center just-center gap-3 roboto-light font-white p-4">
+                <div>
+                    <div class="products-img owerflow-h p-relative">
+                        <figure>
+                            <img class="product-width" src="assets/img/golf-club-set.jpeg" alt="golf-club-set">
+                        </figure>
+                        <figure class="products-hvLink d-none product-width p-absolute">
+                            <a href="#"><img class="p-absolute" src="assets/icons/link.svg" alt="link"></a>
+                        </figure>
+                    </div>
+                    <div class="flex align-center just-between p-0">
+                        <a class="products-link font-1-2rem font-white p-0" href="#">BAG <span
+                                class="font-lightGreen">PRO</a>
+                        <P class="font-1-2rem font-lightGreen p-0">$255.00</P>
+                    </div>
+                    <hr class="products-line">
+                    <a class="products-button text-center font-white roboto-regular" href="#">ADD</a>
+                </div>
+                <div>
+                    <div class="products-img owerflow-h p-relative">
+                        <figure>
+                            <img class="product-width" src="assets/img/golf-club-set-3.webp" alt="golf-club-set">
+                        </figure>
+                        <figure class="products-hvLink d-none product-width p-absolute">
+                            <a href="#"><img class="p-absolute" src="assets/icons/link.svg" alt="link"></a>
+                        </figure>
+                    </div>
+                    <div class="flex align-center just-between p-0">
+                        <a class="products-link font-1-2rem font-white p-0" href="#">SET <span
+                                class="font-lightGreen">13 Pcs</span></a>
+                        <P class="font-1-2rem font-lightGreen p-0">$179.99</P>
+                    </div>
+                    <hr class="products-line">
+                    <a class="products-button text-center font-white roboto-regular" href="#">ADD</a>
+                </div>
+                <div>
+                    <div class="products-img owerflow-h p-relative">
+                        <figure>
+                            <img class="product-width" src="assets/img/golf-club-set-2.jpeg" alt="golf-club-set">
+                        </figure>
+                        <figure class="products-hvLink d-none product-width product-width p-absolute">
+                            <a href="#"><img class="p-absolute" src="assets/icons/link.svg" alt="link"></a>
+                        </figure>
+                    </div>
+                    <div class="flex align-center just-between p-0">
+                        <a class="products-link font-1-2rem font-white p-0" href="#">BAG <span
+                                class="font-lightGreen">PRO</a>
+                        <P class="font-1-2rem font-lightGreen p-0">$215.00</P>
+                    </div>
+                    <hr class="products-line">
+                    <a class="products-button text-center font-white roboto-regular" href="#">ADD</a>
+                </div>
+                <div>
+                    <div class="products-img owerflow-h p-relative">
+                        <figure>
+                            <img class="product-width" src="assets/img/golf-club-set-4.webp" alt="golf-club-set">
+                        </figure>
+                        <figure class="products-hvLink d-none product-width p-absolute">
+                            <a href="#"><img class="p-absolute" src="assets/icons/link.svg" alt="link"></a>
+                        </figure>
+                    </div>
+                    <div class="flex align-center just-between p-0">
+                        <a class="products-link font-1-2rem font-white p-0" href="#">SET <span class="font-lightGreen">9
+                                Pcs</span></a>
+                        <P class="font-1-2rem font-lightGreen p-0">$135.00</P>
+                    </div>
+                    <hr class="products-line">
+                    <a class="products-button text-center font-white roboto-regular" href="#">ADD</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="testimonials-section text-center">
+                <div>
+                    <p class="roboto-light font-2-5rem">TESTIMONIALS</p>
+                    <p class="roboto-italic font-1-2rem font-lightBlack p-0">What people say about us</p>
+                </div>
+                <div class="text-center flex align-center just-center just-center p-4">
+                    <hr class="logo-line">
+                    <figure>
+                        <img class="testimonials-img" src="assets/icons/flag-.svg" alt="flag">
+                    </figure>
+                    <hr class="logo-line">
+                </div>
+                <div class="testimonials">
+                    <p class="roboto-italic font-lightBlack font-1-4rem p-2">As a long-time member of Golf Club, I can
+                        confidently say that it offers everything a
+                        golfer could want. The challenging yet beautiful course, the friendly atmosphere, and the
+                        variety of events and tournaments make it a standout club in the area. I wouldn't golf anywhere
+                        else!</p>
+                </div>
+                <div>
+                    <figure>
+                        <img class="testimonials-img" src="assets/icons/speak-svgrepo-com.svg" alt="speak">
+                    </figure>
+                </div>
+                <div class="p-0">
+                    <p class="roboto-regular font-1-2rem">Sarah M.</p>
+                    <p class="roboto-italic font-lightBlack">Player</p>
+                </div>
+            </div>
+        </section>
+
     </main>
     <footer>
         <h1>footer</h1>
     </footer>
+
+
+    <script src="assets/js/main.js">
+    </script>
+</body>
+
+</html>
+
+</script>
 </body>
 
 </html>
