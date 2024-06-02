@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- saved from url=(0763)https://d1u15l5g0hmigd.cloudfront.net/486894/Front_End_Developer_12_Months_/images/demonstration-5.html?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2QxdTE1bDVnMGhtaWdkLmNsb3VkZnJvbnQubmV0XC80ODY4OTRcL0Zyb250X0VuZF9EZXZlbG9wZXJfMTJfTW9udGhzX1wvaW1hZ2VzXC9kZW1vbnN0cmF0aW9uLTUuaHRtbCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwNjA5ODY0Mn19fV19&Signature=LVtW2Oy5D4HPEYzZwQ7UcEZ0c3GmK8edzXQmWRJr3JfGheosyfCKxu6iFrD1wRIV21YBoOvor2kzM/7ASgZii0sQY69IyR8ps4HncYssRNMjNNAQh-tl/qIN0iZVDzx8xXtbINq2OcDVkW2v18819Ha6vvmUd1L-D1Eej8t5epKfxVWGuESo3gfmxG7DTHjMxEZ2j3RkxpouG5wYi5qdJP15Mn0YECSMRBdLDpsnp0DxwMZpEA-Qk89ELiFB4jvBPYnaCm3ZCuzb7DDIAceBdUVfUgj0HS1WYHlhkJVKso6Ww9LO6tA8fQ8Gieydc4AJ8rDaf1NojxeciXabsj35EA__&Key-Pair-Id=APKAIEEGBMFR4A6B5VLQ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="firstNumber" type="number" placeholder="First Number"><br><br>
+    <input id="secondNumber" type="number" placeholder="Second Number"><br><br>
+    <label>Addition (+): </label><input name="operation" type="radio" value="+" checked=""><br>
+    <label>Multiplication (*): </label><input name="operation" type="radio" value="*"><br><br>
+    <button id="btn">Calculate!</button>
+    <p><strong>Result is: </strong><span id="result"></span></p>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', () => {
+            let firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            let secondNumber = parseFloat(document.getElementById('secondNumber').value);
+
+            if(!firstNumber || !secondNumber)
+                return;
+            
+            let operation = document.querySelector('input[name="operation"]:checked').value;
+            let resultElement = document.getElementById('result');
+            let result;
+
+            if(operation == "+")
+                result = firstNumber + secondNumber;
+            else
+                result = firstNumber * secondNumber;
+
+            resultElement.innerHTML = result;
+        });
+    </script>
+
+</body></html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- saved from url=(0763)https://d1u15l5g0hmigd.cloudfront.net/486894/Front_End_Developer_12_Months_/images/demonstration-4.html?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2QxdTE1bDVnMGhtaWdkLmNsb3VkZnJvbnQubmV0XC80ODY4OTRcL0Zyb250X0VuZF9EZXZlbG9wZXJfMTJfTW9udGhzX1wvaW1hZ2VzXC9kZW1vbnN0cmF0aW9uLTQuaHRtbCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwNjA5ODYxMn19fV19&Signature=d6/aZBT0sCQ3sZS6Xn9DK3jzC16BpvIUFtndxtOzPQnhoO-sKnOQ3uFKLZekAOYryrYRvxTClxbnTAoAb9r2XBBAY6GlzVQtH5R7qpQQVY9iws9QYqWvbajaDpStKZVlvuXN30qSvfIt9d8iiDLmFHBx73zS2627sczTr/0Si8f5b9gNxnE757VpiGvvNd2QS8hwxmmBtaX2ZXHuQAWg5bhyCuvpbkRwloMsTvFLLtTlTgqmmdrTwTSxy2wvXpJttb4vwNG3B8BjginzfxwAyuYp2xKWNz3aqIiHpVwN9vDHTVDumgGmdK/yESHwq0yxIS52BT28bZbPfmO10Ut4ng__&Key-Pair-Id=APKAIEEGBMFR4A6B5VLQ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #game{
+            background-color: rgb(20, 20, 20);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+            height: 400px;
+            padding: 1rem;
+        }
+
+        h1{
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        #btn{
+            background-color: steelblue;
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <h1>Snake Game</h1>
+        <button id="btn">Go Fullscreen</button>
+    </div>
+
+    <script>
+        let button = document.getElementById('btn');
+
+        button.addEventListener('click', ()=> {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+                button.innerHTML = 'Go Fullscreen';
+            } else {
+                document.getElementById('game').requestFullscreen();
+                button.innerHTML = 'Exit Fullscreen';
+            }
+        });
+    </script>
+
+</body></html>
