@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The first Native API</title>
+</head>
+
+<body>
+
+    <script>
+        const website = prompt("Which website do you want to visit?");
+
+        if (website) {
+            location.href = `https://www.${website}.com`;
+        } else {
+            alert("You didn't enter a website.");
+        }
+        // Another way to ask user if they want to search anything to a specific page..
+
+        // const search = prompt("What do you want to search on Google?");
+
+        // if (search) {
+        //     location.href = `https://www.google.com/search?q=${(search)}`;
+        // } else {
+        //     alert("You didn't enter a search query.");
+        // }
+
+    </script>
+</body>
+
+</html>
