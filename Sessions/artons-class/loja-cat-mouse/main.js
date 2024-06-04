@@ -9,7 +9,7 @@ const bgGame = new Image();
 bgGame.src = 'images/background.png';
 
 let tictimer = 15;
-let timeUp = false;
+// let timeUp = false;
 
 let bgReady = false;
 bgGame.onload = function () {
@@ -60,25 +60,25 @@ mouseImg.onload = function () {
 
 function render() {
     // if (!timeUp) {
-        if (bgReady) { ctx.drawImage(bgGame, 0, 0); }
-        if (catReady) { ctx.drawImage(catImg, catObj.x, catObj.y); }
-        if (mouseReady) { ctx.drawImage(mouseImg, mouseObj.x, mouseObj.y); }
-        if (catObj.x > 500) { catObj.x = -100; }
-        if (catObj.x < -110) { catObj.x = 500; }
-        if (catObj.y > 500) { catObj.y = -120; }
-        if (catObj.y < 40) { catObj.y = 41; }
+    if (bgReady) { ctx.drawImage(bgGame, 0, 0); }
+    if (catReady) { ctx.drawImage(catImg, catObj.x, catObj.y); }
+    if (mouseReady) { ctx.drawImage(mouseImg, mouseObj.x, mouseObj.y); }
+    if (catObj.x > 500) { catObj.x = -100; }
+    if (catObj.x < -110) { catObj.x = 500; }
+    if (catObj.y > 500) { catObj.y = -120; }
+    if (catObj.y < 40) { catObj.y = 41; }
 
-        ctx.font = "20px Georgia";
-        ctx.fillStyle = "White";
-        ctx.fillText("Points: 0", 10, 25);
+    ctx.font = "20px Georgia";
+    ctx.fillStyle = "White";
+    ctx.fillText("Points: 0", 10, 25);
 
-        ctx.fillText("Timer: " + tictimer, 400, 25);
+    ctx.fillText("Timer: " + tictimer, 400, 25);
 
-        if (tictimer === 0) {
-            timeUp = true;
-            clearInterval(timerInterval);
-            // console.log("Time's up!");
-        }
+    if (tictimer == 0) {
+        timeUp = true;
+        clearInterval(timerInterval);
+        // console.log("Time's up!");
+    }
     // } else {
     //     ctx.clearRect(0, 0, canvas.width, canvas.height);
     //     ctx.font = "30px Georgia";
@@ -88,7 +88,7 @@ function render() {
 }
 
 function countdownTimer() {
-    tictimer--; 
+    tictimer--;
 }
 
 addEventListener("keydown", function (e) {
