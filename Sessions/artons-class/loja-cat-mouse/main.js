@@ -9,7 +9,7 @@ const bgGame = new Image();
 bgGame.src = 'images/background.png';
 
 let tictimer = 15;
-// let timeUp = false;
+let points = 0;
 
 let bgReady = false;
 bgGame.onload = function () {
@@ -19,6 +19,8 @@ bgGame.onload = function () {
 let catObj = {};
 catObj.x = 0;
 catObj.y = 40;
+catObj.width = 110;
+catObj.height = 128;
 catObj.speed = 10;
 
 let catReady = false;
@@ -33,7 +35,7 @@ let mouseObj = {};
 mouseObj.width = 52;
 mouseObj.height = 54;
 mouseObj.x = Math.floor(Math.random() * 460);
-mouseObj.y = Math.floor(Math.random() * 426);
+mouseObj.y = Math.floor(Math.random() * 396);
 
 let mouseReady = false;
 const mouseImg = new Image();
@@ -42,55 +44,62 @@ mouseImg.onload = function () {
     mouseReady = true;
 }
 
-// mouseImg.onload = function () {
-//     if (mouseObj.x < 0) {
-//         ctx.drawImage(mouseImg, 0, mouseObj.y);
-//     }
-//     else {
-//         ctx.drawImage(mouseImg, mouseObj.x, mouseObj.y);
-//     }
-//     if (mouseObj.y < 0) {
-//         ctx.drawImage(mouseImg, mouseObj.x, 0);
-//     }
-//     else {
-//         ctx.drawImage(mouseImg, mouseObj.x, mouseObj.y);
-//     }
-// }
-
 
 function render() {
-    // if (!timeUp) {
+
     if (bgReady) { ctx.drawImage(bgGame, 0, 0); }
     if (catReady) { ctx.drawImage(catImg, catObj.x, catObj.y); }
     if (mouseReady) { ctx.drawImage(mouseImg, mouseObj.x, mouseObj.y); }
+
     if (catObj.x > 500) { catObj.x = -100; }
     if (catObj.x < -110) { catObj.x = 500; }
     if (catObj.y > 500) { catObj.y = -120; }
     if (catObj.y < 40) { catObj.y = 41; }
 
-    ctx.font = "20px Georgia";
-    ctx.fillStyle = "White";
-    ctx.fillText("Points: 0", 10, 25);
+    if ((catObj.x + catObj.width) > mouseObj.x &&
+        (catObj.y + catObj.height) > mouseObj.y &&
+        (catObj.x + 5) < (mouseObj.x + mouseObj.width) &&
+        (catObj.y) < (mouseObj.y + mouseObj.height)) {
+        mousePos();
+        if (tictimer != 0) { points++; }
 
-    ctx.fillText("Timer: " + tictimer, 400, 25);
+    }
 
     if (tictimer == 0) {
-        timeUp = true;
-        clearInterval(timerInterval);
-        // console.log("Time's up!");
+        mouseObj.x = 3000;
+
+        if (points > 3) {
+            ctx.fillStyle = "white";
+            ctx.font = "30px Georgia";
+            ctx.fillText("You WON ", 200, 220);
+        }
+        else {
+            ctx.font = "30px Georgia";
+            ctx.fillStyle = "Red";
+            ctx.fillText("You LOSE ", 200, 220);
+        }
     }
-    // } else {
-    //     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    //     ctx.font = "30px Georgia";
-    //     ctx.fillStyle = "red";
-    //     ctx.fillText("Time's up!", 200, 200);
-    // }
+
+    ctx.font = "20px Georgia";
+    ctx.fillStyle = "White";
+    ctx.fillText("Points: " + points, 10, 25);
+    ctx.fillText("Timer: " + tictimer, 400, 25);
+
 }
 
 function countdownTimer() {
-    tictimer--;
-}
+    if (tictimer == 0) {
+        timeUp = true;
+        clearInterval(timerInterval);
 
+    }
+    else { tictimer--; }
+}
+function mousePos() {
+    mouseObj.x = Math.floor(Math.random() * 460);
+    mouseObj.y = Math.floor(Math.random() * 396);
+
+}
 addEventListener("keydown", function (e) {
     if (e.key == 'ArrowRight') { catObj.x += catObj.speed; }
     if (e.key == 'ArrowLeft') { catObj.x -= catObj.speed; }
@@ -100,5 +109,4 @@ addEventListener("keydown", function (e) {
 
 
 setInterval(render, 1);
-
 const timerInterval = setInterval(countdownTimer, 1000);
