@@ -1,0 +1,45 @@
+body {
+    height: 100vh;
+    padding: 0 50px;
+}
+
+header {
+    margin-bottom: 100px;
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    font-size: 2rem;
+}
+
+button {
+    font-size: 2rem;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+nav ul li a:focus {
+    text-decoration: underline;
+}
+
+.summerLink.active {
+    text-decoration: underline;
+}
+
+section img {
+    width: 600px;
+    height: 400px;
+}
+
+main section {
+    text-align: center;
+    padding: 30px;
+}

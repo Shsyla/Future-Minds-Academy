@@ -59,6 +59,10 @@
     background-color: rgb(255, 255, 255);
 }
 
+.font-0-9rem {
+    font-size: 0.9rem;
+}
+
 .font-1rem {
     font-size: 1rem;
 }
@@ -222,18 +226,7 @@ main {
 .golf-wallpaper {
     width: 100%;
     left: -120px;
-    /* animation: move 3s linear; */
 }
-
-/* @keyframes move {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-} */
 
 .button-wallpaper {
     padding: 10px 25px;
@@ -558,7 +551,8 @@ canvas {
     border-radius: 0%;
 }
 
-.products-link {
+.products-link,
+.newsletterLink {
     padding: 0%;
     margin: 0%;
     border-radius: 0%;
@@ -575,6 +569,11 @@ canvas {
     background-color: rgb(242, 241, 241);
 }
 
+.testimonials-container {
+    height: 300px;
+    overflow-y: auto;
+}
+
 .testimonials-img {
     width: 40px;
     height: 40px;
@@ -582,6 +581,71 @@ canvas {
     margin-left: 20px;
 }
 
-.testimonials {
+.testimonials-paragraph {
     padding: 0px 60px 30px 60px;
+}
+
+.testimonials-button {
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.672);
+    padding: 5px 10px;
+    color: rgba(0, 0, 0, 0.672);
+    ;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.184);
+}
+
+.testimonials-button:hover {
+    background-color: rgba(0, 0, 0, 0.805);
+    color: white;
+}
+
+/* Footer Container */
+.footer-container {
+    margin: 0px -35px;
+    padding: 30px 0px 0px 0px;
+    background-image: url('../img/golf-wallpaper8.jpeg');
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.809);
+    background-blend-mode: color;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.719);
+}
+
+.aboutUs {
+    width: 250px;
+}
+
+.latestNews {
+    width: 350px;
+}
+
+.latestNews img {
+    width: 120px;
+    height: 70px;
+}
+
+.newsletter input {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.718);
+}
+
+.newsletter button {
+    margin-top: 10px;
+    padding: 8px 58px;
+    background-color: rgb(69, 196, 69);
+    border-radius: 0%;
+}
+
+.newsletterIcons img {
+    width: 25px;
+    height: 25px;
+}
+
+.newsletterFootnote {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: black;
 }

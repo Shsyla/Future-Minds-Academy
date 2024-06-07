@@ -122,3 +122,42 @@ var observer = new IntersectionObserver(function (entries, observer) {
 var statisticsSection = document.getElementById('statistics');
 observer.observe(statisticsSection);
 
+
+
+// Testimonials Section
+const testimonials = document.querySelectorAll('.testimonials-container > div');
+
+let currentTestimonialIndex = 0;
+
+function showTestimonial(index) {
+    // Hide all testimonials
+    testimonials.forEach(testimonial => {
+        testimonial.classList.add('d-none');
+    });
+
+    // Show the testimonial at the specified index
+    testimonials[index].classList.remove('d-none');
+}
+
+// Initial display (only the first testimonial is active)
+showTestimonial(currentTestimonialIndex);
+
+document.getElementById('nextBtn').addEventListener('click', function () {
+    // If there's another testimonial to show
+    if (currentTestimonialIndex < testimonials.length - 1) {
+        currentTestimonialIndex++;
+    } else {
+        currentTestimonialIndex = 0; // Start from the first testimonial again
+    }
+    showTestimonial(currentTestimonialIndex);
+});
+
+document.getElementById('prevBtn').addEventListener('click', function () {
+    // If there's a previous testimonial to show
+    if (currentTestimonialIndex > 0) {
+        currentTestimonialIndex--;
+    } else {
+        currentTestimonialIndex = testimonials.length - 1; // Show the last testimonial
+    }
+    showTestimonial(currentTestimonialIndex);
+});

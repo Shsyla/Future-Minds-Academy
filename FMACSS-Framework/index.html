@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="container-fluid p-4 gap-2">
+<body class="container-fluid p-4">
     <header>
         <nav class="flex just-between align-center">
             <div>
@@ -644,28 +644,136 @@
                     </figure>
                     <hr class="logo-line">
                 </div>
-                <div class="testimonials">
-                    <p class="roboto-italic font-lightBlack font-1-4rem p-2">As a long-time member of Golf Club, I can
-                        confidently say that it offers everything a
-                        golfer could want. The challenging yet beautiful course, the friendly atmosphere, and the
-                        variety of events and tournaments make it a standout club in the area. I wouldn't golf anywhere
-                        else!</p>
+                <div class="testimonials-container flex gap-1">
+                    <div class="firstTestimonial">
+                        <div class="testimonials-paragraph">
+                            <p class="roboto-italic font-lightBlack font-1-4rem p-2">As a long-time member of Golf Club,
+                                I
+                                can confidently say that it offers everything a golfer could want. The challenging yet
+                                beautiful course, the friendly atmosphere, and the variety of events and tournaments
+                                make it
+                                a standout club in the area. I wouldn't golf anywhere else!</p>
+                        </div>
+                        <div>
+                            <figure>
+                                <img class="testimonials-img" src="assets/icons/speak-svgrepo-com.svg" alt="speak">
+                            </figure>
+                        </div>
+                        <div class="p-0">
+                            <p class="roboto-regular font-1-2rem">Sarah M.</p>
+                            <p class="roboto-italic font-lightBlack">Player</p>
+                        </div>
+                    </div>
+                    <div class="secondTestimonial d-none">
+                        <div class="testimonials-paragraph">
+                            <p class="roboto-italic font-lightBlack font-1-4rem p-2">As a beginner, I was initially
+                                intimidated by the idea of joining a golf club. However, the team at Golf Club
+                                made me feel right at home from day one. The instructors are patient and supportive, and
+                                I've seen tremendous progress in my game thanks to their guidance.!</p>
+                        </div>
+                        <div>
+                            <figure>
+                                <img class="testimonials-img" src="assets/icons/speak-svgrepo-com.svg" alt="speak">
+                            </figure>
+                        </div>
+                        <div class="p-0">
+                            <p class="roboto-regular font-1-2rem">David R.</p>
+                            <p class="roboto-italic font-lightBlack">Player</p>
+                        </div>
+                    </div>
+                    <div class="thirdTestimonial d-none">
+                        <div class="testimonials-paragraph">
+                            <p class="roboto-italic font-lightBlack font-1-4rem p-2">Being a member of this golf club
+                                has been an absolute delight. From the stunning course layout to the welcoming staff,
+                                every visit feels like a retreat. It's not just a golf club; it's a community where
+                                friendships are forged over shared love for the game.</p>
+                        </div>
+                        <div>
+                            <figure>
+                                <img class="testimonials-img" src="assets/icons/speak-svgrepo-com.svg" alt="speak">
+                            </figure>
+                        </div>
+                        <div class="p-0">
+                            <p class="roboto-regular font-1-2rem">John D.</p>
+                            <p class="roboto-italic font-lightBlack">Player</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <figure>
-                        <img class="testimonials-img" src="assets/icons/speak-svgrepo-com.svg" alt="speak">
-                    </figure>
+
+                <div class="flex text-center just-center align-center gap-2">
+                    <div><button id="prevBtn" class="testimonials-button p- font-1-2rem">&lt;</button></div>
+                    <div><button id="nextBtn" class="testimonials-button p- font-1-2rem">&gt;</button></div>
                 </div>
-                <div class="p-0">
-                    <p class="roboto-regular font-1-2rem">Sarah M.</p>
-                    <p class="roboto-italic font-lightBlack">Player</p>
-                </div>
-            </div>
         </section>
 
     </main>
-    <footer>
-        <h1>footer</h1>
+    <footer class="footer-container">
+        <div class="flex just-center roboto-light">
+            <div class="aboutUs p-1">
+                <p class="font-1-2rem p-0">ABOUT US</p>
+                <p class="p-0 font-0-9rem">Thank you for visiting golfclub.com Our mission is to provide unrivalled and
+                    unbiased informative
+                    and resources to help any sports fan who enjoys a flutter make informed and value led decisions.</p>
+                <p class="p-0 font-0-9rem">Our mission is to provide unrivalled and unbiased informative, resources to
+                    help any sports fan who
+                    enjoys a flutter make.</p>
+            </div>
+            <div class="latestNews p-1">
+                <p class="font-1-2rem p-0">Latest News</p>
+                <div class="flex gap-2 p-0">
+                    <img src="assets/img/tiger-woods.jpeg" alt="tiger-woods">
+                    <p class="font-0-9rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="flex gap-2 p-0">
+                    <img src="assets/img/golf-gallery2.jpeg" alt="golf-gallery">
+                    <p class="font-0-9rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="flex gap-2 p-0">
+                    <img src="assets/img/golf-gallery6.jpeg" alt="golf-gallery">
+                    <p class="font-0-9rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="contactUs p-1">
+                <p class="font-1-2rem p-0">Contact Us</p>
+                <p class="p-0">Address <br>
+                    8500 Lorem Street, Chicago, IL, 55030</p>
+                <p class="p-0">Call Us <br>
+                    (123) 456-78-90</p>
+                <p class="p-0">Email <br>
+                    golf@yoursite.com</p>
+            </div>
+            <div class="newsletter p-1">
+                <p class="font-1-2rem p-0">NEWSLETTERS</p>
+                <form action="#">
+                    <div class="p-0 font-0-9rem">
+                        <label for="name">Name:</label> <br>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="p-0 font-0-9rem">
+                        <label for="Email">Email:</label> <br>
+                        <input type="text" id="Email" placeholder="johndoe@domain.com" required>
+                    </div>
+                    <div class="p-0">
+                        <button class="font-white">SUBMIT</button>
+                    </div>
+                </form>
+                <div class="newsletterIcons flex align-center gap-1 p-0">
+                    <a class="newsletterLink" href="https://www.facebook.com/"><img
+                            src="assets/icons/facebook-svgrepo-com (1).svg" alt="facebook"></a>
+                    <a class="newsletterLink" href="https://www.instagram.com/"><img
+                            src="assets/icons/instagram-svgrepo-com (1).svg" alt="instagram"></a>
+                    <a class="newsletterLink" href="https://digg.com/"><img
+                            src="assets/icons/digg-round-svgrepo-com (1).svg" alt="digg-round"></a>
+                    <a class="newsletterLink" href="https://twitter.com/"><img
+                            src="assets/icons/twitter-svgrepo-com (1).svg" alt="twitter"></a>
+                    <a class="newsletterLink" href="https://pinterest.com/"><img
+                            src="assets/icons/pinterest-180-svgrepo-com (2).svg" alt="pinterest"></a>
+                </div>
+            </div>
+        </div>
+        <div class="newsletterFootnote font-white text-center font-0-9rem">
+            <p>&#169; <span class="roboto-italic "> www.golfclub.com. All rights reserved</span> 2024</p>
+        </div>
     </footer>
 
 
