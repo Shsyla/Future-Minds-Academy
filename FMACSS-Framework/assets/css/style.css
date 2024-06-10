@@ -636,7 +636,7 @@ canvas {
 
 .latestNews a {
     color: rgba(255, 255, 255, 0.719);
-    padding: 0px 0px 0px 5px;
+    padding: 10px 0px 0px 15px;
     margin: 0%;
 }
 
@@ -667,7 +667,9 @@ canvas {
     width: 25px;
     height: 25px;
 }
-
+.newsletterIcons{
+    margin-top: 20px;
+}
 .newsletterFootnote {
     margin-top: 30px;
     padding: 20px;
