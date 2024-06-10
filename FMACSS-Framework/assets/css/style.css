@@ -1,3 +1,12 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 0rem 2rem;
+}
+
 /* Roboto-CSS Font */
 .roboto-light {
     font-family: "Roboto", sans-serif;
@@ -132,7 +141,6 @@
 
 /* Header Container */
 header {
-    margin-top: -35px;
     border-top: 20px solid black;
     padding: 5px 50px 0px 50px;
 }
@@ -249,7 +257,7 @@ main {
 /* Welcome Section */
 .welcome-section {
     padding: 80px 0px;
-    margin: 0px 0px 0px 300px;
+    margin-left: 300px;
 }
 
 .welcome-container {
@@ -398,8 +406,8 @@ main {
 }
 
 /* Statistics Section */
-.statistics-section {
-    height: 50vh;
+.statistics-container {
+    height: 70vh;
 }
 
 canvas {
@@ -484,6 +492,11 @@ canvas {
 }
 
 /* Golf Brands */
+.golf-brands {
+    margin: 0px -35px;
+    padding: 20px 30px;
+}
+
 .golf-brands img {
     width: 150px;
     height: 60px;
@@ -516,6 +529,7 @@ canvas {
     top: 0;
     background-color: rgba(0, 0, 0, 0.809);
     background-blend-mode: color;
+    border-bottom: 3px solid greenyellow;
 }
 
 @keyframes up {
@@ -620,6 +634,16 @@ canvas {
     width: 350px;
 }
 
+.latestNews a {
+    color: rgba(255, 255, 255, 0.719);
+    padding: 0px 0px 0px 5px;
+    margin: 0%;
+}
+
+.latestNews a:hover {
+    color: #cae8a2;
+}
+
 .latestNews img {
     width: 120px;
     height: 70px;
@@ -648,4 +672,158 @@ canvas {
     margin-top: 30px;
     padding: 20px;
     background-color: black;
+}
+
+@media only screen and (max-width: 1080px) {
+    body {
+        padding: 0%;
+    }
+.margin-0 {
+    margin: 0%;
+}
+    .wd-mrg {
+        width: 100%;
+        margin: 0%;
+    }
+
+    .join-section {
+        padding: 50px 0px;
+    }
+
+    .join-icons {
+        font-size: smaller;
+        padding: 40px 10px;
+    }
+
+    .welcome-section {
+        margin-left: 250px;
+    }
+
+    .welcome-section img {
+        width: 60%;
+    }
+
+    .welcome-container {
+        width: 50%;
+        height: 90%;
+        bottom: 20px;
+    }
+
+    .welcome-container p {
+        font-size: 1rem;
+    }
+
+    .match-container {
+        border-right: none;
+    }
+
+    .match-section {
+        grid-template-columns: auto;
+    }
+
+    .next-matches {
+        width: 70%;
+    }
+
+    .list-matches a {
+        padding: 0%;
+    }
+
+    .gallery-imgs {
+        width: 230px;
+        height: 300px;
+    }
+
+    .gallery-img {
+        width: 400px;
+        height: 300px;
+    }
+
+    .gallery-images {
+        padding: 20px 0px 100px 0px;
+    }
+
+    .gallery p {
+        font-size: 1.3rem;
+    }
+
+    .videos-section {
+        height: 125vh;
+        margin-bottom: 100px;
+    }
+
+    .videos-section div {
+        padding: 5px;
+    }
+
+    .video-width {
+        width: 180px;
+        height: 150px;
+    }
+
+    .video-paragraph {
+        font-size: smaller;
+    }
+
+    .video-link {
+        padding: 0%;
+        top: 5px;
+    }
+
+    .video-link img {
+        width: 20%;
+        height: 20%;
+        top: 60px;
+        left: 80px;
+    }
+
+    canvas {
+        width: 150px;
+        height: 150px;
+    }
+
+    .membership-section {
+        height: 115vh;
+    }
+
+    .membership-cards div {
+        width: 27%;
+        height: 370px;
+    }
+
+    .membership-card-1,
+    .membership-card-2,
+    .membership-card-3 {
+        font-size: small;
+        padding: 1rem;
+    }
+
+    .membership-button {
+        padding: 10px 30px;
+    }
+
+    .golf-brands img {
+        width: 100px;
+        height: 50px;
+    }
+
+    .product-width {
+        width: 200px;
+        height: 200px;
+    }
+
+    .products-hvLink img {
+        width: 15%;
+        height: 15%;
+        top: 90px;
+        left: 90px;
+    }
+
+    .products-button {
+        padding: 10px 85px;
+    }
+
+    .latestNews a {
+        padding: 5px;
+    }
 }
