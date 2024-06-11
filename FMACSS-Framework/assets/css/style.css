@@ -216,7 +216,7 @@ a {
 
 /* Main Container */
 main {
-    background-image: url('../img/bgGreen.png');
+    background-image: url('../img/golf4.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -667,9 +667,11 @@ canvas {
     width: 25px;
     height: 25px;
 }
-.newsletterIcons{
+
+.newsletterIcons {
     margin-top: 20px;
 }
+
 .newsletterFootnote {
     margin-top: 30px;
     padding: 20px;
@@ -680,9 +682,11 @@ canvas {
     body {
         padding: 0%;
     }
-.margin-0 {
-    margin: 0%;
-}
+
+    .margin-0 {
+        margin: 0%;
+    }
+
     .wd-mrg {
         width: 100%;
         margin: 0%;
@@ -724,7 +728,7 @@ canvas {
     }
 
     .next-matches {
-        width: 70%;
+        width: 60%;
     }
 
     .list-matches a {
