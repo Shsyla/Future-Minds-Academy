@@ -444,6 +444,7 @@ canvas {
     animation: moveRight 2s ease;
 }
 
+/* Responsive FOR TABLET */
 @keyframes moveLeft {
     from {
         left: -100px;
