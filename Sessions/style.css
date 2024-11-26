@@ -1,5 +1,6 @@
 .flex-container {
     display: flex;
+    text-align: center;
     flex-wrap: nowrap;
     background-color: DodgerBlue;
   }
