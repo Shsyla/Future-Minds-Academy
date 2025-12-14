@@ -1,0 +1,37 @@
+main {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+
+}
+
+.span-1 {
+    font-size: 200px;
+    text-decoration: underline rgb(250, 110, 10);
+
+}
+
+.span-2 {
+    font-size: 50px;
+
+}
+
+.span-3 {
+    font-size: 30px;
+}
+
+.span-4 {
+    font-size: 200px;
+    float: left;
+    text-decoration: underline rgb(250, 110, 10);
+    margin-top: -30px;
+
+}
+
+.span-5 {
+    font-size: 50px;
+
+}
+
+.span-6 {
+    font-size: 30px;
+}

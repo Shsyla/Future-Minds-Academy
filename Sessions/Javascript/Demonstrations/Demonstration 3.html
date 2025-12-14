@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- saved from url=(0763)https://d1u15l5g0hmigd.cloudfront.net/486894/Front_End_Developer_12_Months_/images/demonstration-3.html?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2QxdTE1bDVnMGhtaWdkLmNsb3VkZnJvbnQubmV0XC80ODY4OTRcL0Zyb250X0VuZF9EZXZlbG9wZXJfMTJfTW9udGhzX1wvaW1hZ2VzXC9kZW1vbnN0cmF0aW9uLTMuaHRtbCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwNjA5ODY1OX19fV19&Signature=cZ2/J67Oyj1SuNhqGDYOVV73RP0wp2a-13xo16qS-3BS4quqVBBX8gwN2Q/cOMzf5KGRaDLtwleBw1vz3iK7qQyl0NVHacRcqTTvMrR1INV2GB8rX4FCfY4YCeiPKdLv0IoArXTOTjX/XSEhRFN5tp9ZCXX18fbP9boil1RmM-hWeYeo1iH7J87Uy2w2PNd9jWLg0pyJ3wOxAxzr4DrT6RlJsKb29M/PqcE9RoZCeZM-82HlS3hht1u8CVM8pzlZ1O61cdg4umpkPcFMhV4eMIKNKbFS2NzT7oOEPgtEO1gndGUFpFhjtqnqKVhdAJeps-1LzR0/5tkJM2G0/kfvbw__&Key-Pair-Id=APKAIEEGBMFR4A6B5VLQ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            gap: 2rem;
+        }
+
+        li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Add new User</button>
+    <ol id="list"></ol>
+
+    <script>
+        let button = document.getElementById('btn');
+        let list = document.getElementById('list');
+        const urlCreator = window.URL || window.webkitURL;
+
+        button.addEventListener('click', async () => {
+            let firstName = prompt('First Name?');
+            let lastName = prompt('Last Name?');
+            
+            let data;
+            const response = await fetch(`https://ui-avatars.com/api/?background=random&name=${firstName}+${lastName}`);
+            const responseBlob = await response.blob();
+
+            let imgElement = document.createElement('img');
+            imgElement.src = urlCreator.createObjectURL(responseBlob);
+            
+            let newElement = document.createElement('li');
+            newElement.innerHTML = `${firstName} ${lastName}:`;
+            newElement.appendChild(imgElement);
+            
+            list.appendChild(newElement);
+        });
+
+    </script>
+
+</body></html>

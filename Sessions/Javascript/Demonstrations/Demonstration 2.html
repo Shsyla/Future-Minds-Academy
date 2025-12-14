@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0763)https://d1u15l5g0hmigd.cloudfront.net/486894/Front_End_Developer_12_Months_/images/demonstration-2.html?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2QxdTE1bDVnMGhtaWdkLmNsb3VkZnJvbnQubmV0XC80ODY4OTRcL0Zyb250X0VuZF9EZXZlbG9wZXJfMTJfTW9udGhzX1wvaW1hZ2VzXC9kZW1vbnN0cmF0aW9uLTIuaHRtbCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwNjA5ODY3N319fV19&Signature=gP-f9f9IEsXIjG0zQrCg8mpe7hAQPOtHXVW4qTRe-G6exD1v7dgcu91E5Gei29CwsbZwSRfSJXeJyctsePD0zfFyRtwwAMVbTGJe8XEDQA6nPr4DvStcw1FMLUsxMdlUSylvt5mdbNpRo47Eo963sXJnOwVLPfafJ29vbiomD6s9XoLSMn5O2-HBELXqrrNkBvpaA8ROqTOXimRXVba4iYilD6x3oJpgeNr4akI1r8VuhzxRTOkMOk/t7uAmSDIE5nPfNAl1BAguF11eHpE5UZh/CWiiUdGkDA1yxVbz/u5wGrmgJ/p0y/abGwJAoBTzIXfujwc-vZSdbDxd0TiXyg__&Key-Pair-Id=APKAIEEGBMFR4A6B5VLQ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            background-color: white;
+            border: 2px solid steelblue;
+            border-radius: 7px;
+            font-size: 1.5rem;
+        }
+
+        #btn:active{
+            background-color: rgb(172, 172, 172);
+        }
+
+
+    </style>
+</head>
+<body>
+    <button id="btn">Click me!</button>
+    <ol id="list"></ol>
+    
+    <script>
+        let button = document.getElementById('btn');
+        let list = document.getElementById('list');
+
+        button.addEventListener('dblclick', () => {
+            let newElement = document.createElement('li');
+            newElement.innerHTML = 'I was added';
+            list.appendChild(newElement);
+        });
+
+    </script>
+
+</body></html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="logo">
+        LOGO
+    </div>
+    <nav>
+        <ul>
+            <li onclick="loadSeason(0)">Spring</li>
+            <li onclick="loadSeason(1)">Summer</li>
+            <li onclick="loadSeason(2)">Autumn</li>
+            <li onclick="loadSeason(3)">Winter</li>
+        </ul>
+    </nav>
+    <main>
+        <h2 id="title">Spring</h2>
+        <div id="photo">
+            <img src="img/spring.png" alt="">
+        </div>
+       <h3 id="discription">Spring in Kosovo</h3>
+    </main>
+
+    <script>
+        let data = [
+            {
+                title: "Spring",
+                hero: "spring.png",
+                des: "Spring in Kosovo"
+            },
+            {
+                title: "Summer",
+                hero: "summer.png",
+                 des: "Summer in Florida"
+            },
+            {
+                title: "Autumn",
+                hero: "autumn.png",
+                des: "Autumn in Albania"
+            },
+            {
+                title: "Winter",
+                hero: "winter.png",
+                des: "Winter in Finland"
+            }
+        ]
+        const title = document.querySelector('#title');
+        const photo = document.querySelector('#photo');
+        const discription = document.querySelector('#discription'); 
+
+        function loadSeason(s) {
+            title.textContent = data[s].title;
+            photo.innerHTML = `<img src="img/${data[s].hero}" alt="">`;
+            discription.textContent = data[s].des; 
+        }
+
+    </script>
+</body>
+
+</html>
+
+
+<!-- FOR LOOP
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="logo">
+        LOGO
+    </div>
+    <nav>
+        <ul id="navList">
+            <li>Spring</li>
+            <li>Summer</li>
+            <li>Autumn</li>
+            <li>Winter</li>
+        </ul>
+    </nav>
+    <main>
+        <h2 id="title">Spring</h2>
+        <div id="photo">
+            <img src="img/spring.png" alt="">
+        </div>
+        <h3 id="discription">Spring in Kosovo</h3>
+    </main>
+
+    <script>
+        let data = [
+            { title: "Spring", hero: "spring.png", des: "Spring in Kosovo" },
+            { title: "Summer", hero: "summer.png", des: "Summer in Florida" },
+            { title: "Autumn", hero: "autumn.png", des: "Autumn in Albania" },
+            { title: "Winter", hero: "winter.png", des: "Winter in Finland" }
+        ];
+
+        const title = document.querySelector('#title');
+        const photo = document.querySelector('#photo');
+        const discription = document.querySelector('#discription');
+        const navItems = document.querySelectorAll('nav ul li'); // Selects all <li> elements
+
+        function loadSeason(s) {
+            title.textContent = data[s].title;
+            photo.innerHTML = `<img src="img/${data[s].hero}" alt="">`;
+            discription.textContent = data[s].des;
+        }
+
+        // Using a for loop to add event listeners to each <li>
+        for (let i = 0; i < navItems.length; i++) {
+            navItems[i].addEventListener('click', function () {
+                loadSeason(i); // Calls the function with the correct index
+            });
+        }
+    </script>
+</body>
+
+</html>--> 
+ 

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create from CRUD</title>
+</head>
+
+<body>
+    <table border="1" cellpadding="5" width="70%">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Payment</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="liststudents">
+            <tr>
+                <td>Ridvan</td>
+                <td>Aliu</td>
+                <td>ridvan@eduongo.com</td>
+                <td>€0</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h1>Add Student</h1>
+    <form action="#">
+        <table>
+            <tr>
+                <td><label for="firstName">First Name:</label></td>
+                <td><input type="text" id="firstName"></td>
+            </tr>
+            <tr>
+                <td><label for="lastName">Last Name:</label></td>
+                <td><input type="text" id="lastName"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="payment">Payment:</label></td>
+                <td><input type="number" id="payment"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button id="addBTN">Add +</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script src="data.js"></script>
+    <script>
+        const liststudents = document.querySelector('#liststudents');
+        const addBTN       = document.querySelector('#addBTN');
+        const firstName    = document.querySelector('#firstName');
+        const lastName     = document.querySelector('#lastName');
+        const email        = document.querySelector('#email');
+        const payment      = document.querySelector('#payment');
+
+        let editMode = false;
+        let currentStudent = null;
+
+        generateList();
+        function generateList() {
+            liststudents.innerHTML = '';
+            for (let i = 0; i < students.length; i++) {
+                liststudents.innerHTML += `
+                <tr>
+                    <td>${students[i].first_name}</td>
+                    <td>${students[i].last_name}</td>
+                    <td>${students[i].email}</td>
+                    <td>${students[i].payment}</td>
+                    <td>
+                        <button onclick="editItem(this, ${i})">Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            `;
+            }
+        }
+
+        addBTN.addEventListener('click', ()=>{
+            if( firstName.value != '' && 
+                lastName.value != '' && 
+                email.value != '' &&
+                payment.value != ''
+            ){
+                let newStudent = {
+                    first_name: firstName.value,
+                    last_name: lastName.value,
+                    email: email.value,
+                    payment: payment.value
+                }
+                students.push(newStudent);
+                generateList();
+            }
+            
+        });
+
+        function editItem(scope, index){
+            currentStudent = index;
+            let tr = scope.parentElement.parentElement;
+            let input = tr.children;
+            if(!editMode){
+                tr.children[0].innerHTML = `<input type="text" value="${tr.children[0].textContent}" />`;
+                tr.children[1].innerHTML = `<input type="text" value="${tr.children[1].textContent}" />`;
+                tr.children[2].innerHTML = `<input type="email" value="${tr.children[2].textContent}" />`;
+                tr.children[3].innerHTML = `<input type="number" value="${tr.children[3].textContent}" />`;
+                scope.textContent = "Save";
+                editMode = true;
+            }
+            else {
+                students[currentStudent].first_name = input[0].children[0].value;
+                students[currentStudent].last_name = input[1].children[0].value;
+                students[currentStudent].email = input[2].children[0].value;
+                students[currentStudent].payment = input[3].children[0].value;
+                editMode = false;
+                generateList();
+            }
+        }
+
+    </script>
+</body>
+
+</html>

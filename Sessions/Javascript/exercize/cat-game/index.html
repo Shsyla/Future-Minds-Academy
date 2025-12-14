@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse & Cat</title>
+    <style>
+        header {
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        #msg {
+            visibility: hidden;
+        }
+
+        footer {
+            width: 500px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #restart {
+            padding: 10px 20px;
+            font-size: 16pt;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2 id="score">Score: 0</h2>
+        <h2 id="msg">You Win</h2>
+        <h2 id="countTime">Timer: 15</h2>
+    </header>
+
+    <canvas width="500" height="500" id="canvas"></canvas> <br> <br>
+
+    <footer>
+        <div>
+            <button id="restart">Restart Game</button>
+        </div>
+    </footer>
+
+
+    <script>
+        const score = document.querySelector('#score');
+        const countTime = document.querySelector('#countTime');
+        const canvas = document.querySelector('#canvas');
+        canvas.style.backgroundColor = "green";
+        let terrain = canvas.getContext('2d');
+
+        let counter = 15;
+        let countScore = 0
+        let = winScore = 3;
+        let = gameOver = false;
+
+        const msg = document.querySelector('#msg')
+        const restart = document.querySelector('#restart')
+
+        let catObj = {};
+        catObj.x = 200;
+        catObj.y = 200;
+        catObj.status = false;
+        catObj.speed = 5;
+        let cat = new Image();
+        cat.src = 'cat.png';
+        cat.onload = function () {
+            catObj.status = true;
+        }
+
+        let mouseObj = {}
+        mouseObj.x = 300;
+        mouseObj.y = 300;
+        mouseObj.status = false;
+        const mouse = new Image();
+        mouse.src = 'mouse.png';
+        mouse.onload = function () {
+            mouseObj.status = true;
+        }
+
+        renderMouse();
+
+        function renderMouse() {
+            mouseObj.x = Math.random() * 450;
+            mouseObj.y = Math.random() * 450;
+            terrain.clearRect(0, 0, 500, 500);
+        }
+
+        function renderGame() {
+            if (catObj.x > 450) { catObj.x = -100; }
+            if (catObj.x < -100) { catObj.x = 440; }
+            if (catObj.y < -80) { catObj.y = 480; }
+            if (catObj.y > 490) { catObj.y = -70; }
+
+            if (catObj.status) { terrain.drawImage(cat, catObj.x, catObj.y); }
+            if (mouseObj.status) { terrain.drawImage(mouse, mouseObj.x, mouseObj.y) };
+
+
+        }
+
+        addEventListener('keydown', (e) => {
+            if (!gameOver) {
+                if (e.key == 'ArrowRight') {
+                    catObj.x += catObj.speed;
+                }
+                if (e.key == 'ArrowLeft') {
+                    catObj.x -= catObj.speed;
+                }
+                if (e.key == 'ArrowUp') {
+                    catObj.y -= catObj.speed;
+                }
+                if (e.key == 'ArrowDown') {
+                    catObj.y += catObj.speed;
+                }
+            }
+            terrain.clearRect(0, 0, 500, 500);
+
+            if (catObj.x + 110 > mouseObj.x &&
+                catObj.x + 40 < mouseObj.x + 64 &&
+                catObj.y + 126 > mouseObj.y &&
+                catObj.y + 25 < mouseObj.y + 64
+            ) {
+                countScore++;
+                renderMouse();
+                score.textContent = "Score:" + countScore;
+            }
+        });
+
+        let gameRender = setInterval(renderGame, 10);
+
+        let timer = setInterval(() => {
+
+            if (counter != 0) { counter--; } else {
+                // Game Over
+                clearInterval(timer);
+                gameOver = true;
+                if (countScore >= winScore) {
+                    msg.textContent = "You win";
+                    msg.style.color = "green";
+                } else {
+                    msg.textContent = "You Lose";
+                    msg.style.color = "Red";
+                }
+
+                msg.style.visibility = "visible";
+                restart.style.visibility = "visible";
+            }
+            countTime.textContent = "Timer: " + counter;
+        }, 1000);
+
+        restart.addEventListener('click', () => { location.reload(); });
+    </script>
+</body>
+
+</html>

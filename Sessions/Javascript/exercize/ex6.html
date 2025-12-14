@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let tasks = [];  
+
+        function addTask(title) {
+            tasks.push({ title, status: 'Complete' });
+            console.log(`Task "${title}" has to be completed`);
+        }
+
+        function completeTask(title) {
+            let task = tasks.find(t => t.title === title);
+            if (task) {
+                task.status = "Completed";
+                console.log(`Task "${title}" has been completed`);
+            } else {
+                console.log(`Task "${title}" not found (404)`);
+            }
+        }
+
+        function removeTask(title) {
+            tasks = tasks.filter(task => task.title !== title);  
+            console.log(`Task "${title}" has been removed`);
+        }
+
+        function viewTask() {
+            if (tasks.length === 0) {
+                console.log('No tasks available');
+            } else {
+                tasks.forEach(task => console.log(`${task.title} - ${task.status}`));
+            }
+        }
+
+        
+        addTask('coding');
+        addTask('drink');
+        viewTask();
+        completeTask('coding');
+        viewTask();
+        removeTask('drink');
+        viewTask();
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create from CRUD</title>
+    <style>
+        .outline {
+            border: 2px solid rgb(192, 144, 0);
+        }
+        form {
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" cellpadding="5" width="50%">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Payment</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="liststudents">
+            <tr>
+                <td>Ridvan</td>
+                <td>Aliu</td>
+                <td>ridvan@eduongo.com</td>
+                <td>€0</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h1>Add Student</h1>
+    <form action="#" id="mainForm">
+        <table>
+            <tr>
+                <td><label for="firstName">First Name:</label></td>
+                <td><input type="text" id="firstName"></td>
+            </tr>
+            <tr>
+                <td><label for="lastName">Last Name:</label></td>
+                <td><input type="text" id="lastName"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="payment">Payment:</label></td>
+                <td><input type="number" id="payment"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button id="addBTN">Add +</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script src="data.js"></script>
+    <script>
+        const liststudents = document.querySelector('#liststudents');
+        const addBTN       = document.querySelector('#addBTN');
+        const firstName    = document.querySelector('#firstName');
+        const lastName     = document.querySelector('#lastName');
+        const email        = document.querySelector('#email');
+        const payment      = document.querySelector('#payment');
+        const mainForm = document.querySelector('#mainForm');
+
+        let editMode = false;
+        let currentStudent = null;
+
+        generateList();
+        function generateList() {
+            liststudents.innerHTML = '';
+            for (let i = 0; i < students.length; i++) {
+                liststudents.innerHTML += `
+                <tr>
+                    <td>${students[i].first_name}</td>
+                    <td>${students[i].last_name}</td>
+                    <td>${students[i].email}</td>
+                    <td>€${students[i].payment}</td>
+                    <td>
+                        <button onclick="editStudent(${i})">Edit</button>
+                        <button onclick="removeStudent(${i})">Delete</button>
+                    </td>
+                </tr>
+            `;
+            }
+        }
+
+        addBTN.addEventListener('click', ()=>{
+            if(!editMode){
+               if( firstName.value != '' && 
+                    lastName.value != '' && 
+                    email.value != '' &&
+                    payment.value != ''
+                ){
+                    let newStudent = {
+                        first_name: firstName.value,
+                        last_name: lastName.value,
+                        email: email.value,
+                        payment: payment.value
+                    }
+                    students.push(newStudent);
+                } 
+            }
+            else {
+                students[currentStudent].first_name = firstName.value;
+                students[currentStudent].last_name = lastName.value;
+                students[currentStudent].email = email.value;
+                students[currentStudent].payment = payment.value;
+                editMode = false;
+            }
+            mainForm.classList.remove('outline');
+            generateList();
+            clearForm();
+        });
+
+        function editStudent(index){
+            currentStudent = index;
+            firstName.value = students[index].first_name;
+            lastName.value = students[index].last_name;
+            email.value = students[index].email;
+            payment.value = students[index].payment;
+            editMode = true;
+            addBTN.textContent = "Save";
+            mainForm.classList.add('outline');
+        }
+
+        function clearForm(){
+            firstName.value = '';
+            lastName.value = '';
+            email.value = '';
+            payment.value = '';
+            addBTN.textContent = "Add +";
+        }
+        
+        function removeStudent(index){
+            students.splice(index, 1);
+            generateList();
+        }
+
+    </script>
+</body>
+
+</html>
+
+look eat this code how to make this code to work like this code 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <h2>File Dashboard</h2>
+    <button id="addFileBtn">Add New File</button>
+    <table>
+      <thead>
+        <tr>
+          <th>File Name</th>
+          <th>Format</th>
+          <th>Size</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="fileTableBody"></tbody>
+    </table>
+  </div>
+
+  <div id="fileModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modalTitle">Add File</h3>
+      <form id="fileForm">
+        <input type="text" id="fileName" placeholder="File Name" required>
+        <input type="text" id="fileFormat" placeholder="Format" required>
+        <input type="text" id="fileSize" placeholder="Size" required>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
+
+let files = [
+  { name: 'Report', format: 'PDF', size: '2MB' },
+  { name: 'Data', format: 'CSV', size: '1.2MB' },
+  { name: 'Presentation', format: 'PPT', size: '5MB' },
+  { name: 'Image', format: 'JPG', size: '500KB' },
+  { name: 'Archive', format: 'ZIP', size: '20MB' }
+];
+
+const addFileBtn = document.querySelector("#addFileBtn");
+const fileTableBody = document.querySelector("#fileTableBody");
+const fileModal = document.querySelector("#fileModal");
+const modalTitle = document.querySelector("#modalTitle");
+const fileForm = document.querySelector("#fileForm");
+const fileName = document.querySelector("#fileName");
+const fileFormat = document.querySelector("#fileFormat");
+const fileSize = document.querySelector("#fileSize");
+
+let editMode = false;
+let currentFiles = null;
+
+generateList();
+function generateList() {
+  fileTableBody.innerHTML = '';
+  for (let i = 0; i < files.length; i++) {
+    fileTableBody.innerHTML += `
+        <tr>
+            <td> type="text" id="fileName" ${files[i].name}</td>
+            <td>  type="text" id="format"${files[i].format}</td>
+            <td>  type="text" id="size"${files[i].size}</td>
+            <td>
+                <button onclick="editFiles(${files[i].action})">Edit</button>
+                <button onclick="removeFiles(${files[i].action})">Delete</button>
+            </td>
+        </tr>
+    `;
+  }
+}
+
+addBTN.addEventListener('click', () => {
+  if (!editMode) {
+    if (fileName.value != '' &&
+      format.value != '' &&
+      size.value != '' &&
+      action.value != ''
+    ) {
+      let newFiles = {
+        fileName: fileName.value,
+        format: format.value,
+        size: size.value,
+        action: action.value
+      }
+      files.push(newFiles);
+    }
+  }
+  else {
+    files[currentFiles].name = fileName.value;
+    files[currentFiles].format = fileForm.value;
+    files[currentFiles].size = fileSize.value;
+    files[currentFiles].action = action.value;
+    editMode = false;
+  }
+  generateList();
+  clearForm();
+});
+
+function editFiles(index) {
+  currentFiles = index;
+  fileName.value = files[index].name;
+  fileForm.value = files[index].format;
+  fileSize.value = files[index].size;
+  action.value = files[index].action;
+  editMode = true;
+  addFileBtn.textContent = "Save";
+}
+function clearForm(){
+  fileForm.value = '';
+  fileFormat.value = '';
+  fileSize.value = '';
+  action.value = '';
+  addFileBtn.textContent = "Add +";
+}
+
+function removeFiles(index) {
+  files.splice(index, 1);
+  generateList();
+}  i want my data to work based on that html

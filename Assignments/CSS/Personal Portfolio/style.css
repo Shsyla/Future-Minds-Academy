@@ -1,0 +1,207 @@
+* {
+    cursor: url(images/arrow.png), auto;
+}
+
+body {
+    background-image: url(images/background.webp);
+    background-size: cover;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0px 150px;
+}
+
+hr {
+    border-color: black;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+ul {
+    padding: initial;
+}
+
+.line {
+    display: inline;
+
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav li {
+    background-color: rgb(85, 145, 219);
+    border: 3px solid transparent;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 8px;
+    display: inline;
+    right: 20px;
+}
+
+.article,
+.project-1 {
+    border: 3px;
+    background-color: rgb(244, 197, 240);
+    border: 3px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.my-photo {
+    width: 300px;
+    border-radius: 50%;
+}
+
+.project-images {
+    width: 500px;
+}
+
+.education,
+.project-2,
+.contact_article {
+    border: 3px;
+    background-color: rgb(152, 231, 178);
+    border: 3px solid transparent;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.primary-school,
+.high-school,
+.university {
+    text-align: left;
+    background-color: rgb(152, 231, 178);
+    box-shadow: 0px 0px 20px 20px rgb(77, 204, 141);
+    border-radius: 10px;
+    border: 3px solid transparent;
+    margin: 50px;
+    padding: 20px;
+    list-style-type: none;
+}
+
+.my-skills,
+.project-3,
+.connect_section {
+    border: 3px;
+    background-color: rgb(174, 230, 235);
+    border-radius: 20px;
+    border: 3px solid transparent;
+    padding: 20px;
+    font-size: 18px;
+}
+
+table,
+th,
+td {
+    padding: 10px;
+    margin: auto;
+    border: 2px solid rgb(142, 138, 138);
+    border-collapse: collapse;
+
+}
+
+th {
+    background-color: rgb(100, 144, 239);
+}
+
+td {
+    background-color: rgb(167, 208, 247);
+}
+
+.header {
+    text-align: center;
+}
+
+.my-projects {
+    border: 3px;
+    background-color: rgb(249, 187, 187);
+    border-radius: 20px;
+    border: 3px solid transparent;
+    padding: 15px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.my-projects button {
+    background-color: rgb(225, 143, 37);
+    border: 3px solid transparent;
+    color: white;
+    position: relative;
+    bottom: 10px;
+}
+
+.footer {
+    border: 10px;
+    background-color: rgb(89, 87, 87);
+    padding: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+input {
+    width: 200px;
+    padding: 10px;
+}
+
+textarea {
+    width: 400px;
+    padding: 30px;
+}
+
+.article:hover,
+.project-1:hover {
+    border: 3px solid rgb(156, 62, 148);
+    background-color: rgb(235, 153, 228);
+    border-radius: 20px;
+}
+
+.nav li:hover {
+    background-color: rgb(12, 133, 231);
+}
+
+.education div:hover {
+    border: 2px solid rgb(42, 179, 14);
+    background-color: rgb(116, 247, 86);
+}
+
+.education:hover,
+.project-2:hover,
+.contact_article:hover {
+    border: 3px solid rgb(50, 157, 62);
+    background-color: rgb(126, 255, 121);
+    border-radius: 20px;
+}
+
+.my-skills:hover,
+.project-3:hover,
+.connect_section:hover {
+    border: 3px solid rgb(35, 76, 143);
+    background-color: rgb(146, 177, 225);
+    border-radius: 20px;
+}
+
+.my-projects:hover {
+    border: 3px solid rgb(156, 68, 146);
+    background-color: rgb(223, 121, 211);
+    border-radius: 20px;
+}
+
+.my-projects button:hover {
+    border: 3px solid rgb(211, 113, 48);
+    background-color: rgb(221, 114, 53);
+    cursor: pointer;
+}

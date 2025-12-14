@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    cursor: url(image/arrow.png), auto;
+}
+
+.animation {
+    margin: 50px;
+    position: absolute;
+    background-color: rgb(185, 178, 178);
+}
+
+.animation div {
+    margin: 20px;
+    padding: 10px;
+}
+
+input {
+    width: 500px;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 5px;
+    border-color: gray;
+}
+
+.submit {
+    width: 150px;
+    padding: 15px;
+    position: relative;
+    background-color: rgb(85, 85, 234);
+    color: white;
+    font-size: 2rem;
+}
+
+label {
+    font-size: 20px;
+    color: rgb(97, 95, 95);
+    display: none;
+    animation: slideUp 1s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+img {
+    width: 70px;
+    position: absolute;
+    right: 10px;
+    bottom: 50px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+input:hover {
+    border-radius: 5px;
+    border-color: blue;
+}
+
+
+.Fname:hover label {
+    display: block;
+}
+
+.Lname:hover label {
+    display: block;
+}
+
+.Email:hover label {
+    display: block;
+}

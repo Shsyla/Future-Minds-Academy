@@ -1,0 +1,20 @@
+body {
+    margin: 0%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.bgpink {
+    background-color: rgb(218, 98, 118);
+}
+
+.bggreen {
+    background-color: rgb(76, 227, 76);
+}
+
+.grid_bggreen {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5rem;
+}

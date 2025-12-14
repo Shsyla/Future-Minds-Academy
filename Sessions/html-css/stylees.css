@@ -1,0 +1,24 @@
+.golf-ball {
+    width: 4%;
+    right: 450px;
+    bottom: 300px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+<div>
+                <img class="golf-ball p-absolute" src="assets/img/golf-ball.png" alt="golf-ball">
+            </div>
+
+            background-color: rgba(160, 246, 140, 0.383);
+
+            box-shadow: inset 1px 0px 69px 6px rgb(207, 231, 168);

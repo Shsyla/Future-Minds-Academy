@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+<body>
+    
+    <h2>Multiplication</h2>
+    <table border="1" id="multitable">
+    </table>
+    <script>
+        const multitable = document.querySelector('#multitable');
+        let buildTable = ''
+        for(let row=1; row<=10; row++){
+            if(row == 1){
+                buildTable +='<tr style="background-color: green">';
+                for(let col = 1; col<=10; col++){
+                    if(col == 1){
+                        buildTable +='<td style="background-color: red">' + row * col + '</td>';
+                    }
+                    else {
+                        buildTable +='<td>' + row * col + '</td>';
+                    }
+                }
+                buildTable +='</tr>';
+            }
+            else{
+                buildTable +='<tr>';
+                    for(let col = 1; col<=10; col++){
+                        if(col == 1){
+                            buildTable +='<td style="background-color: yellow">' + row * col + '</td>';
+                        }
+                        else {
+                            buildTable +='<td>' + row * col + '</td>';
+                        }
+                    }
+                buildTable +='</tr>';
+            }
+              
+        }
+        multitable.innerHTML = buildTable;
+    </script>
+</body>
+</html> 

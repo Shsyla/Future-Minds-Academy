@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest of three numbers</title>
+</head>
+
+<body>
+
+
+    <script>
+        let a = parseInt(prompt("Enter the first number:"));
+        let b = parseInt(prompt("Enter the second number:"));
+        let c = parseInt(prompt("Enter the third number:"));
+
+        let largestNumber;
+
+        if (a >= b && a >= c) {
+            largestNumber = a;
+        }
+        else if (b >= a && b >= c) {
+            largestNumber = b;
+        }
+        else if (!(b >= a || b >= c)) {
+            largestNumber = b;
+        }
+        else {
+            largestNumber = c;
+        }
+        
+        console.log("The largest number is: " + largestNumber);
+
+    </script>
+</body>
+
+</html>

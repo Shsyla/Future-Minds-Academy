@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function robot(name, task) {
+            console.log(`Hello ${name}, I will do now`);
+            task();
+        }
+        robot('John', () => console.log('ki mi shuk dritat'));
+
+        let drinks = ["cola", "fanta", "banana"]
+
+        drinks.shift('')
+
+        console.log(drinks)
+
+
+
+        let numbers = [10, 20, 30]
+
+        function sum(array) {
+            return array.reduce((sum, num) => sum + num, 0);
+        }
+
+        console.log(sum(numbers))
+
+
+        let shopingcart = [];
+
+        function addToCart(item) {
+            shopingcart.push(item)
+            console.log(`${item} have been added`)
+
+        }
+
+        function removeToCart(item) {
+            shopingcart = shopingcart.filter(shopingcartItem => shopingcartItem !== item)
+            console.log('your item have been removed')
+        }
+
+
+        function ViewCart() {
+            console.log('yu have selected your items')
+            shopingcart.forEach(item => console.log(item))
+        }
+        addToCart('pije');
+        addToCart('ushqim');
+        removeToCart('pije')
+        ViewCart();
+
+    </script>
+</body>
+
+</html>

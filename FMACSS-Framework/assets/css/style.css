@@ -1,0 +1,836 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 0rem 2rem;
+}
+
+/* Roboto-CSS Font */
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Global */
+.font-white {
+    color: white;
+}
+
+.font-gray {
+    color: rgb(177, 177, 177);
+}
+
+.font-lightBlack {
+    color: black;
+    opacity: 0.5;
+}
+
+.font-green {
+    color: rgb(0, 33, 0);
+}
+
+.font-mGreen {
+    color: green;
+}
+
+.font-lightGreen {
+    color: rgb(152, 222, 152);
+}
+
+.font-black {
+    color: black;
+}
+
+.font-red {
+    color: red;
+}
+
+.bg-green {
+    background-color: rgb(238, 250, 219);
+}
+
+.bg-white {
+    background-color: rgb(255, 255, 255);
+}
+
+.font-0-9rem {
+    font-size: 0.9rem;
+}
+
+.font-1rem {
+    font-size: 1rem;
+}
+
+.font-1-2rem {
+    font-size: 1.2rem;
+}
+
+.font-1-4rem {
+    font-size: 1.4rem;
+}
+
+.font-2rem {
+    font-size: 2rem;
+}
+
+.font-2-5rem {
+    font-size: 2.5rem;
+}
+
+.font-4rem {
+    font-size: 4rem;
+}
+
+.box-shadow {
+    box-shadow: inset -1px 0px 69px -36px rgba(0, 0, 0, 1);
+}
+
+.golf-logo {
+    width: 30%;
+    margin-left: -300px;
+    margin-right: -300px;
+}
+
+.logo-line {
+    width: 30%;
+    border-style: dashed;
+    opacity: 0.5;
+}
+
+.flex {
+    display: flex;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.owerflow-h {
+    overflow: hidden;
+}
+
+.d-none {
+    display: none;
+}
+
+.before::before,
+.after::after {
+    content: "";
+    width: 15%;
+    border-bottom: 1px solid rgb(1, 46, 1);
+}
+
+/* Header Container */
+header {
+    border-top: 15px solid black;
+    padding: 5px 50px 0px 50px;
+}
+
+.golf-club img {
+    width: 20%;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    width: 300px;
+    padding: 25px 20px;
+    top: 34px;
+    left: 0px;
+    z-index: 1;
+}
+
+.dropdown-menu div,
+a {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: rgb(1, 46, 1);
+    border-radius: 10px;
+}
+
+.dropdown-menu div:hover {
+    box-shadow: inset -1px 0px 69px -36px rgba(0, 0, 0, 1);
+}
+
+.dropdown-menu a:hover {
+    color: black;
+    font-weight: bolder;
+}
+
+/* Dropdown Shopping Cart */
+.dropdown-shopping-cart {
+    padding: 30px 10px;
+    width: 300px;
+    top: 34px;
+    right: 0px;
+    z-index: 1;
+}
+
+.cart-img {
+    width: 130px;
+    height: 100px;
+    border: 1px solid rgba(138, 138, 138, 0.309);
+}
+
+.dropdown-button {
+    border: none;
+    background: transparent;
+}
+
+.dropdown-button a:hover {
+    color: red;
+}
+
+.dashed-line {
+    border-style: dashed;
+    opacity: 0.2;
+}
+
+.button-cart {
+    padding: 10px 40px;
+    background-color: rgb(67, 67, 67);
+}
+
+.button-cart:hover {
+    background-color: rgb(36, 36, 36);
+}
+
+/* Main Container */
+main {
+    background-image: url('../img/golf4.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Wallpaper Section */
+.wallpaper-section {
+    height: 90vh;
+    margin-bottom: 100px;
+    padding: 50px;
+    background: url(../img/golf-wallpaper8.jpeg);
+    background-size: cover;
+}
+
+.golf-wallpaper {
+    width: 100%;
+    left: -120px;
+}
+
+.button-wallpaper {
+    padding: 10px 25px;
+    background-color: rgba(0, 33, 0, 0.618);
+}
+
+.button-wallpaper:hover {
+    background-color: rgb(1, 35, 0);
+}
+
+/* Join Section */
+.join-icons img {
+    width: 30%;
+}
+
+.join-icons h4:hover {
+    color: rgb(152, 222, 152);
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 80px 0px;
+    margin-left: 300px;
+}
+
+.welcome-container {
+    width: 50%;
+    height: 80%;
+    border-radius: 0px 100px 0px 100px;
+    background-color: rgb(11, 0, 37);
+    bottom: 50px;
+    left: -170px;
+    transition: transform 0.5s ease;
+}
+
+.welcome-section .welcome-container:hover {
+    transform: scale(1.2);
+}
+
+.welcome-paragraph {
+    text-align: justify;
+}
+
+/* Match Section */
+.match-section {
+    padding: 100px 0px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.match-results:hover {
+    color: rgb(0, 81, 0);
+}
+
+.match-container {
+    border-right: 3px solid black;
+}
+
+.last-match {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.last-match figure {
+    border: 1px solid rgb(172, 172, 172);
+}
+
+.list-matches {
+    list-style-type: none;
+}
+
+.list-matches-link:hover {
+    box-shadow: 0px 20px 10px -15px rgba(69, 125, 76, 0.75);
+}
+
+/* Gallery-Section */
+.gallery-section {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.gallery-img {
+    width: 640px;
+    height: 400px;
+}
+
+.gallery-imgs {
+    width: 320px;
+    height: 450px;
+}
+
+.gallery-item {
+    top: 0;
+    animation: moveT 0.5s ease;
+}
+
+.gallery-paragraph {
+    bottom: 0;
+}
+
+.gallery {
+    transition: transform 0.5s ease;
+}
+
+.gallery:hover .gallery-item {
+    display: block;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #1b3500 100%);
+}
+
+.gallery:hover {
+    transform: translateY(-10px);
+}
+
+@keyframes moveT {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*Videos Section */
+.videos-section {
+    margin: 100px -35px;
+    padding: 70px 50px;
+    height: 140vh;
+    background-image: url('../img/golf-gallery7.jpeg');
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.809);
+    background-blend-mode: color;
+    background-size: cover;
+}
+
+.video-width {
+    width: 240px;
+    height: 150px;
+}
+
+.video-link {
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.709);
+    background-blend-mode: color;
+    border-bottom: 3px solid greenyellow;
+}
+
+.video-link img {
+    width: 20%;
+    height: 20%;
+    top: 50px;
+    left: 100px;
+}
+
+.videos:hover .video-link {
+    animation: up 0.5s ease;
+    display: block;
+}
+
+.video-header {
+    margin-bottom: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #7aa93c;
+}
+
+.video-paragraph {
+    padding-top: 15px;
+    padding-bottom: 60px;
+}
+
+/* Statistics Section */
+.statistics-container {
+    height: 70vh;
+}
+
+canvas {
+    border-radius: 50%;
+}
+
+/* Membership Section */
+.membership-section {
+    margin: 0px -35px;
+    margin-top: 100px;
+    padding: 100px 0px;
+    height: 130vh;
+    background: url(../img/grass.jpeg);
+}
+
+.membership-cards div {
+    width: 25%;
+    height: 450px;
+    border: 5px solid white;
+}
+
+.membership-section:hover .membership-card-1 {
+    position: relative;
+    animation: moveLeft 2s ease;
+}
+
+.membership-section:hover .membership-card-2 {
+    position: relative;
+    animation: moveTop 2s ease;
+}
+
+.membership-section:hover .membership-card-3 {
+    position: relative;
+    animation: moveRight 2s ease;
+}
+
+/* Responsive FOR TABLET */
+@keyframes moveLeft {
+    from {
+        left: -100px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes moveTop {
+    from {
+        top: 100px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes moveRight {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 0px;
+    }
+}
+
+.membership-paragraph {
+    padding-bottom: 4rem;
+}
+
+.membership-button {
+    padding: 15px 50px;
+    background-color: transparent;
+    border: 1px solid rgb(152, 222, 152);
+    border-radius: 0%;
+}
+
+.membership-button:hover {
+    transition: 1.5s ease;
+    color: white;
+    background-color: rgb(152, 222, 152);
+}
+
+/* Golf Brands */
+.golf-brands {
+    margin: 0px -35px;
+    padding: 20px 30px;
+}
+
+.golf-brands img {
+    width: 150px;
+    height: 60px;
+    transition: transform 0.7s linear;
+}
+
+.golf-brands img:hover {
+    filter: opacity(0.8);
+    transform: scale(1.1);
+}
+
+/* Top Products Secion */
+.top-products-section {
+    margin: 0px -35px;
+    padding: 70px 50px;
+    height: 100vh;
+    background-image: url('../img/golf-wallpaper8.jpeg');
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.809);
+    background-blend-mode: color;
+    background-size: cover;
+}
+
+.product-width {
+    width: 250px;
+    height: 250px;
+}
+
+.products-hvLink {
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.809);
+    background-blend-mode: color;
+    border-bottom: 3px solid greenyellow;
+}
+
+@keyframes up {
+    from {
+        top: 100%;
+    }
+
+    to {
+        bottom: 0%;
+    }
+}
+
+.products-img:hover .products-hvLink {
+    animation: up 0.5s ease;
+    display: block;
+}
+
+.products-hvLink img {
+    width: 15%;
+    height: 15%;
+    top: 90px;
+    left: 110px;
+}
+
+.products-line {
+    opacity: 0.3;
+    margin-bottom: 30px;
+}
+
+.products-button {
+    padding: 10px 108px;
+    background-color: rgb(69, 196, 69);
+    border-radius: 0%;
+}
+
+.products-link,
+.newsletterLink {
+    padding: 0%;
+    margin: 0%;
+    border-radius: 0%;
+}
+
+.products-link:hover {
+    border-bottom: 1px solid white;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    margin: 0px -35px;
+    padding: 70px 50px;
+    background-color: rgb(242, 241, 241);
+}
+
+.testimonials-container {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.testimonials-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.testimonials-paragraph {
+    padding: 0px 60px 30px 60px;
+}
+
+.testimonials-button {
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.672);
+    padding: 5px 10px;
+    color: rgba(0, 0, 0, 0.672);
+    ;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.184);
+}
+
+.testimonials-button:hover {
+    background-color: rgba(0, 0, 0, 0.805);
+    color: white;
+}
+
+/* Footer Container */
+.footer-container {
+    margin: 0px -35px;
+    padding: 30px 0px 0px 0px;
+    background-image: url('../img/golf-wallpaper8.jpeg');
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.809);
+    background-blend-mode: color;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.719);
+}
+
+.aboutUs {
+    width: 250px;
+}
+
+.latestNews {
+    width: 350px;
+}
+
+.latestNews a {
+    color: rgba(255, 255, 255, 0.719);
+    padding: 10px 0px 0px 15px;
+    margin: 0%;
+}
+
+.latestNews a:hover {
+    color: #cae8a2;
+}
+
+.latestNews img {
+    width: 120px;
+    height: 70px;
+}
+
+.newsletter input {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.718);
+}
+
+.newsletter button {
+    margin-top: 10px;
+    padding: 8px 58px;
+    background-color: rgb(69, 196, 69);
+    border-radius: 0%;
+}
+
+.newsletterIcons img {
+    width: 25px;
+    height: 25px;
+}
+
+.newsletterIcons {
+    margin-top: 20px;
+}
+
+.newsletterFootnote {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: black;
+}
+
+@media only screen and (max-width: 1080px) {
+    body {
+        padding: 0%;
+    }
+
+    .margin-0 {
+        margin: 0%;
+    }
+
+    .wd-mrg {
+        width: 100%;
+        margin: 0%;
+    }
+
+    .join-section {
+        padding: 50px 0px;
+    }
+
+    .join-icons {
+        font-size: smaller;
+        padding: 40px 10px;
+    }
+
+    .welcome-section {
+        margin-left: 250px;
+    }
+
+    .welcome-section img {
+        width: 60%;
+    }
+
+    .welcome-container {
+        width: 50%;
+        height: 90%;
+        bottom: 20px;
+    }
+
+    .welcome-container p {
+        font-size: 1rem;
+    }
+
+    .match-container {
+        border-right: none;
+    }
+
+    .match-section {
+        grid-template-columns: auto;
+    }
+
+    .next-matches {
+        width: 60%;
+    }
+
+    .list-matches a {
+        padding: 0%;
+    }
+
+    .gallery-imgs {
+        width: 230px;
+        height: 300px;
+    }
+
+    .gallery-img {
+        width: 400px;
+        height: 300px;
+    }
+
+    .gallery-images {
+        padding: 20px 0px 100px 0px;
+    }
+
+    .gallery p {
+        font-size: 1.3rem;
+    }
+
+    .videos-section {
+        height: 125vh;
+        margin-bottom: 100px;
+    }
+
+    .videos-section div {
+        padding: 5px;
+    }
+
+    .video-width {
+        width: 180px;
+        height: 150px;
+    }
+
+    .video-paragraph {
+        font-size: smaller;
+    }
+
+    .video-link {
+        padding: 0%;
+        top: 5px;
+    }
+
+    .video-link img {
+        width: 20%;
+        height: 20%;
+        top: 60px;
+        left: 80px;
+    }
+
+    canvas {
+        width: 150px;
+        height: 150px;
+    }
+
+    .membership-section {
+        height: 115vh;
+    }
+
+    .membership-cards div {
+        width: 27%;
+        height: 370px;
+    }
+
+    .membership-card-1,
+    .membership-card-2,
+    .membership-card-3 {
+        font-size: small;
+        padding: 1rem;
+    }
+
+    .membership-button {
+        padding: 10px 30px;
+    }
+
+    .golf-brands img {
+        width: 100px;
+        height: 50px;
+    }
+
+    .product-width {
+        width: 200px;
+        height: 200px;
+    }
+
+    .products-hvLink img {
+        width: 15%;
+        height: 15%;
+        top: 90px;
+        left: 90px;
+    }
+
+    .products-button {
+        padding: 10px 85px;
+    }
+
+    .latestNews a {
+        padding: 5px;
+    }
+}

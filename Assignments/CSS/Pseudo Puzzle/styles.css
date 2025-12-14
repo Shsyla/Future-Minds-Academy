@@ -1,0 +1,15 @@
+.header-1:hover {
+    background-color: red;
+}
+
+.header-2:hover {
+    background-color: grey;
+}
+
+.header-1::first-letter {
+    font-size: 50px;
+}
+
+.header-2::first-letter {
+    font-size: 50px;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hide show div</title>
+  <style>
+    button {
+      background-color: blue;
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: white;
+    }
+
+    .questions {
+      width: 500px;
+      background-color: antiquewhite;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      visibility: hidden;
+    }
+
+    .activeQuestion {
+      visibility: visible;
+    }
+    #qFeed ol li {
+      cursor: pointer;
+      padding: 10px;
+      background-color: beige;
+      margin: 3px 0px;
+    }
+    #qFeed ol li:hover {
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="startQuiz">Start Quiz</button>
+  <br><br>
+  <div class="questions">
+    <div id="qFeed">
+      <h2>Question goes here?</h2>
+      <ol type="a">
+        <li>Answer 1</li>
+        <li>Answer 2</li>
+        <li>Answer 3</li>
+      </ol>
+    </div>
+    <button id="exitQuiz">Exit</button>
+    <button id="nextQ">Next</button>
+  </div>
+
+  <script src="question.js"></script>
+  <script>
+    const startQuiz = document.querySelector('#startQuiz');
+    const exitQuiz = document.querySelector('#exitQuiz');
+    const questions = document.querySelector('.questions');
+    const qFeed = document.querySelector('#qFeed');
+    const nextQ = document.querySelector('#nextQ');
+
+    startQuiz.addEventListener('click', () => {
+      questions.classList.add('activeQuestion');
+    });
+    exitQuiz.addEventListener('click', () => {
+      questions.classList.remove('activeQuestion');
+    });
+    let currentQuestion = 0;
+    loadQuestion(currentQuestion);
+
+
+    nextQ.addEventListener('click', () => {
+      currentQuestion++;
+      if (currentQuestion < allQuestions.length) {
+        loadQuestion(currentQuestion);
+      }
+      else {
+        nextQ.style.display = 'none';
+      }
+
+    });
+
+    function loadQuestion(q) {
+      qFeed.innerHTML = '';
+      qFeed.innerHTML = `
+                <h2>${allQuestions[q].question}</h2>
+                <ol type="a">
+                    <li>${allQuestions[q].options[0]}</li>
+                    <li>${allQuestions[q].options[1]}</li>
+                    <li>${allQuestions[q].options[2]}</li>
+                    <li>${allQuestions[q].options[3]}</li>
+                </ol>
+            `;
+    }
+
+  </script>
+</body>
+
+</html>

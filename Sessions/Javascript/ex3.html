@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+
+<body>
+    Num1: <input type="number" id="num1"> <br>
+    Num2: <input type="number" id="num2"> <br><br>
+
+    <select id="arithmetic">
+        <option value="sum">Sum</option> <br>
+        <option value="diff">Diff</option> <br>
+        <option value="divide">Divide</option> <br>
+        <option value="multiply">Multiply</option> <br>
+    </select>
+
+
+    Result: <h3 id="resultMsg">0</h3>
+    <button onclick="doCalculation();">Calculate</button>
+
+
+
+
+    <script>
+        const num1 = document.querySelector("#num1");
+        const num2 = document.querySelector("#num2");
+        const arithmetic = document.querySelector("#arithmetic");
+        const resultMsg = document.querySelector("#resultMsg");
+
+
+
+
+        let result = calculate("sum", 10, 6,);
+        console.log("Sum: " + result);
+
+        result = calculate("diff", 10, 6,);
+        console.log("Diff: " + result);
+
+        result = calculate("divide", 10, 6,);
+        console.log("Divide: " + result);
+
+        result = calculate("multiply", 10, 6,);
+        console.log("Multiply: " + result);
+
+        function calculate(arg, a, b) {
+
+            if (arg == "sum") { return a + b; }
+            if (arg == "diff") { return a - b; }
+            if (arg == "divide") { return a / b; }
+            if (arg == "multiply") { return a * b; }
+
+        }
+
+        function doCalculation() {
+            console.log("Num1: " + num1.value);
+            console.log("Num2: " + num2.value);
+
+            console.log(arithmetic.value);
+
+            let finalResult = calculate(arithmetic.value, Number(num1.value), Number(num2.value));
+            resultMsg.textContent = finalResult;
+        }
+    </script>
+</body>
+
+</html>

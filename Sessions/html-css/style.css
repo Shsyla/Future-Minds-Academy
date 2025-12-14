@@ -1,0 +1,67 @@
+.flex-container {
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
+  }
+
+.flex-container > div {
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+}
+
+.flex-slices {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgba(255, 30, 214, 0.953);
+  }
+
+.logo {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid black;
+    background-color:aqua;
+}
+
+.dashboard {
+    flex: 6;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: antiquewhite;
+}
+
+.my-account {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: chartreuse;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-color: rgb(30, 255, 49);
+  }
+
+.flex-vertical > div {
+    width: 300px;
+    background-color: aliceblue;
+    margin: 10px;
+    text-align: center;
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 600px) {
+    .flex-vertical {
+      flex-direction: column;
+    }
+  }

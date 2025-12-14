@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #83a4d4, #b6fbff);
+      text-align: center;
+      padding: 50px;
+    }
+    #quiz-container {
+      background: #fff;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
+    }
+    #quiz-container:hover {
+      transform: scale(1.01);
+    }
+    #timer {
+      font-size: 20px;
+      color: #ff4d4d;
+      margin-bottom: 20px;
+    }
+    #question {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .option {
+      display: block;
+      padding: 15px;
+      margin: 12px auto;
+      width: 90%;
+      background: #e3e9f3;
+      color: #333;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .option:hover:not(:disabled) {
+      background: #d4def1;
+    }
+    .option.correct {
+      background-color: #a8f0c6;
+      color: #1a4d2e;
+    }
+    .option.wrong {
+      background-color: #f8c6dc;
+      color: #851944;
+    }
+    #result {
+      font-size: 22px;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="quiz-container">
+    <div id="timer">Time left: 15s</div>
+    <div id="question">Loading...</div>
+    <div id="options"></div>
+    <div id="result" style="display:none; margin-top: 30px;"></div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "What is the capital of France?",
+        options: ["Paris", "London", "Berlin", "Madrid"],
+        answer: 0
+      },
+      {
+        question: "Which planet is known as the Red Planet?",
+        options: ["Earth", "Mars", "Jupiter", "Saturn"],
+        answer: 1
+      },
+      {
+        question: "What is 10 + 5?",
+        options: ["12", "13", "15", "17"],
+        answer: 2
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    let timer;
+    let timeLeft = 15;
+
+    function showQuestion() {
+      const q = questions[currentQuestion];
+      document.getElementById("question").textContent = q.question;
+      const optionsContainer = document.getElementById("options");
+      optionsContainer.innerHTML = "";
+      q.options.forEach((option, i) => {
+        const btn = document.createElement("button");
+        btn.classList.add("option");
+        btn.textContent = option;
+        btn.onclick = () => selectOption(i);
+        optionsContainer.appendChild(btn);
+      });
+
+      timeLeft = 15;
+      document.getElementById("timer").textContent = `Time left: ${timeLeft}s`;
+      clearInterval(timer);
+      timer = setInterval(updateTimer, 1000);
+    }
+
+    function updateTimer() {
+      timeLeft--;
+      document.getElementById("timer").textContent = `Time left: ${timeLeft}s`;
+      if (timeLeft === 0) {
+        clearInterval(timer);
+        selectOption(-1); // No answer selected
+      }
+    }
+
+    function selectOption(selectedIndex) {
+      clearInterval(timer);
+      const q = questions[currentQuestion];
+      const optionsButtons = document.querySelectorAll(".option");
+
+      optionsButtons.forEach((btn, i) => {
+        btn.disabled = true;
+        if (i === q.answer) {
+          btn.classList.add("correct");
+        }
+        if (i === selectedIndex && selectedIndex !== q.answer) {
+          btn.classList.add("wrong");
+        }
+      });
+
+      if (selectedIndex === q.answer) {
+        score++;
+      }
+
+      setTimeout(() => {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+          showQuestion();
+        } else {
+          showResult();
+        }
+      }, 2000);
+    }
+
+    function showResult() {
+      document.getElementById("question").style.display = "none";
+      document.getElementById("options").style.display = "none";
+      document.getElementById("timer").style.display = "none";
+      const result = document.getElementById("result");
+      result.style.display = "block";
+      result.textContent = `You scored ${score} out of ${questions.length}!`;
+    }
+
+    showQuestion();
+  </script>
+</body>
+</html>

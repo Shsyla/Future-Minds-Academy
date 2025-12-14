@@ -1,0 +1,36 @@
+.all-cards {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.all-cards>div {
+    width: 300px;
+}
+
+img {
+    height: 100px;
+    width: 300px;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    body {
+        background-color: rgb(8, 133, 133);
+    }
+
+    .all-cards {
+        flex-direction: column;
+    }
+
+    .all-cards>div {
+        width: 100%;
+
+    }
+
+    .all-cards img {
+        width: 100vh;
+        height: 200px;
+        object-fit: cover;
+    }
+}

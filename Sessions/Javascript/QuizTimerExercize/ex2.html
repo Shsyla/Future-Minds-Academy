@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights on and off</title>
+    <style>
+        button {
+            background-color: transparent;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .wrapper {
+            margin-top: 20px;
+            background-color: antiquewhite;
+            padding: 20px;
+            width: 400px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .lightOn {
+            background-color: black;
+            color: white;
+        }
+
+        .wrapperButtonBlack {
+            background-color: white;
+        }
+
+        .buttonOff {
+            background-color: black;
+            color: white;
+        }
+
+        .buttonOn {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    Lights: <button id="allButtons" class="buttonOn">Toggle Movie Details</button>
+    <div class="wrapper">
+        <h1 id="wrapperH2">Movie Titlen</h>
+        <p>Some awesome description</p>
+        <h2>Year: 2025</h2>
+    </div>
+
+    <script>
+        const allButtons = document.querySelector('#allButtons');
+        const wrapper = document.querySelector('.wrapper');
+
+        let lightsOn = false;
+
+        allButtons.addEventListener('click', () => {
+            lightsOn = !lightsOn;
+
+            if (lightsOn) {
+                wrapper.classList.add('lightOn');
+                wrapperButton.classList.add('wrapperButtonBlack');
+                allButtons.textContent = "Off";
+                allButtons.classList.remove('buttonOn');
+                allButtons.classList.add('buttonOff');
+            } else {
+                wrapper.classList.remove('lightOn');
+                wrapperButton.classList.remove('wrapperButtonBlack');
+                allButtons.textContent = "On";
+                allButtons.classList.remove('buttonOff');
+                allButtons.classList.add('buttonOn');
+            }
+        });
+    </script>
+</body>
+
+</html>

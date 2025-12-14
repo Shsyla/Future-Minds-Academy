@@ -1,0 +1,12 @@
+img {
+    margin: 50px;
+    width: 500px;
+    filter: blur(10px);
+    transition: filter .1s ease, transform 2s ease ;
+
+}
+
+img:hover {
+    filter: none;
+    transform: rotate(720deg);
+}

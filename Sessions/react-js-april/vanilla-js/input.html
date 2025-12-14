@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+
+<body>
+    <input id="textType" type="text">
+    <p>You typed: </p>
+
+    <script>
+        const p = document.querySelector('p');
+        const textType = document.querySelector('#textType');
+
+        textType.addEventListener('input', function () {
+            p.textContent = "You typed: " + textType.value;
+        });
+    </script>
+</body>
+
+</html>

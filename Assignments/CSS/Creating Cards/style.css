@@ -1,0 +1,57 @@
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+    position: relative;
+    width: 300px;
+    height: 522px;
+}
+
+.article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-price,
+.card-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    width: 50%;
+    height: 120px;
+    border: 1px solid black;
+}
+
+p {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+    color: white;
+}
+
+.span-date {
+    font-size: 25px;
+    font-weight: lighter;
+    display: block
+}
+
+.card-copyright {
+    color: black;
+}
+
+.image {
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <input type="text" id="name"><br>
+    <input type="email" id="email"><br>
+    <select name="" id="country">
+        <option value="SH">Shqiperia</option>
+        <option value="KS">Kosova</option>
+        <option value="MK">Maqedonia</option>
+    </select>
+    <button id="submitBtn">Submit</button>
+
+
+    <script>
+        const name = document.querySelector('#name');
+        const email = document.querySelector('#email');
+        const country = document.querySelector('#country');
+        const submitBtn = document.querySelector('#submitBtn');
+
+        submitBtn.addEventListener('click', () => {
+            console.log("Name:" + name.value);
+            console.log("Email:" + email.value);
+            console.log("Country:" + country.value);
+        });
+
+    </script>
+</body>
+
+</html>

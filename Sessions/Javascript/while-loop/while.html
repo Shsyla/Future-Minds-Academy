@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+</head>
+
+<body>
+    <p id="numb"></p>
+    <p id="numbers"></p>
+
+
+
+    <script>
+        const numb = document.querySelector("#numb");
+        const numbers = document.querySelector("#numbers");
+
+        let i = 40;
+
+
+        while (i >= 0) {
+            numb.innerHTML += i + " ";
+            i--;
+        }
+        for (let i = 40; i >= 0; i--) {
+
+            numbers.innerHTML += i + " ";
+
+        }
+
+    </script>
+</body>
+
+</html>
