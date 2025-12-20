@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import UserManagement from './UserManagement';
+import Users from './pages/Users';
+
 
 function App() {
   return (
-    <UserManagement />
+    <Users />
   );
 }
 
