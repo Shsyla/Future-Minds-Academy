@@ -3,17 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Login from './components/Login';
 import TodoList from './components/ToDoList';
 import UserManagement from './components/UserManagement';
-import Ex1 from './components/Ex1';
+import FetchUsers from './components/FetchUsers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    {/* <TodoList />
+    {/* <App /> */}
+    {/* <Login /> */}
+    {/* <TodoList /> */}
     <UserManagement />
-    <Ex1 /> */}
+    {/* <FetchUsers /> */}
   </React.StrictMode>
 );
 

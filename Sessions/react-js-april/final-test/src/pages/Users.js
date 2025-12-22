@@ -2,83 +2,117 @@ import React, { useEffect, useState } from "react";
 import "./users.css";
 import Modal from "../components/Modal";
 
-// https://jsonplaceholder.typicode.com/users
-
 const Users = () => {
   const [users, setUsers] = useState([]);
-  const [newUser, setNewUser] = useState({
-    name: "",
-    email: "",
-  });
+  const [newUser, setNewUser] = useState({ name: "", email: "" });
   const [currentGender, setCurrentGender] = useState("male");
 
-  const generateRandomGender = (array) => {
-    const randomNumber = Math.floor(Math.random() * 2) + 1;
+  const [editData, setEditData] = useState({ name: "", email: "" });
+  const [isEditing, setIsEditing] = useState(false);
+  const [editingId, setEditingId] = useState(null);
 
-    const updated = array.map((person) => ({
+  const generateRandomGender = (array) =>
+    array.map((person) => ({
       ...person,
       gender: Math.random() > 0.5 ? "male" : "female",
     }));
 
-    return updated;
-  };
-
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
-      .then((data) => {
-        data = generateRandomGender(data);
-        setUsers(data);
-      });
+      .then((data) => setUsers(generateRandomGender(data)));
   }, []);
 
-  const filteredUsers = users.filter((user) => user.gender === currentGender);
+  const filteredUsers = users.filter(
+    (user) => user.gender === currentGender
+  );
 
   const deleteUser = (id) => {
-    const updatedUsers = users.filter((user) => user.id !== id);
-    setUsers(updatedUsers);
+    setUsers((prev) => prev.filter((user) => user.id !== id));
+  };
+
+  const setData = (setter, e) => {
+    const { name, value } = e.target;
+    setter((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setNewUser((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    isEditing ? setData(setEditData, e) : setData(setNewUser, e);
   };
 
   const addNewUser = () => {
-    if (newUser.name.trim() === "" || newUser.email.trim() === "") {
+    if (!newUser.name.trim() || !newUser.email.trim()) {
       alert("Please provide a name and email");
       return;
     }
 
-    const userToAdd = {
-      id: Date.now(),
-      name: newUser.name,
-      email: newUser.email,
-    };
+    setUsers((prev) => [
+      ...prev,
+      {
+        id: Date.now(),
+        name: newUser.name,
+        email: newUser.email,
+        gender: "male",
+      },
+    ]);
 
-    setUsers((prev) => [...prev, userToAdd]);
+    setNewUser({ name: "", email: "" });
+  };
+
+  const initEdit = (user) => {
+    setIsEditing(true);
+    setEditingId(user.id);
+    setEditData({ name: user.name, email: user.email });
+  };
+
+  const updateUser = () => {
+    if (!editData.name.trim() || !editData.email.trim()) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    setUsers((prev) =>
+      prev.map((user) =>
+        user.id === editingId
+          ? { ...user, name: editData.name, email: editData.email }
+          : user
+      )
+    );
+
+    setIsEditing(false);
+    setEditingId(null);
+    setEditData({ name: "", email: "" });
   };
 
   return (
     <div className="users-container">
+      {isEditing && (
+        <Modal
+          title="Edit User"
+          isEditing
+          editData={editData}
+          handleChange={handleChange}
+          onCancel={() => setIsEditing(false)}
+          onSubmit={updateUser}
+        />
+      )}
+
       <h1>User Management</h1>
 
       <div className="form">
         <input
-          onChange={handleChange}
           type="text"
           name="name"
           placeholder="New user name"
+          value={newUser.name}
+          onChange={handleChange}
         />
         <input
-          onChange={handleChange}
           type="text"
           name="email"
           placeholder="New user email"
+          value={newUser.email}
+          onChange={handleChange}
         />
         <button onClick={addNewUser}>Add User</button>
 
@@ -86,26 +120,30 @@ const Users = () => {
           <button onClick={() => setCurrentGender("male")}>Male</button>
           <button onClick={() => setCurrentGender("female")}>Female</button>
         </div>
-      </div> 
+      </div>
 
       <ul className="user-list">
-        {filteredUsers.map((user) => {
-          return (
-            <div className="user-item" key={user.id}>
-              <li>
-                {user.name} - {user.email} ({user.gender})
-              </li>
-              <div className="buttons">
-                <button
-                  onClick={() => deleteUser(user.id)}
-                  className="delete-btn"
-                >
-                  Delete
-                </button>
-              </div>
+        {filteredUsers.map((user) => (
+          <div className="user-item" key={user.id}>
+            <li>
+              {user.name} - {user.email} ({user.gender})
+            </li>
+            <div className="buttons">
+              <button
+                className="delete-btn"
+                onClick={() => deleteUser(user.id)}
+              >
+                Delete
+              </button>
+              <button
+                className="edit-btn"
+                onClick={() => initEdit(user)}
+              >
+                Edit
+              </button>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </ul>
     </div>
   );
