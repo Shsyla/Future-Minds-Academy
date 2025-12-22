@@ -34,9 +34,10 @@
 .edit-inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px 12px; /* row gap, column gap */
-  margin-bottom: 2rem;
+  gap: 24px 20px; /* more vertical & horizontal space */
+  margin-bottom: 2.5rem; /* also helps separation from buttons */
 }
+
 
 /* Input fields */
 .edit-inputs input {
@@ -65,8 +66,10 @@
 .modal-buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 14px; /* space between buttons */
+  gap: 14px;
+  margin-top: 1.5rem; /* space between inputs & buttons */
 }
+
 
 /* Buttons */
 .modal-btn {

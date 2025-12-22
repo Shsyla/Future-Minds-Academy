@@ -22,7 +22,8 @@ const Modal = ({
               placeholder="New Name"
               value={editData.name}
               onChange={handleChange}
-            />
+            /> 
+            {" "}
             <input
               type="text"
               name="email"
