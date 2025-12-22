@@ -15,86 +15,48 @@
 /* Modal box */
 .modal {
   background-color: #fff;
-  padding: 2rem 2.5rem;
-  border-radius: 16px;
+  padding: 2rem;
+  border-radius: 12px;
   width: 90%;
-  max-width: 450px;
+  max-width: 400px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Modal title */
-.modal h1 {
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-  color: #222;
-}
-
-/* Inputs container – two columns */
-.edit-inputs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px 20px; /* more vertical & horizontal space */
-  margin-bottom: 2.5rem; /* also helps separation from buttons */
-}
-
-
-/* Input fields */
-.edit-inputs input {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid #b3b3b3;
-  font-size: 14px;
-  transition: border 0.2s, box-shadow 0.2s;
-}
-
-.edit-inputs input:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
-  outline: none;
-}
-
-/* Responsive – stack inputs on small screens */
-@media (max-width: 480px) {
-  .edit-inputs {
-    grid-template-columns: 1fr;
-  }
+/* Modal message */
+.modal-message {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
 }
 
 /* Buttons container */
 .modal-buttons {
   display: flex;
-  justify-content: flex-end;
-  gap: 14px;
-  margin-top: 1.5rem; /* space between inputs & buttons */
+  justify-content: space-around;
 }
 
-
-/* Buttons */
+/* Button styles */
 .modal-btn {
-  flex: 1;
-  padding: 10px 0;
+  padding: 0.6rem 1.5rem;
   border: none;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s;
 }
 
-/* Confirm */
+/* Yes button */
 .modal-btn.yes {
   background-color: #4caf50;
   color: white;
 }
 
 .modal-btn.yes:hover {
-  background-color: #43a047;
-  transform: translateY(-1px);
+  background-color: #45a049;
 }
 
-/* Cancel */
+/* No button */
 .modal-btn.no {
   background-color: #f44336;
   color: white;
@@ -102,5 +64,16 @@
 
 .modal-btn.no:hover {
   background-color: #e53935;
-  transform: translateY(-1px);
+}
+
+.edit-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-inputs > * {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(167, 167, 167);
 }

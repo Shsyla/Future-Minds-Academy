@@ -1,39 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./modal.css";
 
 const Modal = ({
   title,
+  message = "",
   onCancel,
   onSubmit,
   isEditing = false,
-  handleChange,
-  editData
+  handleChange
 }) => {
   return (
     <div className="modal-overlay">
       <div className="modal">
         <h1>{title}</h1>
-
         {isEditing && (
-          <div>
-            <input
-              type="text"
-              name="name"
-              placeholder="New Name"
-              value={editData.name}
-              onChange={handleChange}
-            /> 
-            {" "}
-            <input
-              type="text"
-              name="email"
-              placeholder="New Email"
-              value={editData.email}
-              onChange={handleChange}
-            />
+          <div className="edit-inputs">
+            <input onChange={handleChange} type="text" name="name" placeholder="New Name" />
+            <input onChange={handleChange} type="email" name="email" placeholder="New Email" />
           </div>
         )}
-
+        <p className="modal-message">{message}</p>
         <div className="modal-buttons">
           <button className="modal-btn no" onClick={onCancel}>
             Cancel
@@ -48,3 +34,4 @@ const Modal = ({
 };
 
 export default Modal;
+
